@@ -20,6 +20,11 @@ app.configure(function() {
     app.use(express.static(__dirname + "/public/"));
 });
 
+io.configure(function () {
+    io.set("transports", ["xhr-polling"]);
+    io.set("polling duration", 10);
+});
+
 app.get('/', function(req, res) {
     var file = __dirname + "/public/mapTweets.html";
     res.sendfile('public/mapTweets.html');
