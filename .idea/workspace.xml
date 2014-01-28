@@ -32,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="streamTwitter.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="streamTwitter.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/streamTwitter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="49" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+            <state line="13" column="42" selection-start="358" selection-end="358" vertical-scroll-proportion="0.29456192">
               <folding />
             </state>
           </provider>
@@ -59,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mapTweets.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mapTweets.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="36" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.48">
+            <state line="36" column="78" selection-start="2016" selection-end="2016" vertical-scroll-proportion="-13.125">
               <folding />
             </state>
           </provider>
@@ -92,8 +92,8 @@
         <option value="$PROJECT_DIR$/js/streamTwitter.js" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/mapTweets.html" />
-        <option value="$PROJECT_DIR$/streamTwitter.js" />
         <option value="$PROJECT_DIR$/public/mapTweets.html" />
+        <option value="$PROJECT_DIR$/streamTwitter.js" />
       </list>
     </option>
   </component>
@@ -331,6 +331,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="62" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.54545456" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -338,21 +343,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/map.html">
+    <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="62" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.54545456" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/streamTwitter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="49" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+        <state line="36" column="78" selection-start="2016" selection-end="2016" vertical-scroll-proportion="-13.125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
+    <entry file="file://$PROJECT_DIR$/streamTwitter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="36" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.48">
+        <state line="13" column="42" selection-start="358" selection-end="358" vertical-scroll-proportion="0.29456192">
           <folding />
         </state>
       </provider>
