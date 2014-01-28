@@ -31,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="streamTwitter.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="streamTwitter.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/streamTwitter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="39" selection-start="355" selection-end="355" vertical-scroll-proportion="0.29456192">
+            <state line="13" column="41" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mapTweets.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="mapTweets.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="59" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-6.0416665">
+            <state line="36" column="77" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.376">
               <folding />
             </state>
           </provider>
@@ -342,16 +342,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
+    <entry file="file://$PROJECT_DIR$/streamTwitter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="59" selection-start="1620" selection-end="1620" vertical-scroll-proportion="-6.0416665">
+        <state line="13" column="41" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/streamTwitter.js">
+    <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="39" selection-start="355" selection-end="355" vertical-scroll-proportion="0.29456192">
+        <state line="36" column="77" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.376">
           <folding />
         </state>
       </provider>
