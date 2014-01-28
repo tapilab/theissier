@@ -11,7 +11,7 @@ var path = require('path');
 var fs = require("fs");
 var express = require("express");
 var logfmt = require("logfmt");
-var io = require('socket.io').listen(10001);
+var io = require('socket.io').listen(80);
 var twitter = require('ntwitter');
 var app = express();
 
