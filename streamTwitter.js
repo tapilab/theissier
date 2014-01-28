@@ -5,28 +5,24 @@
  * Time: 23:06
  * To change this template use File | Settings | File Templates.
  */
+
 var http = require("http");
 var path = require('path');
 var fs = require("fs");
 var express = require("express");
 var logfmt = require("logfmt");
-var io = require('socket.io').listen(10001);
+var io = require('socket.io').listen(80);
 var twitter = require('ntwitter');
 var app = express();
 
-app.use(logfmt.requestLogger());
-//app.use(express.static(path.join(__dirname, 'css')));
-//app.use(express.static(path.join(__dirname, 'js')));
-
 app.configure(function() {
+    app.use(logfmt.requestLogger());
     app.use(express.static(__dirname + "/public/"));
 });
 
 app.get('/', function(req, res) {
     var file = __dirname + "/public/mapTweets.html";
-    console.log("file : ", file);
     res.sendfile('public/mapTweets.html');
- // res.send('Hello World!');
 });
 
 var twit = new twitter({
@@ -45,30 +41,13 @@ var twit = new twitter({
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function(req,res) {
-    //console.log("port : ", port);
     io.sockets.on('connection', function(socket) {
         twit.stream('statuses/sample', function(stream) {
             stream.on('data', function (data) {
-                console.log(data);
+                //console.log(data);
                 if (data.geo != null)
                     socket.emit('twitterStream', data);
             });
         });
     });
 });
-
-/*twit.stream('statuses/sample',
-    function(stream) {
-        stream.on('data', function (data) {
-            if (data.geo != null) {
-                io.sockets.on('connection', function (socket) {
-                    var tweets = setInterval(function () {
-                        socket.volatile.emit('twitterStream', data);
-                    }, 100);
-                    socket.on('disconnect', function () {
-                        clearInterval(tweets);
-                    });
-                });
-            }
-        });
-    });*/
