@@ -7,7 +7,7 @@
     <ignored path="theissier.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390930462121" ignored="false" />
-    <file path="/mapTweets.html" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390938998165" ignored="false" />
+    <file path="/mapTweets.html" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390939944235" ignored="false" />
     <file path="/style.css" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390784584335" ignored="false" />
     <file path="/base.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390781461764" ignored="false" />
     <file path="/streamTwitter.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390895531201" ignored="false" />
@@ -42,7 +42,7 @@
       <file leaf-file-name="mapTweets.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="61" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.088">
+            <state line="30" column="24" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.088">
               <folding />
             </state>
           </provider>
@@ -332,7 +332,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="61" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.088">
+        <state line="30" column="24" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.088">
           <folding />
         </state>
       </provider>
