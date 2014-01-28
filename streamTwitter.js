@@ -15,15 +15,19 @@ var io = require('socket.io').listen(8080);
 var twitter = require('ntwitter');
 var app = express();
 
+var server = http.createServer(app);
+var wss = new WebSocketServer({server: server});
+console.log("websocket created");
+
 app.configure(function() {
     app.use(logfmt.requestLogger());
     app.use(express.static(__dirname + "/public/"));
 });
 
-io.configure(function () {
+/*io.configure(function () {
     io.set("transports", ["xhr-polling"]);
     io.set("polling duration", 10);
-});
+});    */
 
 app.get('/', function(req, res) {
     var file = __dirname + "/public/mapTweets.html";
@@ -46,13 +50,18 @@ var twit = new twitter({
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function(req,res) {
-    io.sockets.on('connection', function(socket) {
+    wss.on('connection', function(socket) {
         twit.stream('statuses/sample', function(stream) {
             stream.on('data', function (data) {
                 //console.log(data);
                 if (data.geo != null)
                     socket.emit('twitterStream', data);
             });
+        });
+        console.log("websocket connection open");
+        ws.on('close', function() {
+            console.log('websocket connection close');
+            clearInterval(id);
         });
     });
 });
