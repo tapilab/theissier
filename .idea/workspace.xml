@@ -33,10 +33,10 @@
       <file leaf-file-name="streamTwitter.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/streamTwitter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="40" selection-start="356" selection-end="356" vertical-scroll-proportion="0.20694864">
+            <state line="13" column="50" selection-start="366" selection-end="366" vertical-scroll-proportion="0.20694864">
               <folding>
-                <element signature="e#712#829#0" expanded="false" />
-                <element signature="e#1256#1551#0" expanded="false" />
+                <element signature="e#713#830#0" expanded="false" />
+                <element signature="e#1257#1552#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -278,8 +278,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="4" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#712#829#0" expanded="false" />
-            <element signature="e#1256#1551#0" expanded="false" />
+            <element signature="e#713#830#0" expanded="false" />
+            <element signature="e#1257#1552#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -338,10 +338,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/streamTwitter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="40" selection-start="356" selection-end="356" vertical-scroll-proportion="0.20694864">
+        <state line="13" column="50" selection-start="366" selection-end="366" vertical-scroll-proportion="0.20694864">
           <folding>
-            <element signature="e#712#829#0" expanded="false" />
-            <element signature="e#1256#1551#0" expanded="false" />
+            <element signature="e#713#830#0" expanded="false" />
+            <element signature="e#1257#1552#0" expanded="false" />
           </folding>
         </state>
       </provider>
