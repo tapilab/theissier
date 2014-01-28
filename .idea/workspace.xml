@@ -2,6 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cb2aff8-e900-4b28-a978-a77a3502ebcb" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/docs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/docs/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/lib/_events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/lib/_util.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/lib/lang/mixin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/lib/ws/connection.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/lib/ws/manager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/lib/ws/parser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/lib/ws/server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/samples/handshake-packets" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/fixtures/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/chat-server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/chat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/client.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/dev-server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/echo-server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/ssl/cert.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/ssl/cert.pem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/manual/test-https-upgrade.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/pummel/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/test/simple/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/websocket-server/tools/release.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streamTwitter.js" afterPath="$PROJECT_DIR$/streamTwitter.js" />
     </list>
     <ignored path="theissier.iws" />
@@ -33,10 +61,10 @@
       <file leaf-file-name="streamTwitter.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/streamTwitter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="50" selection-start="366" selection-end="366" vertical-scroll-proportion="0.20694864">
+            <state line="13" column="2" selection-start="318" selection-end="318" vertical-scroll-proportion="0.29456192">
               <folding>
-                <element signature="e#713#830#0" expanded="false" />
-                <element signature="e#1257#1552#0" expanded="false" />
+                <element signature="e#715#832#0" expanded="false" />
+                <element signature="e#1259#1554#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -278,8 +306,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="4" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#713#830#0" expanded="false" />
-            <element signature="e#1257#1552#0" expanded="false" />
+            <element signature="e#715#832#0" expanded="false" />
+            <element signature="e#1259#1554#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -338,10 +366,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/streamTwitter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="50" selection-start="366" selection-end="366" vertical-scroll-proportion="0.20694864">
+        <state line="13" column="2" selection-start="318" selection-end="318" vertical-scroll-proportion="0.29456192">
           <folding>
-            <element signature="e#713#830#0" expanded="false" />
-            <element signature="e#1257#1552#0" expanded="false" />
+            <element signature="e#715#832#0" expanded="false" />
+            <element signature="e#1259#1554#0" expanded="false" />
           </folding>
         </state>
       </provider>
