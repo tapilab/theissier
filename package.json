@@ -1,0 +1,32 @@
+{
+  "name": "tweetmapproject",
+  "version": "0.0.0",
+  "description": "Tweets Map project",
+  "main": "js/streamTwitter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tapilab/theissier.git"
+  },
+  "keywords": [
+    "tweetMap",
+    "heroku"
+  ],
+  "author": "Thomas Theissier",
+  "license": "IIT",
+  "bugs": {
+    "url": "https://github.com/tapilab/theissier/issues"
+  },
+  "homepage": "https://github.com/tapilab/theissier",
+  "dependencies": {
+    "ntwitter": "~0.5.0",
+    "socket.io": "~0.9.16",
+    "express": "~3.4.8",
+    "logfmt": "~0.20.0"
+  },
+  "engines": {
+    "node": "0.10.24"
+  }
+}
