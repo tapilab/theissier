@@ -6,7 +6,7 @@
     </list>
     <ignored path="theissier.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390970259933" ignored="false" />
+    <file path="/Dummy.txt" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390972523674" ignored="false" />
     <file path="/mapTweets.html" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390972415222" ignored="false" />
     <file path="/style.css" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390784584335" ignored="false" />
     <file path="/base.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390781461764" ignored="false" />
@@ -45,7 +45,7 @@
       <file leaf-file-name="mapTweets.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="46" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.40099832">
+            <state line="43" column="14" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.22370617">
               <folding />
             </state>
           </provider>
@@ -81,8 +81,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="26" />
-    <option name="y" value="36" />
+    <option name="x" value="18" />
+    <option name="y" value="58" />
     <option name="width" value="1420" />
     <option name="height" value="810" />
   </component>
@@ -137,7 +137,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../theissier" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -179,7 +179,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="36" width="1420" height="810" extended-state="0" />
+    <frame x="18" y="58" width="1420" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -341,7 +341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="46" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.40099832">
+        <state line="43" column="14" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.22370617">
           <folding />
         </state>
       </provider>
