@@ -45,7 +45,7 @@
       <file leaf-file-name="mapTweets.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="14" selection-start="3030" selection-end="3030" vertical-scroll-proportion="0.83732057">
+            <state line="62" column="12" selection-start="3033" selection-end="3033" vertical-scroll-proportion="0.861244">
               <folding />
             </state>
           </provider>
@@ -337,7 +337,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="14" selection-start="3030" selection-end="3030" vertical-scroll-proportion="0.83732057">
+        <state line="62" column="12" selection-start="3033" selection-end="3033" vertical-scroll-proportion="0.861244">
           <folding />
         </state>
       </provider>
