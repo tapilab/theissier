@@ -49,6 +49,7 @@ var twit = new twitter({
     access_token_secret: '0QZedGfeOSMgVhFQd06acTP42RKwNiQOZog77oZzer4Qf'
 });  */
 
+//wss socket
 wss.on('connection', function(ws) {
     twit.stream('statuses/sample', function(stream) {
         stream.on('data', function (data) {
