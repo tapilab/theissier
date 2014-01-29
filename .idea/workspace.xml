@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cb2aff8-e900-4b28-a978-a77a3502ebcb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mapTweets.html" afterPath="$PROJECT_DIR$/public/mapTweets.html" />
-    </list>
+    <list default="true" id="2cb2aff8-e900-4b28-a978-a77a3502ebcb" name="Default" comment="" />
     <ignored path="theissier.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1390978038264" ignored="false" />
