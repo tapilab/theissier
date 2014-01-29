@@ -46,8 +46,8 @@
             var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
         }
 
-        ws.onmessage = function (data) {
-            console.log(data);
+        ws.onmessage = function (event) {
+            var data = JSON.parse(event.data);
             var usernameAndTweet = "<div id='contentInfoWindow'><h3>" + data.user.name + "</h3><h5>"+ data.created_at +"</h5><p>"+ data.text +"</p></div>";
             var myLatlng = new google.maps.LatLng(data.geo.coordinates[0],data.geo.coordinates[1]);
             var infowindow = new google.maps.InfoWindow({
