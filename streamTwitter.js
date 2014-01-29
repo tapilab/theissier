@@ -54,7 +54,7 @@ wss.on('connection', function(ws) {
         stream.on('data', function (data) {
             //console.log(data);
             if (data.geo != null)
-                ws.send('twitterStream', data);
+                ws.send(JSON.stringify(data));
         });
     });
 
