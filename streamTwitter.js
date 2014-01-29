@@ -49,12 +49,12 @@ var twit = new twitter({
     access_token_secret: '0QZedGfeOSMgVhFQd06acTP42RKwNiQOZog77oZzer4Qf'
 });  */
 
-wss.on('connection', function(wss) {
+wss.on('connection', function(ws) {
     twit.stream('statuses/sample', function(stream) {
         stream.on('data', function (data) {
             //console.log(data);
             if (data.geo != null)
-                wss.send('twitterStream', data);
+                ws.send('twitterStream', data);
         });
     });
 
