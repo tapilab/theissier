@@ -34,7 +34,7 @@
     <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         //heroku declaration of socket client
-        var host = location.origin.replace(/^http/, 'ws');
+        var host = location.origin.replace(/^http/, 'wss');
         var ws = new WebSocket(host);
 
         function initialize() {
