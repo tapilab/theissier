@@ -9,6 +9,7 @@ var WebSocketServer = require('ws').Server
     , http = require('http')
     , express = require('express')
     , twitter = require('ntwitter')
+    , logfmt = require('logfmt')
     , app = express()
     , port = process.env.PORT || 5000;
 
