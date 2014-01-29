@@ -5,25 +5,25 @@
  * Time: 23:06
  * To change this template use File | Settings | File Templates.
  */
-
-var http = require("http");
-var path = require('path');
-var fs = require("fs");
-var express = require("express");
-var logfmt = require("logfmt");
-var WebSocketServer = require('ws');
-//var io = require('socket.io').listen(8080);
-var twitter = require('ntwitter');
-var app = express();
+var WebSocketServer = require('ws').Server
+    , http = require('http')
+    , express = require('express')
+    , twitter = require('ntwitter')
+    , app = express()
+    , port = process.env.PORT || 5000;
 
 var server = http.createServer(app);
-var wss = new WebSocketServer({server: server});
-console.log("websocket created");
+server.listen(port);
+
+console.log('http server listening on %d', port);
 
 app.configure(function() {
     app.use(logfmt.requestLogger());
     app.use(express.static(__dirname + "/public/"));
 });
+
+var wss = new WebSocketServer({server: server});
+console.log('websocket server created');
 
 /*io.configure(function () {
     io.set("transports", ["xhr-polling"]);
@@ -31,7 +31,6 @@ app.configure(function() {
 });    */
 
 app.get('/', function(req, res) {
-    var file = __dirname + "/public/mapTweets.html";
     res.sendfile('public/mapTweets.html');
 });
 
@@ -49,20 +48,18 @@ var twit = new twitter({
     access_token_secret: '0QZedGfeOSMgVhFQd06acTP42RKwNiQOZog77oZzer4Qf'
 });  */
 
-var port = Number(process.env.PORT || 5000);
-app.listen(port, function(req,res) {
-    wss.on('connection', function(socket) {
-        twit.stream('statuses/sample', function(stream) {
-            stream.on('data', function (data) {
-                //console.log(data);
-                if (data.geo != null)
-                    socket.emit('twitterStream', data);
-            });
+wss.on('connection', function(wss) {
+    twit.stream('statuses/sample', function(stream) {
+        stream.on('data', function (data) {
+            //console.log(data);
+            if (data.geo != null)
+                wss.send('twitterStream', data);
         });
-        console.log("websocket connection open");
-        ws.on('close', function() {
-            console.log('websocket connection close');
-            clearInterval(id);
-        });
+    });
+
+    console.log("websocket connection open");
+
+    ws.on('close', function() {
+        console.log('websocket connection close');
     });
 });
