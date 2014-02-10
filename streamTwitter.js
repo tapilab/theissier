@@ -51,9 +51,10 @@ var twit = new twitter({
 
 //wss socket
 wss.on('connection', function(ws) {
+    console.log('connected');
     twit.stream('statuses/sample', function(stream) {
         stream.on('data', function (data) {
-            //console.log(data);
+            console.log(data);
             if (data.geo != null)
                 ws.send(JSON.stringify(data));
         });

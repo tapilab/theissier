@@ -24,7 +24,19 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    <div id="map-canvas"/>
+    <div id="container-search-map">
+        <div id="search-keyword">
+            <form class = "navbar-form navbar-brand" role="search">
+                <div class="form-group">
+                    <input class="form-control" name="search_query" type="text" placeholder="Search"/>
+                </div>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+            </form>
+        </div>
+        <div id="map-canvas"/>
+    </div>
 </body>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="javascripts/base.js"></script>
@@ -35,6 +47,7 @@
     <script type="text/javascript">
         //heroku declaration of socket client !
         var host = location.origin.replace(/^http/, 'wss');
+        console.log(host);
         var ws = new WebSocket(host);
 
         function initialize() {
@@ -47,6 +60,7 @@
 
             ws.onmessage = function (event) {
                 var data = JSON.parse(event.data);
+                console.log(data);
                 var usernameAndTweet = "<div id='contentInfoWindow'><h3>" + data.user.name + "</h3><h5>"+ data.created_at +"</h5><p>"+ data.text +"</p></div>";
                 var myLatlng = new google.maps.LatLng(data.geo.coordinates[0],data.geo.coordinates[1]);
                 var infowindow = new google.maps.InfoWindow({
@@ -63,10 +77,10 @@
             }
         }
 
-        window.onbeforeunload = function (e) {
+        /*window.onbeforeunload = function (e) {
             //console.log("coucou");
             ws.close();
-        }
+        }     */
 
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>

@@ -1,5 +1,16 @@
+/**** MISSING CODE BOOSTRAP ****/
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+/**** CSS MAPTWEETS.HTML ****/
 legend { text-align: center; }
 html { height: 100% }
 body { height: 100%; margin: 0; padding: 0 }
-#map-canvas { height: 100%; margin-top: -30px; }
+#container-search-map { width: 100%; overflow: hidden; margin-top: -10px; height: 100%; }
+#map-canvas { width: 75%; float:left; height: 100%; }
+#search-keyword { float:left; margin-left: 10px; margin-top: 200px; }
 #modal-button { float:right; margin-right: 10px; margin-top: 5px; }
+

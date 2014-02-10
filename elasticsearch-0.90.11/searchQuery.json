@@ -1,0 +1,14 @@
+curl -XGET 'http://localhost:9200/test/tweet/_search' -d '
+{
+  "query": {
+    "bool": {
+        "must" : [
+          {
+           "term": {
+             "text": "lmaaao"
+           }
+         }
+       ]
+     }
+   }
+}

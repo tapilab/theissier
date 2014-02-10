@@ -1,0 +1,456 @@
+[2014-02-10 12:06:16,064][INFO ][node                     ] [Shalla-Bal] version[0.90.11], pid[649], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-10 12:06:16,066][INFO ][node                     ] [Shalla-Bal] initializing ...
+[2014-02-10 12:06:16,196][INFO ][plugins                  ] [Shalla-Bal] loaded [river-twitter, river-fs], sites []
+[2014-02-10 12:06:19,173][INFO ][node                     ] [Shalla-Bal] initialized
+[2014-02-10 12:06:19,173][INFO ][node                     ] [Shalla-Bal] starting ...
+[2014-02-10 12:06:19,297][INFO ][transport                ] [Shalla-Bal] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-02-10 12:06:22,388][INFO ][cluster.service          ] [Shalla-Bal] new_master [Shalla-Bal][hJabtggdTwKzCIBXcGy38w][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-02-10 12:06:22,435][INFO ][discovery                ] [Shalla-Bal] elasticsearch/hJabtggdTwKzCIBXcGy38w
+[2014-02-10 12:06:22,470][INFO ][http                     ] [Shalla-Bal] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-02-10 12:06:22,471][INFO ][node                     ] [Shalla-Bal] started
+[2014-02-10 12:06:23,238][INFO ][gateway                  ] [Shalla-Bal] recovered [2] indices into cluster_state
+[2014-02-10 12:08:52,299][DEBUG][action.search.type       ] [Shalla-Bal] [test][0], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1dda817b] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "query" : {
+            "filter" : {
+                "terms" : { "text" : "lmaaao" }
+
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test] No query registered for [filter]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:211)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-02-10 12:08:52,304][DEBUG][action.search.type       ] [Shalla-Bal] [test][3], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1dda817b]
+org.elasticsearch.search.SearchParseException: [test][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "query" : {
+            "filter" : {
+                "terms" : { "text" : "lmaaao" }
+
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test] No query registered for [filter]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:211)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-02-10 12:08:52,303][DEBUG][action.search.type       ] [Shalla-Bal] [test][4], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1dda817b] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "query" : {
+            "filter" : {
+                "terms" : { "text" : "lmaaao" }
+
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test] No query registered for [filter]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:211)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-02-10 12:08:52,303][DEBUG][action.search.type       ] [Shalla-Bal] [test][2], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1dda817b] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "query" : {
+            "filter" : {
+                "terms" : { "text" : "lmaaao" }
+
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test] No query registered for [filter]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:211)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-02-10 12:08:52,303][DEBUG][action.search.type       ] [Shalla-Bal] [test][1], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1dda817b] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "query" : {
+            "filter" : {
+                "terms" : { "text" : "lmaaao" }
+
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test] No query registered for [filter]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:211)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-02-10 12:08:52,306][DEBUG][action.search.type       ] [Shalla-Bal] All shards failed for phase: [query]
+[2014-02-10 12:09:49,380][DEBUG][action.search.type       ] [Shalla-Bal] [test][4], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@236c6da9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "constant_score" : {
+            "filter" : {
+                "term" : { "text" : "lmaaao" }
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][4]: from[-1],size[-1]: Parse Failure [No parser for element [constant_score]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:09:49,381][DEBUG][action.search.type       ] [Shalla-Bal] [test][0], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@236c6da9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "constant_score" : {
+            "filter" : {
+                "term" : { "text" : "lmaaao" }
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][0]: from[-1],size[-1]: Parse Failure [No parser for element [constant_score]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:09:49,381][DEBUG][action.search.type       ] [Shalla-Bal] [test][1], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@236c6da9]
+org.elasticsearch.search.SearchParseException: [test][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "constant_score" : {
+            "filter" : {
+                "term" : { "text" : "lmaaao" }
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][1]: from[-1],size[-1]: Parse Failure [No parser for element [constant_score]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:09:49,382][DEBUG][action.search.type       ] [Shalla-Bal] All shards failed for phase: [query]
+[2014-02-10 12:09:49,381][DEBUG][action.search.type       ] [Shalla-Bal] [test][2], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@236c6da9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "constant_score" : {
+            "filter" : {
+                "term" : { "text" : "lmaaao" }
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][2]: from[-1],size[-1]: Parse Failure [No parser for element [constant_score]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:09:49,380][DEBUG][action.search.type       ] [Shalla-Bal] [test][3], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@236c6da9] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [ {
+        "constant_score" : {
+            "filter" : {
+                "term" : { "text" : "lmaaao" }
+            }
+        }
+}
+]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][3]: from[-1],size[-1]: Parse Failure [No parser for element [constant_score]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:11:53,645][DEBUG][action.search.type       ] [Shalla-Bal] [test][4], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1bd11b79] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [
+{
+    "terms" : {
+        "tags" : [ "lmaaao", "pill" ],
+        "minimum_should_match" : 1
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][4]: from[-1],size[-1]: Parse Failure [No parser for element [terms]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:11:53,646][DEBUG][action.search.type       ] [Shalla-Bal] [test][3], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1bd11b79]
+org.elasticsearch.search.SearchParseException: [test][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [
+{
+    "terms" : {
+        "tags" : [ "lmaaao", "pill" ],
+        "minimum_should_match" : 1
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][3]: from[-1],size[-1]: Parse Failure [No parser for element [terms]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:11:53,646][DEBUG][action.search.type       ] [Shalla-Bal] [test][1], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1bd11b79] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [
+{
+    "terms" : {
+        "tags" : [ "lmaaao", "pill" ],
+        "minimum_should_match" : 1
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][1]: from[-1],size[-1]: Parse Failure [No parser for element [terms]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:11:53,645][DEBUG][action.search.type       ] [Shalla-Bal] [test][0], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1bd11b79] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [
+{
+    "terms" : {
+        "tags" : [ "lmaaao", "pill" ],
+        "minimum_should_match" : 1
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][0]: from[-1],size[-1]: Parse Failure [No parser for element [terms]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:11:53,645][DEBUG][action.search.type       ] [Shalla-Bal] [test][2], node[hJabtggdTwKzCIBXcGy38w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1bd11b79] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [
+{
+    "terms" : {
+        "tags" : [ "lmaaao", "pill" ],
+        "minimum_should_match" : 1
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test][2]: from[-1],size[-1]: Parse Failure [No parser for element [terms]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-02-10 12:11:53,647][DEBUG][action.search.type       ] [Shalla-Bal] All shards failed for phase: [query]
+[2014-02-10 14:13:56,169][INFO ][node                     ] [Shalla-Bal] stopping ...
+[2014-02-10 14:13:56,246][INFO ][node                     ] [Shalla-Bal] stopped
+[2014-02-10 14:13:56,246][INFO ][node                     ] [Shalla-Bal] closing ...
+[2014-02-10 14:13:56,260][INFO ][node                     ] [Shalla-Bal] closed
+[2014-02-10 14:14:12,389][INFO ][node                     ] [Mr. M] version[0.90.11], pid[1960], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-10 14:14:12,390][INFO ][node                     ] [Mr. M] initializing ...
+[2014-02-10 14:14:12,502][INFO ][plugins                  ] [Mr. M] loaded [river-twitter, river-fs], sites []
+[2014-02-10 14:14:15,652][INFO ][node                     ] [Mr. M] initialized
+[2014-02-10 14:14:15,652][INFO ][node                     ] [Mr. M] starting ...
+[2014-02-10 14:14:15,782][INFO ][transport                ] [Mr. M] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-02-10 14:14:16,908][INFO ][node                     ] [Gargantua] version[0.90.11], pid[1973], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-10 14:14:16,908][INFO ][node                     ] [Gargantua] initializing ...
+[2014-02-10 14:14:16,964][INFO ][plugins                  ] [Gargantua] loaded [river-twitter, river-fs], sites []
+[2014-02-10 14:14:18,880][INFO ][cluster.service          ] [Mr. M] new_master [Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-02-10 14:14:18,952][INFO ][discovery                ] [Mr. M] elasticsearch/ZQd9E-xFSdil0DqyBOimEg
+[2014-02-10 14:14:18,983][INFO ][http                     ] [Mr. M] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-02-10 14:14:18,998][INFO ][node                     ] [Mr. M] started
+[2014-02-10 14:14:19,291][INFO ][node                     ] [Gargantua] initialized
+[2014-02-10 14:14:19,291][INFO ][node                     ] [Gargantua] starting ...
+[2014-02-10 14:14:19,417][INFO ][transport                ] [Gargantua] bound_address {inet[/0:0:0:0:0:0:0:0%0:9301]}, publish_address {inet[/10.0.0.3:9301]}
+[2014-02-10 14:14:19,849][INFO ][gateway                  ] [Mr. M] recovered [2] indices into cluster_state
+[2014-02-10 14:14:22,561][INFO ][cluster.service          ] [Mr. M] added {[Gargantua][h6vOsnnVToCn98huogmzeA][inet[/10.0.0.3:9301]],}, reason: zen-disco-receive(join from node[[Gargantua][h6vOsnnVToCn98huogmzeA][inet[/10.0.0.3:9301]]])
+[2014-02-10 14:14:22,584][INFO ][cluster.service          ] [Gargantua] detected_master [Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]], added {[Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]],}, reason: zen-disco-receive(from master [[Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]]])
+[2014-02-10 14:14:22,629][INFO ][discovery                ] [Gargantua] elasticsearch/h6vOsnnVToCn98huogmzeA
+[2014-02-10 14:14:22,652][INFO ][http                     ] [Gargantua] bound_address {inet[/0:0:0:0:0:0:0:0%0:9201]}, publish_address {inet[/10.0.0.3:9201]}
+[2014-02-10 14:14:22,653][INFO ][node                     ] [Gargantua] started
+[2014-02-10 14:44:22,746][INFO ][node                     ] [Mr. M] stopping ...
+[2014-02-10 14:44:22,778][INFO ][discovery.zen            ] [Gargantua] master_left [[Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]]], reason [shut_down]
+[2014-02-10 14:44:22,781][INFO ][cluster.service          ] [Gargantua] master {new [Gargantua][h6vOsnnVToCn98huogmzeA][inet[/10.0.0.3:9301]], previous [Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]]}, removed {[Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]],}, reason: zen-disco-master_failed ([Mr. M][ZQd9E-xFSdil0DqyBOimEg][inet[/10.0.0.3:9300]])
+[2014-02-10 14:44:22,809][INFO ][node                     ] [Mr. M] stopped
+[2014-02-10 14:44:22,809][INFO ][node                     ] [Mr. M] closing ...
+[2014-02-10 14:44:22,817][INFO ][node                     ] [Mr. M] closed
+[2014-02-10 14:44:25,119][INFO ][node                     ] [Gargantua] stopping ...
+[2014-02-10 14:44:25,160][INFO ][node                     ] [Gargantua] stopped
+[2014-02-10 14:44:25,160][INFO ][node                     ] [Gargantua] closing ...
+[2014-02-10 14:44:25,166][INFO ][node                     ] [Gargantua] closed
+[2014-02-10 14:44:31,938][INFO ][node                     ] [Carl "Crusher" Creel] version[0.90.11], pid[2491], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-10 14:44:31,938][INFO ][node                     ] [Carl "Crusher" Creel] initializing ...
+[2014-02-10 14:44:32,008][INFO ][plugins                  ] [Carl "Crusher" Creel] loaded [river-twitter, river-fs], sites []
+[2014-02-10 14:44:34,988][INFO ][node                     ] [Carl "Crusher" Creel] initialized
+[2014-02-10 14:44:34,988][INFO ][node                     ] [Carl "Crusher" Creel] starting ...
+[2014-02-10 14:44:35,118][INFO ][transport                ] [Carl "Crusher" Creel] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-02-10 14:44:38,215][INFO ][cluster.service          ] [Carl "Crusher" Creel] new_master [Carl "Crusher" Creel][B6Q0ch7yTdGSVLoJPWy8aA][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-02-10 14:44:38,260][INFO ][discovery                ] [Carl "Crusher" Creel] elasticsearch/B6Q0ch7yTdGSVLoJPWy8aA
+[2014-02-10 14:44:38,310][INFO ][http                     ] [Carl "Crusher" Creel] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-02-10 14:44:38,311][INFO ][node                     ] [Carl "Crusher" Creel] started
+[2014-02-10 14:44:39,082][INFO ][gateway                  ] [Carl "Crusher" Creel] recovered [2] indices into cluster_state
