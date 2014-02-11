@@ -28,9 +28,9 @@
         <div id="search-keyword">
             <form class = "navbar-form navbar-brand" role="search">
                 <div class="form-group">
-                    <input class="form-control" name="search_query" type="text" placeholder="Search"/>
+                    <input id="keyword-search-input" class="form-control" name="search_query" type="text" placeholder="Search"/>
                 </div>
-                    <button type="button" class="btn btn-default btn-sm">
+                    <button id="submit-keyword" type="button" class="btn btn-default btn-sm">
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
             </form>
@@ -38,26 +38,67 @@
         <div id="map-canvas"/>
     </div>
 </body>
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:8080');
+    </script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="javascripts/base.js"></script>
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmKFXOfbzFxjrP5BO-Jw8ZTtooWm0XKU&sensor=true">
     </script>
     <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         //heroku declaration of socket client !
-        var host = location.origin.replace(/^http/, 'wss');
+       /* var host = location.origin.replace(/^http/, 'wss');
         console.log(host);
-        var ws = new WebSocket(host);
-
+        var ws = new WebSocket(host);   */
+        var map;
+        var markers = [];
         function initialize() {
             var mapOptions = {
                 zoom: 2,
                 center: new google.maps.LatLng(10, 0)
+            };
+            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            socket.on('data', function(hits) {
+                clearMarkers();
+                markers = [];
+                for (var index in hits) {
+                    var usernameAndTweet = "<div id='contentInfoWindow'><h3>" + hits[index]._source.user.name + "</h3><h5>"+ hits[index]._source.created_at +"</h5><p>"+ hits[index]._source.text +"</p></div>";
+                    var myLatlng = new google.maps.LatLng(hits[index]._source.geo.coordinates[0],hits[index]._source.geo.coordinates[1]);
+                    var infowindow = new google.maps.InfoWindow({
+                        content: usernameAndTweet
+                    });
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: usernameAndTweet
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map,marker);
+                    });
+                    markers.push(marker);
+                }
+                console.log(markers);
+                setAllMap(map);
+            });
+        }
+
+        /**** FUNCTIONS MARKERS GOOGLEMAPS ****/
+        function setAllMap(map) {
+            for (var i = 0; i < markers.length; i++) {
+                markers[i].setMap(map);
             }
+        }
+        function clearMarkers() {
+            console.log("here");
+            setAllMap(null);
+        }
 
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        google.maps.event.addDomListener(window, 'load', initialize);
 
+          /* HEROKU SOCKET */
+            /*
             ws.onmessage = function (event) {
                 var data = JSON.parse(event.data);
                 console.log(data);
@@ -75,13 +116,7 @@
                     infowindow.open(map,marker);
                 });
             }
-        }
-
-        /*window.onbeforeunload = function (e) {
-            //console.log("coucou");
-            ws.close();
         }     */
-
-        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    <script type="text/javascript" src="javascripts/base.js"></script>
 </html>

@@ -8,4 +8,19 @@
 
 $(document).ready(function() {
     $('#modal-box').modal('toggle');
+    /*setInterval(function(){
+        $('#keyword-search-input').keyup(function() {
+            console.log("hello");
+        });},4000);  */
+    $("#submit-keyword").click(function(){
+        var valInput = $("#keyword-search-input").val();
+        socket.emit('updateTweets', {keyword: valInput});
+    });
+
+    $("#keyword-search-input").bind('keyup', function() {
+        if($("#keyword-search-input").val() == "") {
+            clearMarkers();
+            markers = [];
+        }
+    });
 });

@@ -1,10 +1,3 @@
-/**
- * Created with JetBrains WebStorm.
- * User: thomastheissier
- * Date: 23/01/2014
- * Time: 23:06
- * To change this template use File | Settings | File Templates.
- */
 var WebSocketServer = require('ws').Server
     , http = require('http')
     , express = require('express')
