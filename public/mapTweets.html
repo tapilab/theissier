@@ -54,6 +54,7 @@
         var ws = new WebSocket(host);   */
         var map;
         var markers = [];
+        var infoWindows = [];
         function initialize() {
             var mapOptions = {
                 zoom: 2,
@@ -63,21 +64,25 @@
             socket.on('data', function(hits) {
                 clearMarkers();
                 markers = [];
+                infoWindows = [];
                 for (var index in hits) {
                     var usernameAndTweet = "<div id='contentInfoWindow'><h3>" + hits[index]._source.user.name + "</h3><h5>"+ hits[index]._source.created_at +"</h5><p>"+ hits[index]._source.text +"</p></div>";
                     var myLatlng = new google.maps.LatLng(hits[index]._source.geo.coordinates[0],hits[index]._source.geo.coordinates[1]);
-                    var infowindow = new google.maps.InfoWindow({
+                    var infoWindow = new google.maps.InfoWindow({
                         content: usernameAndTweet
                     });
+                    infoWindows.push(infoWindow);
                     var marker = new google.maps.Marker({
                         position: myLatlng,
                         map: map,
                         title: usernameAndTweet
                     });
-                    google.maps.event.addListener(marker, 'click', function() {
-                        infowindow.open(map,marker);
-                    });
                     markers.push(marker);
+                    google.maps.event.addListener(markers[index], 'click', function(innerKey) {
+                        return function() {
+                            infoWindows[innerKey].open(map, markers[innerKey]);
+                        }
+                    }(index));
                 }
                 console.log(markers);
                 setAllMap(map);

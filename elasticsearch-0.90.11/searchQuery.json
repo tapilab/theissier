@@ -1,11 +1,11 @@
-curl -XGET 'http://localhost:9200/test2/twit/_search' -d '
+curl -XGET 'http://localhost:9200/test/test/_search' -d '
 {
   "query": {
     "bool": {
         "must" : [
           {
            "term": {
-             "text": "following"
+             "text": "c"
            }
          }
        ]

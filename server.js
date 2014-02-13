@@ -27,7 +27,7 @@ io.sockets.on('connection', function (socket) {
             body: {
                 query: {
                     bool: {
-                        must : [
+                        should : [
                             {
                                 term: {
                                     "text": keyword.keyword

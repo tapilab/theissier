@@ -52,7 +52,7 @@ twit.stream('statuses/sample', function(stream) {
 /***** TO BE INDEXED BY BULK API ELASTICSEARCH ******/
 
 twit.stream('statuses/sample',  function(stream) {
-    var cpt = 100; //100th tweet
+    var cpt = 200; //200th tweet
     stream.on('data', function (data) {
         var cptString = cpt.toString();
         console.log(cptString);
@@ -72,7 +72,7 @@ twit.stream('statuses/sample',  function(stream) {
                 }
             });
         }
-        if (cpt == 200) {
+        if (cpt == 300) {
             stream.destroy();
         }
     });
