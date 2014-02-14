@@ -11,4 +11,4 @@ curl -XGET 'http://localhost:9200/test/test/_search' -d '
        ]
      }
    }
-}
+}'

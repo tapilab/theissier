@@ -21,28 +21,53 @@ var elasticsearch = require('elasticsearch')
 
 io.sockets.on('connection', function (socket) {
     socket.on('updateTweets', function (keyword) {
-        client.search({
-            index: 'test',
-            type: 'test',
-            body: {
-                query: {
-                    bool: {
-                        should : [
-                            {
-                                term: {
-                                    "text": keyword.keyword
+        if(keyword.keyword.indexOf(" ") == -1){    //if keyword
+            client.search({
+                index: 'test',
+                type: 'test',
+                body: {
+                    query: {
+                        bool: {
+                            should : [
+                                {
+                                    term: {
+                                        "text": keyword.keyword
+                                    }
                                 }
-                            }
-                        ]
+                            ]
+                        }
                     }
                 }
-            }
-        }).then(function (resp) {
-                var hits = resp.hits.hits;
-                console.log(hits);
-                io.sockets.emit('data', hits);
-            }, function (err) {
-                console.trace(err.message);
-            });
+            }).then(function (resp) {
+                    var hits = resp.hits.hits;
+                    console.log(hits);
+                    io.sockets.emit('data', hits);
+                }, function (err) {
+                    console.trace(err.message);
+                });
+        } else {            //else phrase
+            client.search({
+                index: 'test',
+                type: 'test',
+                body: {
+                    query :
+                        { bool :
+                            { must :
+                                { match :
+                                    { text :
+                                        { "query" : keyword.keyword, "type" : "phrase" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }).then(function (resp) {
+                    var hits = resp.hits.hits;
+                    console.log(hits);
+                    io.sockets.emit('data', hits);
+                }, function (err) {
+                    console.trace(err.message);
+                });
+        }
     });
 });

@@ -1,0 +1,33 @@
+[2014-02-12 22:00:13,747][INFO ][node                     ] [Ronan the Accuser] version[0.90.11], pid[1090], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-12 22:00:13,748][INFO ][node                     ] [Ronan the Accuser] initializing ...
+[2014-02-12 22:00:13,873][INFO ][plugins                  ] [Ronan the Accuser] loaded [river-twitter, river-fs], sites []
+[2014-02-12 22:00:17,017][INFO ][node                     ] [Ronan the Accuser] initialized
+[2014-02-12 22:00:17,017][INFO ][node                     ] [Ronan the Accuser] starting ...
+[2014-02-12 22:00:17,144][INFO ][transport                ] [Ronan the Accuser] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-02-12 22:00:20,236][INFO ][cluster.service          ] [Ronan the Accuser] new_master [Ronan the Accuser][HN8d99XRR_edKOCYjHXT2Q][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-02-12 22:00:20,277][INFO ][discovery                ] [Ronan the Accuser] elasticsearch/HN8d99XRR_edKOCYjHXT2Q
+[2014-02-12 22:00:20,322][INFO ][http                     ] [Ronan the Accuser] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-02-12 22:00:20,323][INFO ][node                     ] [Ronan the Accuser] started
+[2014-02-12 22:00:21,058][INFO ][gateway                  ] [Ronan the Accuser] recovered [1] indices into cluster_state
+[2014-02-12 23:13:51,985][INFO ][cluster.metadata         ] [Ronan the Accuser] [test] deleting index
+[2014-02-12 23:14:38,501][INFO ][cluster.metadata         ] [Ronan the Accuser] [test] creating index, cause [auto(bulk api)], shards [5]/[1], mappings []
+[2014-02-12 23:14:39,024][INFO ][cluster.metadata         ] [Ronan the Accuser] [test] update_mapping [test] (dynamic)
+[2014-02-12 23:21:02,859][INFO ][node                     ] [Ronan the Accuser] stopping ...
+[2014-02-12 23:21:02,915][INFO ][node                     ] [Ronan the Accuser] stopped
+[2014-02-12 23:21:02,915][INFO ][node                     ] [Ronan the Accuser] closing ...
+[2014-02-12 23:21:02,924][INFO ][node                     ] [Ronan the Accuser] closed
+[2014-02-12 23:21:06,133][INFO ][node                     ] [Captain Universe] version[0.90.11], pid[1957], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-12 23:21:06,133][INFO ][node                     ] [Captain Universe] initializing ...
+[2014-02-12 23:21:06,209][INFO ][plugins                  ] [Captain Universe] loaded [river-twitter, river-fs], sites []
+[2014-02-12 23:21:09,263][INFO ][node                     ] [Captain Universe] initialized
+[2014-02-12 23:21:09,264][INFO ][node                     ] [Captain Universe] starting ...
+[2014-02-12 23:21:09,395][INFO ][transport                ] [Captain Universe] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-02-12 23:21:12,489][INFO ][cluster.service          ] [Captain Universe] new_master [Captain Universe][pxIeHUS_QWyr75W8Jqo8iw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-02-12 23:21:12,529][INFO ][discovery                ] [Captain Universe] elasticsearch/pxIeHUS_QWyr75W8Jqo8iw
+[2014-02-12 23:21:12,576][INFO ][http                     ] [Captain Universe] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-02-12 23:21:12,577][INFO ][node                     ] [Captain Universe] started
+[2014-02-12 23:21:13,327][INFO ][gateway                  ] [Captain Universe] recovered [1] indices into cluster_state
+[2014-02-12 23:28:45,088][INFO ][node                     ] [Captain Universe] stopping ...
+[2014-02-12 23:28:45,133][INFO ][node                     ] [Captain Universe] stopped
+[2014-02-12 23:28:45,133][INFO ][node                     ] [Captain Universe] closing ...
+[2014-02-12 23:28:45,140][INFO ][node                     ] [Captain Universe] closed
