@@ -6,16 +6,45 @@
     <link rel="stylesheet" href="stylesheets/style.css"/>
 </head>
 <body>
-    <legend> Tweets map coming soon !<button id="modal-button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#modal-box">Info!</button><br/><br/></legend>
+    <legend> Search something !
+        <button id="modal-button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#info-box">Info!</button>
+        <div id="search-keyword">
+            <form class = "navbar-form navbar-brand" role="search">
+                <div class="form-group">
+                    <input id="keyword-search-input" class="form-control" name="search_query" type="text" placeholder="Search"/>
+                </div>
+                <button id="submit-keyword" type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </form>
+        </div>
+        <br/><br/>
+    </legend>
+    <div class="modal fade" id="info-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="info">Information</h4>
+                </div>
+                <div id="text-info-box" class="modal-body">
+                    <p>Just search for something (keywords or sentences) and say if the tweets retrieved are relevant to your search!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <div class="modal fade" id="modal-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">World map displaying tweets</h4>
+                    <h4 class="modal-title" id="tweets-result">Tweets</h4>
                 </div>
-                <div class="modal-body">
-                    Click on markers to display tweets !
+                <div id="text-modal" class="modal-body">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -24,17 +53,6 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    <div id="container-search-map">
-        <div id="search-keyword">
-            <form class = "navbar-form navbar-brand" role="search">
-                <div class="form-group">
-                    <input id="keyword-search-input" class="form-control" name="search_query" type="text" placeholder="Search"/>
-                </div>
-                    <button id="submit-keyword" type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-            </form>
-        </div>
         <div id="map-canvas"/>
     </div>
 </body>
@@ -47,6 +65,26 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmKFXOfbzFxjrP5BO-Jw8ZTtooWm0XKU&sensor=true">
     </script>
     <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/underscore.js"></script>
+    <script type="text/javascript" src="javascripts/backbone.js"></script>
+    <script type="text/javascript">
+        var Search = Backbone.Model.extend({
+            defaults: {
+                input: "Keyword",
+                hits: new Object()
+            },
+            initialize: function(){
+                //console.log("Search is initialized");
+            }
+        });
+
+        var SearchResults = Backbone.Collection.extend({
+            model: Search
+        });
+
+        var results = new SearchResults();
+       // console.log( results.models );
+    </script>
     <script type="text/javascript">
         //heroku declaration of socket client !
        /* var host = location.origin.replace(/^http/, 'wss');
@@ -55,6 +93,7 @@
         var map;
         var markers = [];
         var infoWindows = [];
+        var returnHits =[];
         function initialize() {
             var mapOptions = {
                 zoom: 2,
@@ -65,27 +104,80 @@
                 clearMarkers();
                 markers = [];
                 infoWindows = [];
-                for (var index in hits) {
-                    var usernameAndTweet = "<div id='contentInfoWindow'><h3>" + hits[index]._source.user.name + "</h3><h5>"+ hits[index]._source.created_at +"</h5><p>"+ hits[index]._source.text +"</p></div>";
-                    var myLatlng = new google.maps.LatLng(hits[index]._source.geo.coordinates[0],hits[index]._source.geo.coordinates[1]);
-                    var infoWindow = new google.maps.InfoWindow({
-                        content: usernameAndTweet
-                    });
-                    infoWindows.push(infoWindow);
-                    var marker = new google.maps.Marker({
-                        position: myLatlng,
-                        map: map,
-                        title: usernameAndTweet
-                    });
-                    markers.push(marker);
-                    google.maps.event.addListener(markers[index], 'click', function(innerKey) {
-                        return function() {
-                            infoWindows[innerKey].open(map, markers[innerKey]);
-                        }
-                    }(index));
+                $("#text-modal").empty();
+                if (hits != '') {
+                    $('#modal-box').modal('hide');
+                    for (var index in hits) {
+                        var search = new Search();
+                        search.set('input',$("#keyword-search-input").val());
+                        var hit = new Object();
+                        hit.id = hits[index]._id;
+                        hit.username = hits[index]._source.user.name;
+                        hit.created_at = hits[index]._source.created_at;
+                        hit.text = hits[index]._source.text;
+                        hit.lng = hits[index]._source.geo.coordinates[0];
+                        hit.lat = hits[index]._source.geo.coordinates[1];
+                        hit.score = -1;
+
+                        var idInfoWindow = 'contentInfoWindow' + hit['id'];
+                        var usernameAndTweet = "<div id=" + idInfoWindow + "><div class='tweets-matched'><h3>" + hit['username'] + "</h3><h5>"+ hit['created_at'] +"</h5><p>"+ hit['text'] +"</p></div>";
+                        var myLatlng = new google.maps.LatLng(hit['lng'], hit['lat']);
+                        var infoWindow = new google.maps.InfoWindow({
+                            content: usernameAndTweet
+                        });
+                        infoWindows.push(infoWindow);
+                        var marker = new google.maps.Marker({
+                            position: myLatlng,
+                            map: map,
+                            title: usernameAndTweet
+                        });
+                        markers.push(marker);
+                        google.maps.event.addListener(markers[index], 'click', function(innerKey) {
+                            return function() {
+                                infoWindows[innerKey].open(map, markers[innerKey]);
+                            }
+                        }(index));
+
+                        $('#text-modal').append(usernameAndTweet);
+                        var idSelector = "#" + idInfoWindow;
+                        var idButtons = "id-button-" + index;
+                        $(idSelector).append("<div id=" + idButtons + " class='yes-or-no'><button type='button' class='button-yes btn btn-success'><span class='glyphicon glyphicon-ok-sign'></span> Yes!</button><br/><button type='button' class='button-no btn btn-danger'><span class='glyphicon glyphicon-remove-sign'></span> Nope!</button></div></div>");
+                        $(idSelector).css('overflow', 'hidden');
+                        $(idSelector).css('margin-top', '20px');
+                        search.set('hits', hit);
+                        results.add(search);
+
+                        $("#" + idButtons + " .button-yes").click(function() {
+                            var idParent = $(this).parents().parents().attr('id');
+                            var indexHit = idParent.replace('contentInfoWindow','');
+                            var indexCollection = findIndex(indexHit, results);
+                            var hitsToSave = results.models[indexCollection].attributes.hits;
+                            hitsToSave.score = 1;
+                            var updateObjectScore = new Search;
+                            results.remove(results.at(indexCollection));
+                            updateObjectScore.set('input', $('#keyword-search-input').val());
+                            updateObjectScore.set('hits', hitsToSave);
+                            results.push(updateObjectScore, {at: indexCollection});
+                        });
+                        $("#" + idButtons + " .button-no").click(function() {
+                            var idParent = $(this).parents().parents().attr('id');
+                            var indexHit = idParent.replace('contentInfoWindow','');
+                            var indexCollection = findIndex(indexHit, results);
+                            var hitsToSave = results.models[indexCollection].attributes.hits;
+                            hitsToSave.score = 0;
+                            var updateObjectScore = new Search;
+                            results.remove(results.at(indexCollection));
+                            updateObjectScore.set('input', $('#keyword-search-input').val());
+                            updateObjectScore.set('hits', hitsToSave);
+                            results.push(updateObjectScore, {at: indexCollection});
+                        });
+                    }
+                    setAllMap(map);
+                    $('#modal-box').modal('toggle');
+                } else {
+                    $('#text-modal').append("<p>No tweets are relative to this research</p>");
+                    $('#modal-box').modal('toggle');
                 }
-                console.log(markers);
-                setAllMap(map);
             });
         }
 
@@ -96,8 +188,16 @@
             }
         }
         function clearMarkers() {
-            console.log("here");
             setAllMap(null);
+        }
+
+        function findIndex(index, collection) {
+            for (var i=0; i < collection.models.length; i++) {
+                if (collection.models[i].attributes.hits.id == index) {
+                     return i;
+                }
+            }
+
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);

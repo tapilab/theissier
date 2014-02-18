@@ -1,0 +1,9 @@
+curl -XGET 'http://localhost:9200/test/test/_search' -d '
+{
+  "query": {
+   	  "multi_match" : {
+                "query":    "this is a test", 
+                "fields": [ "text", "entities.hashtags" ] 
+  	   }
+   }
+}'
