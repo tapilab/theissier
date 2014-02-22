@@ -13,6 +13,7 @@ body { height: 100%; margin: 0; padding: 0 }
 #map-canvas { width: 100%; float:left; height: 100%; }
 #search-keyword { float:right; margin-top: 5px; }
 #modal-button { float:right; margin-top: 10px; }
+#analytics { float:right; margin-right: 5px;margin-top: 10px; }
 .tweets-matched { float: left; width: 50%; margin-top: -20px; }
 .yes-or-no { float: left; width: 40%; margin-left: 30px; margin-top: 20px; }
 .button-yes {  }
