@@ -12,8 +12,11 @@ body { height: 100%; margin: 0; padding: 0 }
 #container-search-map { width: 100%; overflow: hidden; margin-top: -10px; height: 100%; }
 #map-canvas { width: 100%; float:left; height: 100%; }
 #search-keyword { float:right; margin-top: 5px; }
-#modal-button { float:right; margin-top: 10px; }
+#modal-button { float:right; margin-top: 10px; margin-right: 10px; }
+#create-session-button { float:left; margin-top: 10px; margin-left: 10px; }
+#body-create-session { height: 110px; }
 #analytics { float:right; margin-right: 5px;margin-top: 10px; }
+#choose-session { margin-top: 10px; float: left; margin-left: 10px;}
 .tweets-matched { float: left; width: 50%; margin-top: -20px; }
 .yes-or-no { float: left; width: 40%; margin-left: 30px; margin-top: 20px; }
 .button-yes {  }

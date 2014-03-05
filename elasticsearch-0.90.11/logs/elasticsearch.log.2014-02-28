@@ -1,0 +1,15 @@
+[2014-02-28 14:52:12,279][INFO ][node                     ] [Donald Pierce] version[0.90.11], pid[3347], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-28 14:52:12,281][INFO ][node                     ] [Donald Pierce] initializing ...
+[2014-02-28 14:52:12,413][INFO ][plugins                  ] [Donald Pierce] loaded [river-twitter, river-fs], sites []
+[2014-02-28 14:52:15,940][INFO ][node                     ] [Donald Pierce] initialized
+[2014-02-28 14:52:15,941][INFO ][node                     ] [Donald Pierce] starting ...
+[2014-02-28 14:52:16,105][INFO ][transport                ] [Donald Pierce] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-02-28 14:52:19,215][INFO ][cluster.service          ] [Donald Pierce] new_master [Donald Pierce][nnFLjb0MTfimGqNyCCI0dQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-02-28 14:52:19,263][INFO ][discovery                ] [Donald Pierce] elasticsearch/nnFLjb0MTfimGqNyCCI0dQ
+[2014-02-28 14:52:19,294][INFO ][http                     ] [Donald Pierce] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-02-28 14:52:19,295][INFO ][node                     ] [Donald Pierce] started
+[2014-02-28 14:52:20,141][INFO ][gateway                  ] [Donald Pierce] recovered [1] indices into cluster_state
+[2014-02-28 20:50:30,674][INFO ][node                     ] [Donald Pierce] stopping ...
+[2014-02-28 20:50:30,753][INFO ][node                     ] [Donald Pierce] stopped
+[2014-02-28 20:50:30,753][INFO ][node                     ] [Donald Pierce] closing ...
+[2014-02-28 20:50:30,763][INFO ][node                     ] [Donald Pierce] closed

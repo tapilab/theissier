@@ -1,8 +1,21 @@
 var elasticsearch = require('elasticsearch')
-    , io          = require('socket.io').listen(8080)
+    , mongoose = require('mongoose')
+    , io     = require('socket.io').listen(8080)
     , client = new elasticsearch.Client({
         host: 'localhost:9200'
     });
+
+var locationDb = "mongodb://127.0.0.1:27017/tweetsClassifier"
+var MongoClient = require('mongodb')
+    , format = require('util').format;
+
+MongoClient.connect(locationDb, function(err, db) {
+        if(err)
+            throw err;
+        else {
+            console.log("yep ! ");
+        }
+});
 
 //Ping the elasticsearch index to see if it responds
 /*client.ping({
@@ -40,7 +53,7 @@ io.sockets.on('connection', function (socket) {
                 }
             }).then(function (resp) {
                     var hits = resp.hits.hits;
-                    console.log(hits);
+                    //console.log(hits);
                     io.sockets.emit('data', hits);
                 }, function (err) {
                     console.trace(err.message);
@@ -63,11 +76,19 @@ io.sockets.on('connection', function (socket) {
                     }
             }).then(function (resp) {
                     var hits = resp.hits.hits;
-                    console.log(hits);
+                    //console.log(hits);
                     io.sockets.emit('data', hits);
                 }, function (err) {
                     console.trace(err.message);
                 });
         }
+    });
+
+    socket.on('affectGoodScore', function(object) {
+        console.log(object.object.id); //retrieve id through socket !
+    });
+
+    socket.on('affectBadScore', function(object) {
+       console.log(object.object.id);
     });
 });

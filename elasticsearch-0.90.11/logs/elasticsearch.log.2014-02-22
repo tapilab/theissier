@@ -1,0 +1,15 @@
+[2014-02-22 12:14:25,561][INFO ][node                     ] [Machinesmith] version[0.90.11], pid[700], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-02-22 12:14:25,563][INFO ][node                     ] [Machinesmith] initializing ...
+[2014-02-22 12:14:25,730][INFO ][plugins                  ] [Machinesmith] loaded [river-twitter, river-fs], sites []
+[2014-02-22 12:14:29,068][INFO ][node                     ] [Machinesmith] initialized
+[2014-02-22 12:14:29,068][INFO ][node                     ] [Machinesmith] starting ...
+[2014-02-22 12:14:29,203][INFO ][transport                ] [Machinesmith] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-02-22 12:14:32,301][INFO ][cluster.service          ] [Machinesmith] new_master [Machinesmith][lWv3QMY0SdW4btpLfTlSdw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-02-22 12:14:32,345][INFO ][discovery                ] [Machinesmith] elasticsearch/lWv3QMY0SdW4btpLfTlSdw
+[2014-02-22 12:14:32,381][INFO ][http                     ] [Machinesmith] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-02-22 12:14:32,382][INFO ][node                     ] [Machinesmith] started
+[2014-02-22 12:14:33,388][INFO ][gateway                  ] [Machinesmith] recovered [1] indices into cluster_state
+[2014-02-22 15:53:21,590][INFO ][node                     ] [Machinesmith] stopping ...
+[2014-02-22 15:53:21,711][INFO ][node                     ] [Machinesmith] stopped
+[2014-02-22 15:53:21,711][INFO ][node                     ] [Machinesmith] closing ...
+[2014-02-22 15:53:21,722][INFO ][node                     ] [Machinesmith] closed

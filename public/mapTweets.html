@@ -4,9 +4,10 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
     <link rel="stylesheet" href="stylesheets/style.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/highslide.css"/>
 </head>
 <body>
-    <legend> Search something !
+    <legend>
         <button id="modal-button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#info-box">Info!</button>
         <button id="analytics" class="btn btn-success btn-small" data-toggle="modal" data-target="#analytics-box">Analytics</button>
         <div id="search-keyword">
@@ -19,6 +20,15 @@
                 </button>
             </form>
         </div>
+        <div id="choose-session" class="btn-group">
+            <button id="choose-session-button" class="btn btn-default btn-small btn-danger dropdown-toggle" type="button" data-toggle="dropdown">
+                Sessions <span class="caret"></span>
+            </button>
+            <ul id="list-sessions" class="dropdown-menu">
+                <li id="no-history" class="disabled"><a href="#">No History</a></li>
+            </ul>
+        </div>
+        <button id="create-session-button" class="btn btn-success btn-small" data-toggle="modal" data-target="#create-session-box">Create a session</button>
         <br/><br/>
     </legend>
     <div class="modal fade" id="analytics-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -29,7 +39,7 @@
                     <h4 class="modal-title" id="analytics-title">Information</h4>
                 </div>
                 <div id="text-analytics-box" class="modal-body">
-                    <p>Analytics will be there</p>
+                    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -71,6 +81,33 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+    <div class="modal fade" id="create-session-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="title-create-session">Create a session</h4>
+                </div>
+                <div id="body-create-session" class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input id="input-username" type="text" class="form-control" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="input-session-name" placeholder="Your Session Name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-create-session" type="button" class="disabled btn btn-primary" data-dismiss="modal">Submit</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
         <div id="map-canvas"/>
     </div>
 </body>
@@ -85,6 +122,10 @@
     <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascripts/underscore.js"></script>
     <script type="text/javascript" src="javascripts/backbone.js"></script>
+    <script type="text/javascript" src="javascripts/highcharts.js"></script>
+    <script type="text/javascript" src="javascripts/data.js"></script>
+    <script type="text/javascript" src="javascripts/exporting.js"></script>
+    <script type="text/javascript" src="javascripts/initChart.js"></script>
     <script type="text/javascript">
         var Search = Backbone.Model.extend({
             defaults: {
@@ -176,6 +217,8 @@
                             updateObjectScore.set('input', $('#keyword-search-input').val());
                             updateObjectScore.set('hits', hitsToSave);
                             results.push(updateObjectScore, {at: indexCollection});
+                            socket.emit('affectGoodScore', {object: hitsToSave});
+
                         });
                         $("#" + idButtons + " .button-no").click(function() {
                             var idParent = $(this).parents().parents().attr('id');
@@ -188,6 +231,7 @@
                             updateObjectScore.set('input', $('#keyword-search-input').val());
                             updateObjectScore.set('hits', hitsToSave);
                             results.push(updateObjectScore, {at: indexCollection});
+                            socket.emit('affectBadScore', {object:hitsToSave});
                         });
                     }
                     setAllMap(map);
