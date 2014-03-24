@@ -1,0 +1,11 @@
+[2014-03-05 11:11:07,233][INFO ][node                     ] [Eshu] version[0.90.11], pid[3375], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-03-05 11:11:07,235][INFO ][node                     ] [Eshu] initializing ...
+[2014-03-05 11:11:07,355][INFO ][plugins                  ] [Eshu] loaded [river-twitter, river-fs], sites []
+[2014-03-05 11:11:10,532][INFO ][node                     ] [Eshu] initialized
+[2014-03-05 11:11:10,532][INFO ][node                     ] [Eshu] starting ...
+[2014-03-05 11:11:10,677][INFO ][transport                ] [Eshu] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-03-05 11:11:13,785][INFO ][cluster.service          ] [Eshu] new_master [Eshu][iuhCf8PRSsy5jkdsvb3Tag][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-03-05 11:11:13,827][INFO ][discovery                ] [Eshu] elasticsearch/iuhCf8PRSsy5jkdsvb3Tag
+[2014-03-05 11:11:13,874][INFO ][http                     ] [Eshu] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-03-05 11:11:13,874][INFO ][node                     ] [Eshu] started
+[2014-03-05 11:11:14,707][INFO ][gateway                  ] [Eshu] recovered [1] indices into cluster_state

@@ -84,14 +84,14 @@ MongoClient.connect(locationDb, function(err, db) {
         });
 
         socket.on('affectGoodScore', function(object) {
-            console.log("heyyyyyyyyyyyyyyyyyyyyy");
+            //console.log("heyyyyyyyyyyyyyyyyyyyyy");
             collection.insert(object.object, function(err, docs) {
 
             });
         });
 
         socket.on('affectBadScore', function(object) {
-           console.log(object.object);
+          // console.log(object.object);
            collection.insert(object.object, function(err, docs) {
 
             });

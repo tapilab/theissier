@@ -28,19 +28,24 @@ $(document).ready(function() {
             $("#submit-create-session").addClass("disabled");
         }
         if ($("#input-username").val() != "" && $("#input-session-name").val() != "") {
-            console.log("#submit-create-session", $("#submit-create-session"));
+            //console.log("#submit-create-session", $("#submit-create-session"));
             $("#submit-create-session").removeClass("disabled");
         }
     });
 
     $("#submit-create-session").click(function() {
         if ($("#input-username").val() != "" && $("#input-session-name").val() != "") {
-            var jsObj = { username: $("#input-username").val(), sessionname: $("#input-session-name").val() };
+            var jsObj = { username: $("#input-username").val(), sessionname: $("#input-session-name").val(), status: "active" };
             dataSessions.userSessions.push(jsObj);
-            console.log(dataSessions);
+        }
+        for (var i = 0; i < Object.keys(dataSessions.userSessions).length - 1; i++) {
+            dataSessions.userSessions[i].status = "inactive";
         }
         $("#choose-session-button").removeClass("btn-danger");
         $("#no-history").remove();
-        $("#list-sessions").append("<li><a href='#'>"+ dataSessions.userSessions[0].sessionname + "</a></li>");
+        $("#list-sessions a").css('background-color', '');
+        $("#list-sessions").append("<li><a style='background-color:#4cae4c;' href='#'>"+  jsObj.sessionname + "</a></li>");
+        //$("#choose-session").val(dataSessions.userSessions[0].sessionname);
+       //$("#choose-session-button").text(dataSessions.userSessions[0].sessionname);
     });
 });
