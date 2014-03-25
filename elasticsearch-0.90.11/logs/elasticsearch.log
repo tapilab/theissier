@@ -1,26 +1,15 @@
-[2014-03-24 10:36:23,217][INFO ][node                     ] [Jeanne-Marie Beaubier] version[0.90.11], pid[479], build[11da1ba/2014-02-03T15:27:39Z]
-[2014-03-24 10:36:23,217][INFO ][node                     ] [Jeanne-Marie Beaubier] initializing ...
-[2014-03-24 10:36:23,336][INFO ][plugins                  ] [Jeanne-Marie Beaubier] loaded [river-twitter, river-fs], sites []
-[2014-03-24 10:36:26,346][INFO ][node                     ] [Jeanne-Marie Beaubier] initialized
-[2014-03-24 10:36:26,346][INFO ][node                     ] [Jeanne-Marie Beaubier] starting ...
-[2014-03-24 10:36:26,458][INFO ][transport                ] [Jeanne-Marie Beaubier] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
-[2014-03-24 10:36:29,546][INFO ][cluster.service          ] [Jeanne-Marie Beaubier] new_master [Jeanne-Marie Beaubier][SA-D7F0JQj21PVeDPG9hvA][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
-[2014-03-24 10:36:29,598][INFO ][discovery                ] [Jeanne-Marie Beaubier] elasticsearch/SA-D7F0JQj21PVeDPG9hvA
-[2014-03-24 10:36:29,646][INFO ][http                     ] [Jeanne-Marie Beaubier] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
-[2014-03-24 10:36:29,646][INFO ][node                     ] [Jeanne-Marie Beaubier] started
-[2014-03-24 10:36:30,410][INFO ][gateway                  ] [Jeanne-Marie Beaubier] recovered [1] indices into cluster_state
-[2014-03-24 10:36:41,468][INFO ][node                     ] [Jeanne-Marie Beaubier] stopping ...
-[2014-03-24 10:36:41,516][INFO ][node                     ] [Jeanne-Marie Beaubier] stopped
-[2014-03-24 10:36:41,516][INFO ][node                     ] [Jeanne-Marie Beaubier] closing ...
-[2014-03-24 10:36:41,520][INFO ][node                     ] [Jeanne-Marie Beaubier] closed
-[2014-03-24 10:37:00,542][INFO ][node                     ] [Wind Dancer] version[0.90.11], pid[489], build[11da1ba/2014-02-03T15:27:39Z]
-[2014-03-24 10:37:00,543][INFO ][node                     ] [Wind Dancer] initializing ...
-[2014-03-24 10:37:00,588][INFO ][plugins                  ] [Wind Dancer] loaded [river-twitter, river-fs], sites []
-[2014-03-24 10:37:02,703][INFO ][node                     ] [Wind Dancer] initialized
-[2014-03-24 10:37:02,703][INFO ][node                     ] [Wind Dancer] starting ...
-[2014-03-24 10:37:02,801][INFO ][transport                ] [Wind Dancer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
-[2014-03-24 10:37:05,869][INFO ][cluster.service          ] [Wind Dancer] new_master [Wind Dancer][bdwGHjOzRPWud79FJ8glnA][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
-[2014-03-24 10:37:05,914][INFO ][discovery                ] [Wind Dancer] elasticsearch/bdwGHjOzRPWud79FJ8glnA
-[2014-03-24 10:37:05,954][INFO ][http                     ] [Wind Dancer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
-[2014-03-24 10:37:05,955][INFO ][node                     ] [Wind Dancer] started
-[2014-03-24 10:37:06,575][INFO ][gateway                  ] [Wind Dancer] recovered [1] indices into cluster_state
+[2014-03-25 10:50:14,165][INFO ][node                     ] [Wind Dancer] stopping ...
+[2014-03-25 10:50:14,260][INFO ][node                     ] [Wind Dancer] stopped
+[2014-03-25 10:50:14,260][INFO ][node                     ] [Wind Dancer] closing ...
+[2014-03-25 10:50:14,272][INFO ][node                     ] [Wind Dancer] closed
+[2014-03-25 10:50:21,650][INFO ][node                     ] [Mad Jim Jaspers] version[0.90.11], pid[5948], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-03-25 10:50:21,651][INFO ][node                     ] [Mad Jim Jaspers] initializing ...
+[2014-03-25 10:50:21,757][INFO ][plugins                  ] [Mad Jim Jaspers] loaded [river-twitter, river-fs], sites []
+[2014-03-25 10:50:24,828][INFO ][node                     ] [Mad Jim Jaspers] initialized
+[2014-03-25 10:50:24,828][INFO ][node                     ] [Mad Jim Jaspers] starting ...
+[2014-03-25 10:50:24,958][INFO ][transport                ] [Mad Jim Jaspers] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-03-25 10:50:28,067][INFO ][cluster.service          ] [Mad Jim Jaspers] new_master [Mad Jim Jaspers][BL-9FSfgRJy2fraeUhfTiw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-03-25 10:50:28,104][INFO ][discovery                ] [Mad Jim Jaspers] elasticsearch/BL-9FSfgRJy2fraeUhfTiw
+[2014-03-25 10:50:28,149][INFO ][http                     ] [Mad Jim Jaspers] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-03-25 10:50:28,150][INFO ][node                     ] [Mad Jim Jaspers] started
+[2014-03-25 10:50:28,959][INFO ][gateway                  ] [Mad Jim Jaspers] recovered [1] indices into cluster_state
