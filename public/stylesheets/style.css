@@ -21,3 +21,4 @@ body { height: 100%; margin: 0; padding: 0 }
 .yes-or-no { float: left; width: 40%; margin-left: 30px; margin-top: 20px; }
 .button-yes {  }
 .button-no { margin-top: 5px;  }
+#title-alert-active-session { float:left; margin-top: 10px; margin-left: 10px; }

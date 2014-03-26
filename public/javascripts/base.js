@@ -39,12 +39,16 @@ $(document).ready(function() {
             dataSessions.userSessions.push(jsObj);
         }
         for (var i = 0; i < Object.keys(dataSessions.userSessions).length - 1; i++) {
+            console.log(dataSessions);
             dataSessions.userSessions[i].status = "inactive";
+            $("#list-sessions").empty();
+            $("#list-sessions").append("<li id=" + dataSessions.userSessions[i].sessionname + " class=" + dataSessions.userSessions[i].status + "><a style='backgroud-color:#fff;' href='#'>" + dataSessions.userSessions[i].sessionname + "</a></li>");
         }
         $("#choose-session-button").removeClass("btn-danger");
         $("#no-history").remove();
         $("#list-sessions a").css('background-color', '');
-        $("#list-sessions").append("<li><a style='background-color:#4cae4c;' href='#'>"+  jsObj.sessionname + "</a></li>");
+        $("#list-sessions").append("<li id="+ jsObj.sessionname+ " class=" + jsObj.status + "><a style='background-color:#4cae4c;' href='#'>"+  jsObj.sessionname + "</a></li>");
+        $("#title-alert-active-session").empty().append("Current session : " + jsObj.sessionname);
         //$("#choose-session").val(dataSessions.userSessions[0].sessionname);
        //$("#choose-session-button").text(dataSessions.userSessions[0].sessionname);
     });

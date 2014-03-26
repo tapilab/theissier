@@ -29,6 +29,7 @@
             </ul>
         </div>
         <button id="create-session-button" class="btn btn-success btn-small" data-toggle="modal" data-target="#create-session-box">Create a session</button>
+        <button id="title-alert-active-session" class="btn btn-info btn-small">Current session :</button>
         <br/><br/>
     </legend>
     <div class="modal fade" id="analytics-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -108,7 +109,7 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-        <div id="map-canvas"/>
+    <div id="map-canvas"/>
     </div>
 </body>
     <script src="http://localhost:8080/socket.io/socket.io.js"></script>
@@ -177,7 +178,6 @@
                         hit.lng = hits[index]._source.geo.coordinates[0];
                         hit.lat = hits[index]._source.geo.coordinates[1];
                         hit.score = -1;
-                        hit.session = $("#choose-session").val();
 
                         var idInfoWindow = 'contentInfoWindow' + hit['id'];
                         var usernameAndTweet = "<div id=" + idInfoWindow + "><div class='tweets-matched'><h3>" + hit['username'] + "</h3><h5>"+ hit['created_at'] +"</h5><p>"+ hit['text'] +"</p></div>";
@@ -208,31 +208,36 @@
                         results.add(search);
 
                         $("#" + idButtons + " .button-yes").click(function() {
-                            var idParent = $(this).parents().parents().attr('id');
-                            var indexHit = idParent.replace('contentInfoWindow','');
-                            var indexCollection = findIndex(indexHit, results);
-                            var hitsToSave = results.models[indexCollection].attributes.hits;
-                            hitsToSave.score = 1;
-                            var updateObjectScore = new Search;
-                            results.remove(results.at(indexCollection));
-                            updateObjectScore.set('input', $('#keyword-search-input').val());
-                            updateObjectScore.set('hits', hitsToSave);
-                            results.push(updateObjectScore, {at: indexCollection});
-                            socket.emit('affectGoodScore', {object: hitsToSave});
-
+                            if ($("#list-sessions li").length != 0) {
+                                var idParent = $(this).parents().parents().attr('id');
+                                var indexHit = idParent.replace('contentInfoWindow','');
+                                var indexCollection = findIndex(indexHit, results);
+                                var hitsToSave = results.models[indexCollection].attributes.hits;
+                                hitsToSave.score = 1;
+                                hitsToSave.sessionname = $('#list-sessions').find('.active').text();
+                                var updateObjectScore = new Search;
+                                results.remove(results.at(indexCollection));
+                                updateObjectScore.set('input', $('#keyword-search-input').val());
+                                updateObjectScore.set('hits', hitsToSave);
+                                results.push(updateObjectScore, {at: indexCollection});
+                                socket.emit('affectGoodScore', {object: hitsToSave});
+                            }
                         });
                         $("#" + idButtons + " .button-no").click(function() {
-                            var idParent = $(this).parents().parents().attr('id');
-                            var indexHit = idParent.replace('contentInfoWindow','');
-                            var indexCollection = findIndex(indexHit, results);
-                            var hitsToSave = results.models[indexCollection].attributes.hits;
-                            hitsToSave.score = 0;
-                            var updateObjectScore = new Search;
-                            results.remove(results.at(indexCollection));
-                            updateObjectScore.set('input', $('#keyword-search-input').val());
-                            updateObjectScore.set('hits', hitsToSave);
-                            results.push(updateObjectScore, {at: indexCollection});
-                            socket.emit('affectBadScore', {object:hitsToSave});
+                            if ($("#list-sessions li").length != 0) {
+                                var idParent = $(this).parents().parents().attr('id');
+                                var indexHit = idParent.replace('contentInfoWindow','');
+                                var indexCollection = findIndex(indexHit, results);
+                                var hitsToSave = results.models[indexCollection].attributes.hits;
+                                hitsToSave.score = 0;
+                                hitsToSave.sessionname = $('#list-sessions').find('.active').text();
+                                var updateObjectScore = new Search;
+                                results.remove(results.at(indexCollection));
+                                updateObjectScore.set('input', $('#keyword-search-input').val());
+                                updateObjectScore.set('hits', hitsToSave);
+                                results.push(updateObjectScore, {at: indexCollection});
+                                socket.emit('affectBadScore', {object:hitsToSave});
+                            }
                         });
                     }
                     setAllMap(map);

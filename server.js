@@ -75,7 +75,6 @@ MongoClient.connect(locationDb, function(err, db) {
                         }
                 }).then(function (resp) {
                         var hits = resp.hits.hits;
-                        //console.log(hits);
                         io.sockets.emit('data', hits);
                     }, function (err) {
                         console.trace(err.message);
@@ -84,14 +83,11 @@ MongoClient.connect(locationDb, function(err, db) {
         });
 
         socket.on('affectGoodScore', function(object) {
-            //console.log("heyyyyyyyyyyyyyyyyyyyyy");
             collection.insert(object.object, function(err, docs) {
-
             });
         });
 
         socket.on('affectBadScore', function(object) {
-          // console.log(object.object);
            collection.insert(object.object, function(err, docs) {
 
             });
