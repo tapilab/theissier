@@ -12,6 +12,6 @@ for document in collection.find( { }, { "text": 1, "_id": 0 }):
 print textTweetsArray
 resultMatrix = vec.fit_transform(textTweetsArray).toarray()
 print ("result matrix : ", resultMatrix)
-# print vec.get_feature_names()
+return resultMatrix
 
 

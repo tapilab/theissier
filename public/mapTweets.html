@@ -221,6 +221,13 @@
                                 updateObjectScore.set('hits', hitsToSave);
                                 results.push(updateObjectScore, {at: indexCollection});
                                 socket.emit('affectGoodScore', {object: hitsToSave});
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/IIT/CS597/tweetmapprojLOCAL/theissier/scriptPredict.py",
+                                    data: { param: hitsToSave}
+                                }).done(function( o ) {
+                                            console.log("result Matrix: ", o);
+                                        });
                             }
                         });
                         $("#" + idButtons + " .button-no").click(function() {
@@ -237,6 +244,19 @@
                                 updateObjectScore.set('hits', hitsToSave);
                                 results.push(updateObjectScore, {at: indexCollection});
                                 socket.emit('affectBadScore', {object:hitsToSave});
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/IIT/CS597/tweetmapprojLOCAL/theissier/scriptPredict.py",
+                                    data: { param: hitsToSave}
+                                }).done(function( o ) {
+                                            console.log("result Matrix: ", o);
+                                       });
+                              /*  $.ajax({
+                                    url: "/IIT/CS597/tweetmapprojLOCAL/theissier/scriptPredict.py",
+                                    success: function(response){
+                                        console.log(response);
+                                    }
+                                });*/
                             }
                         });
                     }

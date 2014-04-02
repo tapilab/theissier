@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'node-zeromq' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 warn package.json http@0.0.0 http is also the name of a node core module.
+5 warn package.json http@0.0.0 No description
+6 warn package.json http@0.0.0 No repository field.
+7 warn package.json path@0.4.9 path is also the name of a node core module.
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'node-zeromq', null ]
+10 verbose cache add name=undefined spec="node-zeromq" args=["node-zeromq",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'node-zeromq',
+11 verbose parsed url   path: 'node-zeromq',
+11 verbose parsed url   href: 'node-zeromq' }
+12 silly lockFile 44078d1b-node-zeromq node-zeromq
+13 verbose lock node-zeromq /Users/thomastheissier/.npm/44078d1b-node-zeromq.lock
+14 silly lockFile 44078d1b-node-zeromq node-zeromq
+15 silly lockFile 44078d1b-node-zeromq node-zeromq
+16 verbose addNamed [ 'node-zeromq', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile 3ae0f80e-node-zeromq node-zeromq@
+19 verbose lock node-zeromq@ /Users/thomastheissier/.npm/3ae0f80e-node-zeromq.lock
+20 silly addNameRange { name: 'node-zeromq', range: '*', hasData: false }
+21 verbose url raw node-zeromq
+22 verbose url resolving [ 'https://registry.npmjs.org/', './node-zeromq' ]
+23 verbose url resolved https://registry.npmjs.org/node-zeromq
+24 info trying registry request attempt 1 at 11:46:42
+25 http GET https://registry.npmjs.org/node-zeromq
+26 http 404 https://registry.npmjs.org/node-zeromq
+27 silly registry.get cb [ 404,
+27 silly registry.get   { date: 'Wed, 02 Apr 2014 16:46:42 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'cache-control': 'max-age=0',
+27 silly registry.get     'content-length': '52',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-v36-ASH, cache-d46-DAL',
+27 silly registry.get     'x-cache': 'MISS, MISS',
+27 silly registry.get     'x-cache-hits': '0, 0',
+27 silly registry.get     'x-timer': 'S1396457202.638496637,VS0,VS20,VE40,VE56',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly lockFile 3ae0f80e-node-zeromq node-zeromq@
+29 silly lockFile 3ae0f80e-node-zeromq node-zeromq@
+30 error 404 'node-zeromq' is not in the npm registry.
+30 error 404 You should bug the author to publish it
+30 error 404
+30 error 404 Maybe try 'npm search zeromq'
+30 error 404
+30 error 404 Note that you can also install from a
+30 error 404 tarball, folder, or http url, or git url.
+31 error System Darwin 13.1.0
+32 error command "node" "/usr/local/bin/npm" "install" "node-zeromq"
+33 error cwd /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier
+34 error node -v v0.10.24
+35 error npm -v 1.3.21
+36 error code E404
+37 verbose exit [ 1, true ]

@@ -1,0 +1,15 @@
+[2014-03-26 09:50:55,498][INFO ][node                     ] [Romany Wisdom] version[0.90.11], pid[490], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-03-26 09:50:55,499][INFO ][node                     ] [Romany Wisdom] initializing ...
+[2014-03-26 09:50:55,624][INFO ][plugins                  ] [Romany Wisdom] loaded [river-twitter, river-fs], sites []
+[2014-03-26 09:50:58,716][INFO ][node                     ] [Romany Wisdom] initialized
+[2014-03-26 09:50:58,717][INFO ][node                     ] [Romany Wisdom] starting ...
+[2014-03-26 09:50:58,849][INFO ][transport                ] [Romany Wisdom] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-03-26 09:51:01,937][INFO ][cluster.service          ] [Romany Wisdom] new_master [Romany Wisdom][C216GirgQdKxYk-VjyCBEg][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-03-26 09:51:01,972][INFO ][discovery                ] [Romany Wisdom] elasticsearch/C216GirgQdKxYk-VjyCBEg
+[2014-03-26 09:51:01,992][INFO ][http                     ] [Romany Wisdom] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-03-26 09:51:01,993][INFO ][node                     ] [Romany Wisdom] started
+[2014-03-26 09:51:02,781][INFO ][gateway                  ] [Romany Wisdom] recovered [1] indices into cluster_state
+[2014-03-26 18:56:54,400][INFO ][node                     ] [Romany Wisdom] stopping ...
+[2014-03-26 18:56:54,453][INFO ][node                     ] [Romany Wisdom] stopped
+[2014-03-26 18:56:54,454][INFO ][node                     ] [Romany Wisdom] closing ...
+[2014-03-26 18:56:54,463][INFO ][node                     ] [Romany Wisdom] closed
