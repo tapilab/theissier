@@ -42,14 +42,34 @@ $(document).ready(function() {
             console.log(dataSessions);
             dataSessions.userSessions[i].status = "inactive";
             $("#list-sessions").empty();
-            $("#list-sessions").append("<li id=" + dataSessions.userSessions[i].sessionname + " class=" + dataSessions.userSessions[i].status + "><a style='backgroud-color:#fff;' href='#'>" + dataSessions.userSessions[i].sessionname + "</a></li>");
+            $("#list-sessions").append("<li id=" + dataSessions.userSessions[i].username + " class=" + dataSessions.userSessions[i].status + "><span style='cursor:pointer;'>" + dataSessions.userSessions[i].sessionname + "</span></li>");
         }
         $("#choose-session-button").removeClass("btn-danger");
         $("#no-history").remove();
-        $("#list-sessions a").css('background-color', '');
-        $("#list-sessions").append("<li id="+ jsObj.sessionname+ " class=" + jsObj.status + "><a style='background-color:#4cae4c;' href='#'>"+  jsObj.sessionname + "</a></li>");
+        $("#list-sessions span").css('background-color', '');
+        $("#list-sessions").append("<li id=" + jsObj.username + " class=" + jsObj.status + "><span style='cursor:pointer;'>"+  jsObj.sessionname + "</span></li>");
         $("#title-alert-active-session").empty().append("Current session : " + jsObj.sessionname);
         //$("#choose-session").val(dataSessions.userSessions[0].sessionname);
        //$("#choose-session-button").text(dataSessions.userSessions[0].sessionname);
+    });
+
+    $('#list-sessions').on('click', 'li', function () {
+        if ($(this).hasClass("active")) {
+            $("#list-sessions li").addClass("inactive");
+            $(this).removeClass("inactive");
+            $(this).addClass("active");
+        } else {
+            $("#list-sessions li").removeClass("active");
+            $("#list-sessions li").addClass("inactive");
+            $(this).removeClass('inactive');
+            $(this).addClass("active");
+        }
+        var currentSession =  $("#list-sessions .active").html();
+        $("#title-alert-active-session").html("Current session : " + currentSession);
+    });
+
+    //TRAIN CLASSIFIER HERE:
+    $("#train-classifier").click(function() {
+        socket.emit('trainClassifier', {});
     });
 });

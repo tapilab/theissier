@@ -22,3 +22,6 @@ body { height: 100%; margin: 0; padding: 0 }
 .button-yes {  }
 .button-no { margin-top: 5px;  }
 #title-alert-active-session { float:left; margin-top: 10px; margin-left: 10px; }
+.active span {background-color:#4cae4c;}
+.inactive span {background-color:#ffffff;}
+#train-classifier { float:right; margin-right: 5px; margin-top: 12px;}

@@ -1,0 +1,11 @@
+[2014-04-07 19:32:58,325][INFO ][node                     ] [Alexander Lexington] version[0.90.11], pid[1065], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-04-07 19:32:58,326][INFO ][node                     ] [Alexander Lexington] initializing ...
+[2014-04-07 19:32:58,464][INFO ][plugins                  ] [Alexander Lexington] loaded [river-twitter, river-fs], sites []
+[2014-04-07 19:33:01,914][INFO ][node                     ] [Alexander Lexington] initialized
+[2014-04-07 19:33:01,916][INFO ][node                     ] [Alexander Lexington] starting ...
+[2014-04-07 19:33:02,162][INFO ][transport                ] [Alexander Lexington] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-04-07 19:33:05,311][INFO ][cluster.service          ] [Alexander Lexington] new_master [Alexander Lexington][YYOy9NP5QEqTl7ORegQOUw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-04-07 19:33:05,362][INFO ][discovery                ] [Alexander Lexington] elasticsearch/YYOy9NP5QEqTl7ORegQOUw
+[2014-04-07 19:33:05,385][INFO ][http                     ] [Alexander Lexington] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-04-07 19:33:05,386][INFO ][node                     ] [Alexander Lexington] started
+[2014-04-07 19:33:06,247][INFO ][gateway                  ] [Alexander Lexington] recovered [1] indices into cluster_state

@@ -28,6 +28,7 @@
                 <li id="no-history" class="disabled"><a href="#">No History</a></li>
             </ul>
         </div>
+        <button id="train-classifier" class="btn btn-danger btn-small">Train Classifier</button>
         <button id="create-session-button" class="btn btn-success btn-small" data-toggle="modal" data-target="#create-session-box">Create a session</button>
         <button id="title-alert-active-session" class="btn btn-info btn-small">Current session :</button>
         <br/><br/>
@@ -215,19 +216,13 @@
                                 var hitsToSave = results.models[indexCollection].attributes.hits;
                                 hitsToSave.score = 1;
                                 hitsToSave.sessionname = $('#list-sessions').find('.active').text();
+                                hitsToSave.username = $('#list-sessions').find('.active').attr('id');
                                 var updateObjectScore = new Search;
                                 results.remove(results.at(indexCollection));
                                 updateObjectScore.set('input', $('#keyword-search-input').val());
                                 updateObjectScore.set('hits', hitsToSave);
                                 results.push(updateObjectScore, {at: indexCollection});
                                 socket.emit('affectGoodScore', {object: hitsToSave});
-                                $.ajax({
-                                    type: "POST",
-                                    url: "/IIT/CS597/tweetmapprojLOCAL/theissier/scriptPredict.py",
-                                    data: { param: hitsToSave}
-                                }).done(function( o ) {
-                                            console.log("result Matrix: ", o);
-                                        });
                             }
                         });
                         $("#" + idButtons + " .button-no").click(function() {
@@ -238,25 +233,13 @@
                                 var hitsToSave = results.models[indexCollection].attributes.hits;
                                 hitsToSave.score = 0;
                                 hitsToSave.sessionname = $('#list-sessions').find('.active').text();
+                                hitsToSave.username = $('#list-sessions').find('.active').attr('id');
                                 var updateObjectScore = new Search;
                                 results.remove(results.at(indexCollection));
                                 updateObjectScore.set('input', $('#keyword-search-input').val());
                                 updateObjectScore.set('hits', hitsToSave);
                                 results.push(updateObjectScore, {at: indexCollection});
                                 socket.emit('affectBadScore', {object:hitsToSave});
-                                $.ajax({
-                                    type: "POST",
-                                    url: "/IIT/CS597/tweetmapprojLOCAL/theissier/scriptPredict.py",
-                                    data: { param: hitsToSave}
-                                }).done(function( o ) {
-                                            console.log("result Matrix: ", o);
-                                       });
-                              /*  $.ajax({
-                                    url: "/IIT/CS597/tweetmapprojLOCAL/theissier/scriptPredict.py",
-                                    success: function(response){
-                                        console.log(response);
-                                    }
-                                });*/
                             }
                         });
                     }

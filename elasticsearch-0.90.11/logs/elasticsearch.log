@@ -1,11 +1,15 @@
-[2014-04-02 10:26:34,581][INFO ][node                     ] [Fan Boy] version[0.90.11], pid[490], build[11da1ba/2014-02-03T15:27:39Z]
-[2014-04-02 10:26:34,582][INFO ][node                     ] [Fan Boy] initializing ...
-[2014-04-02 10:26:34,709][INFO ][plugins                  ] [Fan Boy] loaded [river-twitter, river-fs], sites []
-[2014-04-02 10:26:37,796][INFO ][node                     ] [Fan Boy] initialized
-[2014-04-02 10:26:37,797][INFO ][node                     ] [Fan Boy] starting ...
-[2014-04-02 10:26:37,926][INFO ][transport                ] [Fan Boy] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
-[2014-04-02 10:26:41,008][INFO ][cluster.service          ] [Fan Boy] new_master [Fan Boy][i275mlYQT3qeIB-flF8qSQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
-[2014-04-02 10:26:41,046][INFO ][discovery                ] [Fan Boy] elasticsearch/i275mlYQT3qeIB-flF8qSQ
-[2014-04-02 10:26:41,069][INFO ][http                     ] [Fan Boy] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
-[2014-04-02 10:26:41,069][INFO ][node                     ] [Fan Boy] started
-[2014-04-02 10:26:41,857][INFO ][gateway                  ] [Fan Boy] recovered [1] indices into cluster_state
+[2014-04-08 11:50:38,966][INFO ][node                     ] [Alexander Lexington] stopping ...
+[2014-04-08 11:50:39,068][INFO ][node                     ] [Alexander Lexington] stopped
+[2014-04-08 11:50:39,069][INFO ][node                     ] [Alexander Lexington] closing ...
+[2014-04-08 11:50:39,079][INFO ][node                     ] [Alexander Lexington] closed
+[2014-04-08 17:58:37,966][INFO ][node                     ] [Zuras] version[0.90.11], pid[24287], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-04-08 17:58:37,967][INFO ][node                     ] [Zuras] initializing ...
+[2014-04-08 17:58:38,105][INFO ][plugins                  ] [Zuras] loaded [river-twitter, river-fs], sites []
+[2014-04-08 17:58:41,401][INFO ][node                     ] [Zuras] initialized
+[2014-04-08 17:58:41,401][INFO ][node                     ] [Zuras] starting ...
+[2014-04-08 17:58:41,542][INFO ][transport                ] [Zuras] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/169.254.41.193:9300]}
+[2014-04-08 17:58:44,638][INFO ][cluster.service          ] [Zuras] new_master [Zuras][SGpoQ-9EQ_qv5Tj6FAw02w][inet[/169.254.41.193:9300]], reason: zen-disco-join (elected_as_master)
+[2014-04-08 17:58:44,675][INFO ][discovery                ] [Zuras] elasticsearch/SGpoQ-9EQ_qv5Tj6FAw02w
+[2014-04-08 17:58:44,701][INFO ][http                     ] [Zuras] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/169.254.41.193:9200]}
+[2014-04-08 17:58:44,702][INFO ][node                     ] [Zuras] started
+[2014-04-08 17:58:45,660][INFO ][gateway                  ] [Zuras] recovered [1] indices into cluster_state
