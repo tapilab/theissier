@@ -19,12 +19,13 @@ for document in collection.find({ }, { "text": 1, "id": 1, "score": 1, "sessionn
 print ("scores : ", scores)
 resultMatrix = vec.fit_transform(textTweetsArray).toarray()
 print ("result matrix : ", resultMatrix[0])
-#clf.fit(resultMatrix, scores)
-#clf.predict_proba()
+clf.fit(resultMatrix, scores)
+list = clf.predict_proba(resultMatrix)
+print list
 class TrainClassifier(object):
     def train(self, object):
-        return "Train this data, %s" % object
-
+        #transform
+        return "Train this data, %s" % object[i].text
 s = zerorpc.Server(TrainClassifier())
 s.bind("tcp://127.0.0.1:4242")
 s.run()
