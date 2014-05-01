@@ -107,21 +107,17 @@ MongoClient.connect(locationDb, function(err, db) {
             }).then(function (resp) {
                     var hits = resp.hits.hits;
                     //console.log(hits);
-                    clientZeroRPC.invoke("train", hits, function(error, res, more) {
-                        console.log(res);
-                    });
                 }, function (err) {
                     console.trace(err.message);
                 });   */
             var unlabledTweets = [];
-            var labeledTweets = [];
             var hits = [];
-            var ids = [];
+            var idsHits = [];
             ESclient.search({
                 index: 'test',
                 type: 'test',
                 body: {
-                    from: 0, size: 10
+                    from: 0, size: 20
                 }
             },function getMoreUntilDone(error, resp) {
                     if (err)
@@ -130,19 +126,24 @@ MongoClient.connect(locationDb, function(err, db) {
                         hits = resp.hits.hits;
                     }
                     for (var i = 0; i < Object.size(hits); i++) {
-                        ids[i] = hits[i]._id;
+                        idsHits[i] = hits[i]._id;
                     }
                     collection.find(
                         {
-                            id: { $in: ids }
+                            id: { $in: idsHits }
+                        },
+                        {
+                            id: 1, _id : 0
                         }
-                    ).toArray(function(err, items) {
+                    ).toArray(function(err, idLabeledTweets) {
                             if (err)
                                 console.log("error : ", err);
                             else {
-                                labeledTweets = items;
-                                findUnlabledTweets(hits, labeledTweets, unlabledTweets);
-                                console.log("unlabled tweets : ", unlabledTweets);
+                                findUnlabledTweets(hits, idLabeledTweets , unlabledTweets);
+                                clientZeroRPC.connect("tcp://127.0.0.1:4242");
+                                clientZeroRPC.invoke("train", unlabledTweets, function(error, res, more) {
+                                    console.log(res);
+                                });
 
                             }
                         });
@@ -211,12 +212,6 @@ MongoClient.connect(locationDb, function(err, db) {
     }
 });
 
-/*
-function retrieveNTweetsUnlabeled(N, ES, offset) {
-
-
-}  */
-
 /*function isInHitsUnlabled(hitsunlabled, id) {
     console.log("size array : ", Object.size(hitsunlabled));
     for (var i = 0; i < hitsunlabled.size(); i++) {
@@ -228,18 +223,19 @@ function retrieveNTweetsUnlabeled(N, ES, offset) {
     return false;
 }  */
 
-function findUnlabledTweets(hits, labeledTweets, unlabledTweets) {
-    for (var i = 0; i < Object.size(labeledTweets); i++) {
-        if ((hits[i]._id == labeledTweets[i].id)) {
-            unlabledTweets.push(hits[i]);
-            console.log("here", i);
+function findUnlabledTweets(hits, idsLabeledTweets, tweetsUnlabled) {
+    for (var i = 0; i < Object.size(hits); i++) {
+        var hasBeenLabeled = false;
+        for (var j = 0; j < Object.size(idsLabeledTweets); j++) {
+            if (hits[i]._id == idsLabeledTweets[j].id) {
+                hasBeenLabeled = true;
+                j = Object.size(idsLabeledTweets);
+            }
+        }
+        if (hasBeenLabeled == false) {
+            tweetsUnlabled.push(hits[i]);
         }
     }
-    for (var j = Object.size(labeledTweets); j < Object.size(hits); j++) {
-        unlabledTweets.push(hits[i]);
-        console.log("heheheheehe", j);
-    }
-    return unlabledTweets;
 };
 
 Object.size = function(obj) {

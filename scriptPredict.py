@@ -24,8 +24,7 @@ list = clf.predict_proba(resultMatrix)
 print list
 class TrainClassifier(object):
     def train(self, object):
-        #transform
-        return "Train this data, %s" % object[i].text
+        return "Train this data, %s" % object
 s = zerorpc.Server(TrainClassifier())
 s.bind("tcp://127.0.0.1:4242")
 s.run()
