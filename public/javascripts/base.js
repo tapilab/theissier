@@ -70,6 +70,6 @@ $(document).ready(function() {
 
     //TRAIN CLASSIFIER HERE:
     $("#train-classifier").click(function() {
-        socket.emit('trainClassifier', {});
+        socket.emit('trainClassifier', { sessionName : $("#list-sessions .active").text() });
     });
 });
