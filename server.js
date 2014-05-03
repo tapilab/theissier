@@ -164,8 +164,8 @@ MongoClient.connect(locationDb, function(err, db) {
                                 else {
                                     findUnlabledTweets(hits, idLabeledTweets , unlabledTweets);
                                     clientZeroRPC.connect("tcp://127.0.0.1:4242");
-                                    console.log(unlabledTweets);
-                                    clientZeroRPC.invoke("trainUnlabledTweets", unlabledTweets, function(error, res, more) {
+                                    console.log("unalbled tweets :", unlabledTweets);
+                                    clientZeroRPC.invoke("train", unlabledTweets, function(error, res, more) {
                                         console.log(res);
                                     });
                                 }

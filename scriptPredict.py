@@ -24,14 +24,14 @@ print ("result matrix : ", resultMatrix)
 clf.fit(resultMatrix, scores)
 list = clf.predict_proba(resultMatrix)
 class TrainClassifier(object):
-    def trainUnlabledTweets(self, object):
-        print ("list : ", list)
+    def train(self, object):
         textUnlabledTweets = []
-        for i in range(object):
+        for i in range(len(object)):
+            print("object[i]", object[i])
             textUnlabledTweets.append(object[i]['_source']['text'])
         matrixUnlabledTweets = vec.fit_transform(textUnlabledTweets).toarray()
         print("text unlabled tweets : ", textUnlabledTweets)
-        print ('matrix unlabled tweets : ', matrixUnlabledTweets)
+        print ("matrix unlabled tweets : ", matrixUnlabledTweets)
         predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)   #this line
         print("predict : ", predictUnlabledTweets)
          #tweets that respect the criterion (more than a certain probability) will be sent to node.js
