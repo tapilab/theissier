@@ -26,16 +26,18 @@ list = clf.predict_proba(resultMatrix)
 class TrainClassifier(object):
     def train(self, object):
         textUnlabledTweets = []
+        print("object :", object)
         for i in range(len(object)):
             print("object[i]", object[i])
             textUnlabledTweets.append(object[i]['_source']['text'])
         matrixUnlabledTweets = vec.fit_transform(textUnlabledTweets).toarray()
         print("text unlabled tweets : ", textUnlabledTweets)
         print ("matrix unlabled tweets : ", matrixUnlabledTweets)
-        predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)   #this line
-        print("predict : ", predictUnlabledTweets)
-         #tweets that respect the criterion (more than a certain probability) will be sent to node.js
-        return "New tweets are there : " % object
+        #predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)   #this line
+        #print("predict : ", predictUnlabledTweets)
+        #tweets that respect the criterion (more than a certain probability) will be sent to node.js
+        idTweetsThatMatchTheCriterion = [1, 3, 20, 10]
+        return "%s " % idTweetsThatMatchTheCriterion
 s = zerorpc.Server(TrainClassifier())
 s.bind("tcp://127.0.0.1:4242")
 s.run()

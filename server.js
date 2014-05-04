@@ -166,7 +166,9 @@ MongoClient.connect(locationDb, function(err, db) {
                                     clientZeroRPC.connect("tcp://127.0.0.1:4242");
                                     console.log("unalbled tweets :", unlabledTweets);
                                     clientZeroRPC.invoke("train", unlabledTweets, function(error, res, more) {
-                                        console.log(res);
+                                        var idTweetsThatMatchTheCriterion = res.replace("[", "");
+                                        idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace("]", "");
+                                        var myArray = JSON.parse("[" + idTweetsThatMatchTheCriterion + "]");
                                     });
                                 }
                             });
