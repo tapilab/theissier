@@ -18,25 +18,25 @@ for document in collection.find({ }, { "text": 1, "id": 1, "score": 1, "sessionn
     textTweetsArray.append(document['text'])
     sessionNames.append(document['sessionname'])
     scores.append(document['score'])
-print("scores : ", scores)
 resultMatrix = vec.fit_transform(textTweetsArray).toarray()
-print ("result matrix : ", resultMatrix)
 clf.fit(resultMatrix, scores)
 list = clf.predict_proba(resultMatrix)
+print ("predict just fit : ",list)
 class TrainClassifier(object):
     def train(self, object):
+        epsilon = 0.54
         textUnlabledTweets = []
-        print("object :", object)
+        idTweetsThatMatchTheCriterion = []
         for i in range(len(object)):
-            print("object[i]", object[i])
             textUnlabledTweets.append(object[i]['_source']['text'])
-        matrixUnlabledTweets = vec.fit_transform(textUnlabledTweets).toarray()
-        print("text unlabled tweets : ", textUnlabledTweets)
-        print ("matrix unlabled tweets : ", matrixUnlabledTweets)
-        #predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)   #this line
-        #print("predict : ", predictUnlabledTweets)
+        matrixUnlabledTweets = vec.transform(textUnlabledTweets).toarray()
+        predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)
+        print("predict unlabled tweets : ", predictUnlabledTweets)
+        for j in range(len(predictUnlabledTweets)):
+            if (predictUnlabledTweets[j][1] >= epsilon):
+                idTweetsThatMatchTheCriterion.append(object[j]['_id'])
         #tweets that respect the criterion (more than a certain probability) will be sent to node.js
-        idTweetsThatMatchTheCriterion = [1, 3, 20, 10]
+        print ("ids : ", idTweetsThatMatchTheCriterion)
         return "%s " % idTweetsThatMatchTheCriterion
 s = zerorpc.Server(TrainClassifier())
 s.bind("tcp://127.0.0.1:4242")

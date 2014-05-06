@@ -58,7 +58,7 @@
                     <h4 class="modal-title" id="info">Information</h4>
                 </div>
                 <div id="text-info-box" class="modal-body">
-                    <p>Just search for something (keywords or sentences) and say if the tweets retrieved are relevant to your search!</p>
+                    <p>Just search for something (keywords or sentences) and say if the tweets retrieved are relevant to your search! Please add a session name to be able to search for something.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -207,7 +207,6 @@
                         $(idSelector).css('margin-top', '20px');
                         search.set('hits', hit);
                         results.add(search);
-
                         $("#" + idButtons + " .button-yes").click(function() {
                             if ($("#list-sessions li").length != 0) {
                                 var idParent = $(this).parents().parents().attr('id');
@@ -223,6 +222,13 @@
                                 updateObjectScore.set('hits', hitsToSave);
                                 results.push(updateObjectScore, {at: indexCollection});
                                 socket.emit('affectGoodScore', {object: hitsToSave});
+                                if ($("#train-classifier").hasClass('disabled')) {
+                                    $("#train-classifier").removeClass('disabled');
+                                    $("#train-classifier").prop('disabled', false);
+                                }
+                                var idThis = "#id-button-" + indexCollection;
+                                $(idThis).children("button").addClass("disabled");
+                                $(idThis).children("button").prop('disabled', false);
                             }
                         });
                         $("#" + idButtons + " .button-no").click(function() {
@@ -240,8 +246,16 @@
                                 updateObjectScore.set('hits', hitsToSave);
                                 results.push(updateObjectScore, {at: indexCollection});
                                 socket.emit('affectBadScore', {object:hitsToSave});
+                                if ($("#train-classifier").hasClass('disabled')) {
+                                     $("#train-classifier").removeClass('disabled');
+                                     $("#train-classifier").prop('disabled', false);
+                                }
+                                var idThis = "#id-button-" + indexCollection;
+                                $(idThis).children("button").addClass("disabled");
+                                $(idThis).children("button").prop('disabled', false);
                             }
                         });
+
                     }
                     setAllMap(map);
                     $('#modal-box').modal('toggle');

@@ -11,6 +11,15 @@ $(document).ready(function() {
         userSessions : []
     };
 
+    $('#submit-keyword').addClass('disabled');
+    $('#submit-keyword').prop('disabled', true);
+
+    $("#train-classifier").addClass('disabled');
+    $("#train-classifier").prop('disabled', true);
+
+    $("#keyword-search-input").addClass('disabled');
+    $("#keyword-search-input").prop('disabled', true);
+
     $("#submit-keyword").click(function(){
         var valInput = $("#keyword-search-input").val();
         socket.emit('updateTweets', {keyword: valInput});
@@ -45,6 +54,10 @@ $(document).ready(function() {
             $("#list-sessions").append("<li id=" + dataSessions.userSessions[i].username + " class=" + dataSessions.userSessions[i].status + "><span style='cursor:pointer;'>" + dataSessions.userSessions[i].sessionname + "</span></li>");
         }
         $("#choose-session-button").removeClass("btn-danger");
+        $('#submit-keyword').removeClass('disabled');
+        $('#submit-keyword').prop('disabled', false);
+        $("#keyword-search-input").removeClass('disabled');
+        $("#keyword-search-input").prop('disabled', false);
         $("#no-history").remove();
         $("#list-sessions span").css('background-color', '');
         $("#list-sessions").append("<li id=" + jsObj.username + " class=" + jsObj.status + "><span style='cursor:pointer;'>"+  jsObj.sessionname + "</span></li>");

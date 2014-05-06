@@ -96,36 +96,20 @@ MongoClient.connect(locationDb, function(err, db) {
         });
 
         socket.on('trainClassifier', function(sessionName) {
-          /*  console.log("train classifier called here");
-            clientZeroRPC.connect("tcp://127.0.0.1:4242");
-            ESclient.search({
-                index: 'test',
-                type: 'test',
-                body: {
-                    from : 0, size : 5
-                }
-            }).then(function (resp) {
-                    var hits = resp.hits.hits;
-                    //console.log(hits);
-                }, function (err) {
-                    console.trace(err.message);
-                });   */
             var nbDocs = 0;
             var offset = 0;
             ESclient.count({
                 index: 'test'
             }, function setOffset(error, resp) {
+                var unlabledTweets = [];
+                var hits = [];
+                var idsHits = [];
                 if (error)
                     console.log("error : ", error);
                 else {
                     nbDocs = resp.count;
                     offset = (Math.floor(Math.random() * nbDocs)) + 1;
                 }
-                var unlabledTweets = [];
-                var hits = [];
-                var idsHits = [];
-                console.log("offset : ", offset.toString());
-                console.log("nb docs : ", nbDocs.toString());
                 ESclient.search({
                     index: 'test',
                     type: 'test',
@@ -137,23 +121,20 @@ MongoClient.connect(locationDb, function(err, db) {
                 },function getMoreUntilDone(error, resp) {
                         if (error)
                             console.log("error : ", error);
-                        else {
+                        else
                             hits = resp.hits.hits;
-                            //console.log("hits: ", hits);
-                        }
-                        for (var i = 0; i < Object.size(hits); i++) {
+                        for (var i = 0; i < Object.size(hits); i++)
                             idsHits[i] = hits[i]._id;
-                        }
+                        console.log("session name : ", sessionName.sessionName);
                         collection.find(
                             {
-                                id: { $in: idsHits }
+                                /*id: { $in: idsHits }*/
 
                                 /*  WITH SESSION */
-                                /* $and: [
-                                 { $or : [ { id: { $in: idsHits } } ] },
-                                 { $or : [ { sessionname: sessionName.sessionName } ] }
+                                 $and: [
+                                     { $or : [ { id: { $in: idsHits } } ] },
+                                     { $or : [ { sessionname: sessionName.sessionName } ] }
                                  ]
-                                */
                             },
                             {
                                 id: 1, _id : 0
@@ -162,13 +143,19 @@ MongoClient.connect(locationDb, function(err, db) {
                                 if (err)
                                     console.log("error : ", err);
                                 else {
+                                    console.log("labeled tweeeeets : ", idLabeledTweets);
                                     findUnlabledTweets(hits, idLabeledTweets , unlabledTweets);
                                     clientZeroRPC.connect("tcp://127.0.0.1:4242");
                                     console.log("unalbled tweets :", unlabledTweets);
                                     clientZeroRPC.invoke("train", unlabledTweets, function(error, res, more) {
-                                        var idTweetsThatMatchTheCriterion = res.replace("[", "");
-                                        idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace("]", "");
-                                        var myArray = JSON.parse("[" + idTweetsThatMatchTheCriterion + "]");
+                                        console.log("res : ", res);
+                                        if (res[0] != "[" && res[1] != "]") {
+                                            var idTweetsThatMatchTheCriterion = res.replace("[", "");
+                                            idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace("]", "");
+                                            regExp=/'/g
+                                            idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace(regExp, "");
+                                            var idsRelevantTweets = stringToArray(idTweetsThatMatchTheCriterion);
+                                        }
                                     });
                                 }
                             });
@@ -258,9 +245,8 @@ function findUnlabledTweets(hits, idsLabeledTweets, tweetsUnlabled) {
                 j = Object.size(idsLabeledTweets);
             }
         }
-        if (hasBeenLabeled == false) {
+        if (hasBeenLabeled == false)
             tweetsUnlabled.push(hits[i]);
-        }
     }
 };
 
@@ -271,6 +257,11 @@ Object.size = function(obj) {
     }
     return size;
 };
+
+function stringToArray(string) {
+    if (!string) return [];
+    return string.split(',').map(Number);
+}
 
 /* hits.forEach(function(hit) {
  var object = collection.findOne({'id': hit._id}, function(err, document) {
