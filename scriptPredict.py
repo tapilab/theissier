@@ -5,30 +5,29 @@ client = MongoClient('localhost', 27017)
 from sklearn.feature_extraction.text import CountVectorizer
 vec = CountVectorizer()
 from sklearn.linear_model import LogisticRegression
-clf = LogisticRegression()
 import zerorpc
 import array
 import json
 db = client.tweetsClassifier
 collection = db['scoredTweets']
-textTweetsArray = []
-sessionNames = []
-scores = []
-for document in collection.find({ }, { "text": 1, "id": 1, "score": 1, "sessionname": 1, "_id": 0 }):
-    textTweetsArray.append(document['text'])
-    sessionNames.append(document['sessionname'])
-    scores.append(document['score'])
-resultMatrix = vec.fit_transform(textTweetsArray).toarray()
-clf.fit(resultMatrix, scores)
-list = clf.predict_proba(resultMatrix)
-print ("predict just fit : ",list)
 class TrainClassifier(object):
     def train(self, object):
-        epsilon = 0.54
+        clf = LogisticRegression()
+        textTweetsArray = []
+        sessionNames = []
+        scores = []
+        for document in collection.find({ }, { "text": 1, "id": 1, "score": 1, "sessionname": 1, "_id": 0 }):
+            textTweetsArray.append(document['text'])
+            sessionNames.append(document['sessionname'])
+            scores.append(document['score'])
+        resultMatrix = vec.fit_transform(textTweetsArray).toarray()
+        clf.fit(resultMatrix, scores)
+        epsilon = 0.44
         textUnlabledTweets = []
         idTweetsThatMatchTheCriterion = []
+        print ("len object : ", len(object))
         for i in range(len(object)):
-            textUnlabledTweets.append(object[i]['_source']['text'])
+            textUnlabledTweets.append(object[i]['fields']['text'])
         matrixUnlabledTweets = vec.transform(textUnlabledTweets).toarray()
         predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)
         print("predict unlabled tweets : ", predictUnlabledTweets)

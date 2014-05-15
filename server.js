@@ -1,6 +1,5 @@
 var elasticsearch = require('elasticsearch')
     , mongoose = require('mongoose')
-    , forEachAsync = require('forEachAsync')
     , zerorpc = require('zerorpc')
     , io     = require('socket.io').listen(8080)
     , ESclient = new elasticsearch.Client({
@@ -143,7 +142,7 @@ MongoClient.connect(locationDb, function(err, db) {
                                 if (err)
                                     console.log("error : ", err);
                                 else {
-                                    console.log("labeled tweeeeets : ", idLabeledTweets);
+                                    //console.log("labeled tweeeeets : ", idLabeledTweets);
                                     findUnlabledTweets(hits, idLabeledTweets , unlabledTweets);
                                     clientZeroRPC.connect("tcp://127.0.0.1:4242");
                                     console.log("unalbled tweets :", unlabledTweets);
@@ -160,63 +159,6 @@ MongoClient.connect(locationDb, function(err, db) {
                                 }
                             });
                         });
-                         /*retrieveNTweetsUnlabeled(10, ESclient, 0, function(hits) {
-                             var labeledTweets = [];
-                             var ids = [];
-                             for (var i = 0; i < Object.size(hits); i++) {
-                                ids[i] = hits[i]._id;
-                             }
-                             collection.find(
-                                 {
-                                    id: { $in: ids }
-                                 }
-                             ).toArray(function(err, item) {
-                                     if (err)
-                                         console.log("error : ", hits);
-                                     else {
-                                         labeledTweets = item;
-                                     }
-                                 });
-
-                             var unlabledTweets = findUnlabledTweets(labeledTweets,hits);
-                             console.log("unlabled tweets : ", unlabledTweets);
-
-
-                             for (var i = 0; i < Object.size(hits); i++) {
-                                 console.log("i : ", i);
-                                 var objects = collection.findOne({'id': hits[i]._id}, function(err, document) {
-                                     if (err) return console.error(err);
-                                     else {
-                                         console.log("this is i : ", i);
-                                         console.log(" and this is the doc : ", document);
-                                         //!(isInHitsUnlabled(hitsUnlabled, hits[i].id))
-                                         if (document == null) {  //if object is not in the database, it means that it has not been labled.
-                                             nbUnlabledTweets++;
-                                            // resultTweets.push(hits[i]); //so we push it and we'll send this array to the python script
-                                             //console.log("result tweets", resultTweets);
-                                         }
-                                     }
-                                });
-                             }
-
-
-
-                              hits.forEach(function(hit) {
-                                 var object = collection.findOne({'id': hit._id}, function(err, document) {
-                                     if (err) return console.error(err);
-                                     else {
-                                         //console.log("this is the doc : ", document);
-                                         //!(isInHitsUnlabled(hitsUnlabled, hits[i].id))
-                                         if (document == null) {  //if object is not in the database, it means that it has not been labled.
-                                             nbUnlabledTweets++;
-                                             console.log("nb unlabled tweets : ", nbUnlabledTweets);
-                                             resultTweets.push(hit); //so we push it and we'll send this array to the python script
-                                         }
-                                     }
-                                 });
-                             });
-                             console.log("result tweets : ", resultTweets);
-                         });*/
                 });
           });
 
@@ -224,17 +166,6 @@ MongoClient.connect(locationDb, function(err, db) {
 
     }
 });
-
-/*function isInHitsUnlabled(hitsunlabled, id) {
-    console.log("size array : ", Object.size(hitsunlabled));
-    for (var i = 0; i < hitsunlabled.size(); i++) {
-        if (hitsunlabled[i].id == id) {
-            console.log("already in !!");
-            return true;
-        }
-    }
-    return false;
-}  */
 
 function findUnlabledTweets(hits, idsLabeledTweets, tweetsUnlabled) {
     for (var i = 0; i < Object.size(hits); i++) {
@@ -262,20 +193,3 @@ function stringToArray(string) {
     if (!string) return [];
     return string.split(',').map(Number);
 }
-
-/* hits.forEach(function(hit) {
- var object = collection.findOne({'id': hit._id}, function(err, document) {
- if (err) return console.error(err);
- else {
- //console.log("this is the doc : ", document);
- //!(isInHitsUnlabled(hitsUnlabled, hits[i].id))
- if (document == null) {  //if object is not in the database, it means that it has not been labled.
- nbUnlabledTweets++;
- console.log("nb unlabled tweets : ", nbUnlabledTweets);
- resultTweets.push(hit); //so we push it and we'll send this array to the python script
- console.log("result tweets : ", resultTweets);
- }
- }
- });
- });    */
-

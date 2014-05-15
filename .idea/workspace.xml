@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cb2aff8-e900-4b28-a978-a77a3502ebcb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/base.js" afterPath="$PROJECT_DIR$/public/javascripts/base.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-0.90.11/logs/elasticsearch.log" afterPath="$PROJECT_DIR$/elasticsearch-0.90.11/logs/elasticsearch.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mapTweets.html" afterPath="$PROJECT_DIR$/public/mapTweets.html" />
@@ -11,15 +12,17 @@
     </list>
     <ignored path="theissier.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1399223881423" ignored="false" />
-    <file path="/mapTweets.html" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1399350192096" ignored="false" />
+    <file path="/Dummy.txt" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1400079498796" ignored="false" />
+    <file path="/mapTweets.html" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1400168700341" ignored="false" />
     <file path="/style.css" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1397058250465" ignored="false" />
-    <file path="/base.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1399334829844" ignored="false" />
+    <file path="/base.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1400169459322" ignored="false" />
     <file path="/streamTwitter.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1391529852442" ignored="false" />
     <file path="/README.md" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1396974587565" ignored="false" />
     <file path="/serverPushData.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1392083359575" ignored="false" />
     <file path="/server.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1399308450823" ignored="false" />
-    <file path="/scriptPredict.py" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1399334697409" ignored="false" />
+    <file path="/scriptPredict.py" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1400166120386" ignored="false" />
+    <file path="/testES.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1400022413895" ignored="false" />
+    <file path="/other.js" changelist="2cb2aff8-e900-4b28-a978-a77a3502ebcb" time="1400167421013" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,45 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mapTweets.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
+      <file leaf-file-name="other.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/other.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="85" selection-start="15148" selection-end="15148" vertical-scroll-proportion="-8.4">
+            <state line="170" column="19" selection-start="8027" selection-end="8027" vertical-scroll-proportion="4.1530943">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="66" selection-start="5464" selection-end="5473" vertical-scroll-proportion="0.63355047">
-              <folding>
-                <element signature="e#6743#10122#0" expanded="false" />
-                <element signature="e#10178#10485#0" expanded="false" />
-                <element signature="e#11223#11808#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scriptPredict.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scriptPredict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="52" selection-start="1680" selection-end="1680" vertical-scroll-proportion="-18.576923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="258" selection-end="258" vertical-scroll-proportion="25.76923">
-              <folding>
-                <marker date="1399336695000" expanded="true" signature="2118:2133" placeholder="..." />
-                <marker date="1399336695000" expanded="false" signature="2703:2718" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -100,8 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tweets.json" />
-        <option value="$PROJECT_DIR$/streamTwitter.js" />
         <option value="$PROJECT_DIR$/serverPushData.js" />
         <option value="$PROJECT_DIR$/public/javascripts/backbone.js" />
         <option value="$PROJECT_DIR$/public/javascripts/underscore.js" />
@@ -113,9 +80,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/testES.js" />
         <option value="$PROJECT_DIR$/scriptPredict.py" />
-        <option value="$PROJECT_DIR$/public/javascripts/base.js" />
+        <option value="$PROJECT_DIR$/other.js" />
         <option value="$PROJECT_DIR$/public/mapTweets.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/base.js" />
       </list>
     </option>
   </component>
@@ -151,7 +120,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -184,26 +152,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theissier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theissier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,8 +163,8 @@
     <property name="options.lastSelected" value="web-ide.project.structure" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -338,16 +289,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2800" selection-start="2948" selection-end="2948" vertical-scroll-proportion="0.14975041" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/underscore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1343" column="14" selection-start="50211" selection-end="50211" vertical-scroll-proportion="0.95114005" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/backbone.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1608" column="4" selection-start="67989" selection-end="67989" vertical-scroll-proportion="0.95114005" />
@@ -380,18 +321,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/forEachAsync/forEachAsync.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="66" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.64891845">
-          <folding />
-        </state>
+        <state line="26" column="66" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.64891845" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/streamTwitter.js">
@@ -406,36 +341,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scriptPredict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="52" selection-start="1680" selection-end="1680" vertical-scroll-proportion="-18.576923">
+        <state line="27" column="44" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.59183675">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
+    <entry file="file://$PROJECT_DIR$/testES.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="85" selection-start="15148" selection-end="15148" vertical-scroll-proportion="-8.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="258" selection-end="258" vertical-scroll-proportion="25.76923">
+        <state line="167" column="59" selection-start="6918" selection-end="6918" vertical-scroll-proportion="3.174267">
           <folding>
-            <marker date="1399336695000" expanded="true" signature="2118:2133" placeholder="..." />
-            <marker date="1399336695000" expanded="false" signature="2703:2718" placeholder="..." />
+            <element signature="e#820#1204#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="66" selection-start="5464" selection-end="5473" vertical-scroll-proportion="0.63355047">
+        <state line="174" column="3" selection-start="7012" selection-end="7012" vertical-scroll-proportion="4.2508144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mapTweets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="25" selection-start="5478" selection-end="5505" vertical-scroll-proportion="-1.1506352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="211" column="55" selection-start="10498" selection-end="10498" vertical-scroll-proportion="5.504348">
           <folding>
-            <element signature="e#6743#10122#0" expanded="false" />
-            <element signature="e#10178#10485#0" expanded="false" />
-            <element signature="e#11223#11808#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1400169460000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400169460000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="19" selection-start="8027" selection-end="8027" vertical-scroll-proportion="4.1530943">
+          <folding />
         </state>
       </provider>
     </entry>
