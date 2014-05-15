@@ -19,6 +19,8 @@ var locationDb = "mongodb://127.0.0.1:27017/tweetsClassifier"
 var MongoClient = require('mongodb')
     , format = require('util').format;
 
+var MAX_TOP_TWEETS = 20;
+
 MongoClient.connect(locationDb, function(err, db) {
     if(err)
         throw err;
@@ -102,8 +104,8 @@ MongoClient.connect(locationDb, function(err, db) {
                         hits.push(hit);
                         allIds.push(hit._id)
                     });
-                    console.log("REDOOOOOOO THE FIND THEREEEEEEEE");
-                    console.log("WITH IDS OF HITS : ", allIds);
+                    //console.log("REDOOOOOOO THE FIND THEREEEEEEEE");
+                    // console.log("WITH IDS OF HITS : ", allIds);
                     collection.find(
                         {
                             $and: [
@@ -134,7 +136,7 @@ MongoClient.connect(locationDb, function(err, db) {
                                         regExp=/'/g
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace(regExp, "");
                                         var idsRelevantTweets = stringToArray(idTweetsThatMatchTheCriterion);
-                                        if (Object.size(idsRelevantTweets) > 20) {
+                                        if (Object.size(idsRelevantTweets) > MAX_TOP_TWEETS) {
                                             console.log("it's done, here are the ids : ", idsRelevantTweets);
                                             ESclient.mget({
                                                 index: 'test',
@@ -151,7 +153,6 @@ MongoClient.connect(locationDb, function(err, db) {
 
                                         } else {
                                             if (response.hits.total !== hits.length) {
-                                               // console.log("here");
                                                 // now we can call scroll over and over
                                                 ESclient.scroll({
                                                     scrollId: response._scroll_id,
@@ -160,6 +161,7 @@ MongoClient.connect(locationDb, function(err, db) {
                                             }
                                         }
                                     } else {
+                                        //HANDLE THE ERROR -> send back the ids even if there are less that MAX_TOP_TWEETS
                                         console.log("Error happened ! Sorry");
                                     }
                                 });
