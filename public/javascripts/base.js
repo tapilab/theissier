@@ -142,6 +142,7 @@ $(document).ready(function() {
     $("#keyword-search-input").prop('disabled', true);
 
     $("#submit-keyword").click(function(){
+        results = new SearchResults();
         var valInput = $("#keyword-search-input").val();
         socket.emit('updateTweets', {keyword: valInput});
     });
@@ -210,7 +211,7 @@ $(document).ready(function() {
     socket.on('resultsFromClassifier', function (data) {
         console.log(data);
         for (var i = 0; i < Object.size(data.idsTweets); i++) {
-            $('#text-from-classifier-tweets').append("<p>id "+ i + " " + data.idsTweets[i]._source.id + "</p>");
+            $('#text-from-classifier-tweets').$(idSelector).append("<div id=" + idButtons + " class='yes-or-no'><button type='button' class='button-yes btn btn-success'><span class='glyphicon glyphicon-ok-sign'></span> Yes!</button><br/><button type='button' class='button-no btn btn-danger'><span class='glyphicon glyphicon-remove-sign'></span> Nope!</button></div></div>");
         }
         $('#results-box').modal('toggle');
     });
@@ -228,6 +229,8 @@ function clearMarkers() {
 
 function findIndex(index, collection) {
     for (var i=0; i < collection.models.length; i++) {
+        console.log("collection id : ", collection.models[i].attributes.hits.id);
+        console.log("index : ", index);
         if (collection.models[i].attributes.hits.id == index) {
             return i;
         }

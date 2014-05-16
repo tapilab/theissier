@@ -122,6 +122,7 @@ MongoClient.connect(locationDb, function(err, db) {
                             else {
                                 console.log("ids : ", idLabeledTweets);
                                 unlabledTweets = [];
+                                var idsRelevantTweets = [];
                                 findUnlabledTweets(hits, idLabeledTweets , unlabledTweets);
                                 clientZeroRPC.connect("tcp://127.0.0.1:4242");
                                 clientZeroRPC.invoke("train", unlabledTweets, function(error, res, more) {
@@ -135,7 +136,7 @@ MongoClient.connect(locationDb, function(err, db) {
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace("]", "");
                                         regExp=/'/g
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace(regExp, "");
-                                        var idsRelevantTweets = stringToArray(idTweetsThatMatchTheCriterion);
+                                        idsRelevantTweets = stringToArray(idTweetsThatMatchTheCriterion);
                                         if (Object.size(idsRelevantTweets) > MAX_TOP_TWEETS) {
                                             console.log("it's done, here are the ids : ", idsRelevantTweets);
                                             ESclient.mget({
@@ -147,10 +148,8 @@ MongoClient.connect(locationDb, function(err, db) {
                                             }, function(error, response) {
                                                 if (error) throw error;
                                                 else
-                                                    console.log("response : ", response);
                                                     socket.emit('resultsFromClassifier', { idsTweets : response.docs });
                                             });
-
                                         } else {
                                             if (response.hits.total !== hits.length) {
                                                 // now we can call scroll over and over
@@ -160,10 +159,8 @@ MongoClient.connect(locationDb, function(err, db) {
                                                 }, getMoreUntilDone);
                                             }
                                         }
-                                    } else {
-                                        //HANDLE THE ERROR -> send back the ids even if there are less that MAX_TOP_TWEETS
-                                        console.log("Error happened ! Sorry");
-                                    }
+                                    } else //HANDLE THE ERROR -> send back the ids even if there are less that MAX_TOP_TWEETS
+                                        console.log("ERROR");
                                 });
                             }
                         });
