@@ -14,6 +14,7 @@
 var map;
 var markers = [];
 var infoWindows = [];
+var cptLabeled = 0;
 function initialize() {
     var mapOptions = {
         zoom: 2,
@@ -21,6 +22,7 @@ function initialize() {
     };
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     socket.on('data', function(hits) {
+        results = new SearchResults();
         clearMarkers();
         markers = [];
         infoWindows = [];
@@ -31,7 +33,9 @@ function initialize() {
                 var search = new Search();
                 search.set('input',$("#keyword-search-input").val());
                 var hit = new Object();
+                console.log("hits[index]", hits[index]);
                 hit.id = hits[index]._id;
+                console.log("hit id : ", hit.id);
                 hit.username = hits[index]._source.user.name;
                 hit.created_at = hits[index]._source.created_at;
                 hit.text = hits[index]._source.text;
@@ -81,13 +85,14 @@ function initialize() {
                         updateObjectScore.set('hits', hitsToSave);
                         results.push(updateObjectScore, {at: indexCollection});
                         socket.emit('affectGoodScore', {object: hitsToSave});
-                        if ($("#train-classifier").hasClass('disabled')) {
-                            $("#train-classifier").removeClass('disabled');
-                            $("#train-classifier").prop('disabled', false);
-                        }
                         var idThis = "#id-button-" + indexCollection;
                         $(idThis).children("button").addClass("disabled");
                         $(idThis).children("button").prop('disabled', false);
+                        cptLabeled++;
+                        if ($("#train-classifier").hasClass('disabled') && cptLabeled > 1) {
+                            $("#train-classifier").removeClass('disabled');
+                            $("#train-classifier").prop('disabled', false);
+                        }
                     }
                 });
                 $("#" + idButtons + " .button-no").click(function() {
@@ -105,13 +110,14 @@ function initialize() {
                         updateObjectScore.set('hits', hitsToSave);
                         results.push(updateObjectScore, {at: indexCollection});
                         socket.emit('affectBadScore', {object:hitsToSave});
-                        if ($("#train-classifier").hasClass('disabled')) {
-                            $("#train-classifier").removeClass('disabled');
-                            $("#train-classifier").prop('disabled', false);
-                        }
                         var idThis = "#id-button-" + indexCollection;
                         $(idThis).children("button").addClass("disabled");
                         $(idThis).children("button").prop('disabled', false);
+                        cptLabeled++;
+                        if ($("#train-classifier").hasClass('disabled') && cptLabeled > 1) {
+                            $("#train-classifier").removeClass('disabled');
+                            $("#train-classifier").prop('disabled', false);
+                        }
                     }
                 });
 
@@ -144,7 +150,7 @@ $(document).ready(function() {
     $("#submit-keyword").click(function(){
         results = new SearchResults();
         var valInput = $("#keyword-search-input").val();
-        socket.emit('updateTweets', {keyword: valInput});
+        socket.emit('updateTweets', { keyword: valInput });
     });
 
     $("#keyword-search-input").bind('keyup', function() {
@@ -208,12 +214,10 @@ $(document).ready(function() {
         socket.emit('trainClassifier', { sessionName : $("#list-sessions .active").text() });
     });
 
-    socket.on('resultsFromClassifier', function (data) {
-        console.log(data);
-        for (var i = 0; i < Object.size(data.idsTweets); i++) {
-            $('#text-from-classifier-tweets').$(idSelector).append("<div id=" + idButtons + " class='yes-or-no'><button type='button' class='button-yes btn btn-success'><span class='glyphicon glyphicon-ok-sign'></span> Yes!</button><br/><button type='button' class='button-no btn btn-danger'><span class='glyphicon glyphicon-remove-sign'></span> Nope!</button></div></div>");
-        }
-        $('#results-box').modal('toggle');
+    socket.on("nodata", function(param) {
+        console.log("no data");
+        $('#text-modal').empty().append("<p>No tweets are relative to this research</p>");
+        $('#modal-box').modal('toggle');
     });
 });
 
