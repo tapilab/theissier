@@ -14,7 +14,9 @@
 var map;
 var markers = [];
 var infoWindows = [];
-var cptLabeled = 0;
+var cptLabeledYES = 0;
+var cptLabeledNO = 0;
+
 function initialize() {
     var mapOptions = {
         zoom: 2,
@@ -33,7 +35,8 @@ function initialize() {
                 var search = new Search();
                 search.set('input',$("#keyword-search-input").val());
                 var hit = new Object();
-                console.log("hits[index]", hits[index]);
+
+                /************ FILL THE HIT OUT **********/
                 hit.id = hits[index]._id;
                 console.log("hit id : ", hit.id);
                 hit.username = hits[index]._source.user.name;
@@ -42,6 +45,9 @@ function initialize() {
                 hit.lng = hits[index]._source.geo.coordinates[0];
                 hit.lat = hits[index]._source.geo.coordinates[1];
                 hit.score = -1;
+                /*********** FILL THE HIT OUT ***********/
+
+                var idButtons = "id-button-" + index;
 
                 var idInfoWindow = 'contentInfoWindow' + hit['id'];
                 var usernameAndTweet = "<div id=" + idInfoWindow + "><div class='tweets-matched'><h3>" + hit['username'] + "</h3><h5>"+ hit['created_at'] +"</h5><p>"+ hit['text'] +"</p></div>";
@@ -64,67 +70,27 @@ function initialize() {
 
                 $('#text-modal').append(usernameAndTweet);
                 var idSelector = "#" + idInfoWindow;
-                var idButtons = "id-button-" + index;
                 $(idSelector).append("<div id=" + idButtons + " class='yes-or-no'><button type='button' class='button-yes btn btn-success'><span class='glyphicon glyphicon-ok-sign'></span> Yes!</button><br/><button type='button' class='button-no btn btn-danger'><span class='glyphicon glyphicon-remove-sign'></span> Nope!</button></div></div>");
                 $(idSelector).css('overflow', 'hidden');
                 $(idSelector).css('margin-top', '20px');
                 search.set('hits', hit);
                 results.add(search);
                 $("#" + idButtons + " .button-yes").click(function() {
-                    if ($("#list-sessions li").length != 0) {
-                        var idParent = $(this).parents().parents().attr('id');
-                        var indexHit = idParent.replace('contentInfoWindow','');
-                        var indexCollection = findIndex(indexHit, results);
-                        var hitsToSave = results.models[indexCollection].attributes.hits;
-                        hitsToSave.score = 1;
-                        hitsToSave.sessionname = $('#list-sessions').find('.active').text();
-                        hitsToSave.username = $('#list-sessions').find('.active').attr('id');
-                        var updateObjectScore = new Search;
-                        results.remove(results.at(indexCollection));
-                        updateObjectScore.set('input', $('#keyword-search-input').val());
-                        updateObjectScore.set('hits', hitsToSave);
-                        results.push(updateObjectScore, {at: indexCollection});
-                        socket.emit('affectGoodScore', {object: hitsToSave});
-                        var idThis = "#id-button-" + indexCollection;
-                        $(idThis).children("button").addClass("disabled");
-                        $(idThis).children("button").prop('disabled', false);
-                        cptLabeled++;
-                        if ($("#train-classifier").hasClass('disabled') && cptLabeled > 1) {
-                            $("#train-classifier").removeClass('disabled');
-                            $("#train-classifier").prop('disabled', false);
-                        }
-                    }
+                    //affect score 1
+                    var scoreAffected = 1;
+                    onClickTweet(scoreAffected, $(this));
                 });
                 $("#" + idButtons + " .button-no").click(function() {
-                    if ($("#list-sessions li").length != 0) {
-                        var idParent = $(this).parents().parents().attr('id');
-                        var indexHit = idParent.replace('contentInfoWindow','');
-                        var indexCollection = findIndex(indexHit, results);
-                        var hitsToSave = results.models[indexCollection].attributes.hits;
-                        hitsToSave.score = 0;
-                        hitsToSave.sessionname = $('#list-sessions').find('.active').text();
-                        hitsToSave.username = $('#list-sessions').find('.active').attr('id');
-                        var updateObjectScore = new Search;
-                        results.remove(results.at(indexCollection));
-                        updateObjectScore.set('input', $('#keyword-search-input').val());
-                        updateObjectScore.set('hits', hitsToSave);
-                        results.push(updateObjectScore, {at: indexCollection});
-                        socket.emit('affectBadScore', {object:hitsToSave});
-                        var idThis = "#id-button-" + indexCollection;
-                        $(idThis).children("button").addClass("disabled");
-                        $(idThis).children("button").prop('disabled', false);
-                        cptLabeled++;
-                        if ($("#train-classifier").hasClass('disabled') && cptLabeled > 1) {
-                            $("#train-classifier").removeClass('disabled');
-                            $("#train-classifier").prop('disabled', false);
-                        }
-                    }
+                    //affect score 0
+                    var scoreAffected = 0;
+                    onClickTweet(scoreAffected, $(this));
                 });
 
             }
             setAllMap(map);
             $('#modal-box').modal('toggle');
         } else {
+            console.log("no tweets relatived to this search");
             $('#text-modal').append("<p>No tweets are relative to this research</p>");
             $('#modal-box').modal('toggle');
         }
@@ -248,3 +214,32 @@ Object.size = function(obj) {
     }
     return size;
 };
+
+function onClickTweet(scoreAffected, parent) {
+    if ($("#list-sessions li").length != 0) {
+        var idParent = parent.parents().parents().attr('id');
+        var indexHit = idParent.replace('contentInfoWindow','');
+        var indexCollection = findIndex(indexHit, results);
+        var hitsToSave = results.models[indexCollection].attributes.hits;
+        hitsToSave.score = scoreAffected;
+        hitsToSave.sessionname = $('#list-sessions').find('.active').text();
+        hitsToSave.username = $('#list-sessions').find('.active').attr('id');
+        var updateObjectScore = new Search;
+        results.remove(results.at(indexCollection));
+        updateObjectScore.set('input', $('#keyword-search-input').val());
+        updateObjectScore.set('hits', hitsToSave);
+        results.push(updateObjectScore, { at: indexCollection });
+        socket.emit('affectBadScore', { object:hitsToSave });
+        var idThis = "#id-button-" + indexCollection;
+        $(idThis).children("button").addClass("disabled");
+        $(idThis).children("button").prop('disabled', false);
+        if (scoreAffected)
+            cptLabeledYES++;
+        else
+            cptLabeledNO++;
+        if ($("#train-classifier").hasClass('disabled') && cptLabeledNO >= 1 && cptLabeledYES >= 1) {
+            $("#train-classifier").removeClass('disabled');
+            $("#train-classifier").prop('disabled', false);
+        }
+    }
+}

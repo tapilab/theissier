@@ -93,7 +93,7 @@ MongoClient.connect(locationDb, function(err, db) {
                 var allIds = [];
                 var hits = [];
                 clientZeroRPC.invoke("fit", sessionName.sessionName, function(error, res, more) {
-                    //console.log("well-fit");
+                    console.log("well-fit");
                 });
 
                 // first we do a search, and specify a scroll timeout
@@ -101,22 +101,23 @@ MongoClient.connect(locationDb, function(err, db) {
                     index: 'test',
                     // Set to 30 seconds because we are calling right back
                     scroll: '30s',
-                    fields: ['text']
+                    fields: ['text'],
+                    match_all : {}
                 }, function getMoreUntilDone(error, response) {
+                    //console.log("response : ", response);
                     // collect the title from each response
                     response.hits.hits.forEach(function (hit) {
                         hits.push(hit);
                         allIds.push(hit._id)
                     });
-                    //console.log("REDOOOOOOO THE FIND THEREEEEEEEE");
-                    console.log("WITH IDS OF HITS : ", allIds);
-                    console.log(sessionName);
+                    console.log("all ids : ", allIds);
+                    console.log("sessionname : ", sessionName);
                     collection.find(
                         {
-                            $and: [
-                                { $or : [ { id: { $in: allIds } } ] },
-                                { $or : [ { sessionname: sessionName } ] }
-                            ]
+                            id: { $in: allIds }
+                            /*** WITH SESSIONS ****/
+                          //  $and: [ { id: { $in: allIds } }, { sessionname: sessionName } ]
+                            /**********************/
                         },
                         {
                             id: 1, _id : 0
@@ -129,9 +130,9 @@ MongoClient.connect(locationDb, function(err, db) {
                                 var idsRelevantTweets = [];
                                 console.log("idLabeledTweets : ", idLabeledTweets);
                                 findUnlabledTweets(hits, idLabeledTweets , unlabledTweets);
-                                console.log("unlabled tweets: ", unlabledTweets);
+                                //console.log("unlabled tweets: ", unlabledTweets);
                                 clientZeroRPC.invoke("train", unlabledTweets, function(error, res, more) {
-                                    console.log("res : ", res);
+                                    //console.log("res : ", res);
                                     if (!(res[0] == "[" && res[1] == "]")) {
                                         var idTweetsThatMatchTheCriterion = res.replace("[", "");
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace("]", "");
@@ -139,7 +140,7 @@ MongoClient.connect(locationDb, function(err, db) {
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace(regExp, "");
                                         idsRelevantTweets = stringToArray(idTweetsThatMatchTheCriterion);
                                         if (Object.size(idsRelevantTweets) > MAX_TOP_TWEETS) {
-                                            //console.log("it's done, here are the ids : ", idsRelevantTweets);
+                                            console.log("it's done, here are the ids : ", idsRelevantTweets);
                                             ESclient.mget({
                                                 index: 'test',
                                                 type: 'test',
@@ -152,8 +153,6 @@ MongoClient.connect(locationDb, function(err, db) {
                                                     socket.emit('data', response.docs);
                                             });
                                         } else {
-                                            console.log("response total:", response.hits.total);
-                                            console.log("length : ", hits.length);
                                             if (response.hits.total !== hits.length) {
                                                 // now we can call scroll over and over
                                                 ESclient.scroll({
