@@ -10,10 +10,11 @@ import array
 import json
 db = client.tweetsClassifier
 collection = db['scoredTweets']
-clf = LogisticRegression()
-epsilon = 0.44
+clf = LogisticRegression(class_weight="auto")
+epsilon = 0.4j
 class TrainClassifier(object):
     def fit(self, object):
+        print ("currently fitting")
         print("object :", object)
         textTweetsArray = []
         scores = []
@@ -22,17 +23,20 @@ class TrainClassifier(object):
             scores.append(document['score'])
         resultMatrix = vec.fit_transform(textTweetsArray).toarray()
         clf.fit(resultMatrix, scores)
-    def train(self, object):
+    def predict(self, object):
+        print ("currently predicting")
         textUnlabledTweets = []
         idTweetsThatMatchTheCriterion = []
         for i in range(len(object)):
             textUnlabledTweets.append(object[i]['fields']['text'])
         matrixUnlabledTweets = vec.transform(textUnlabledTweets).toarray()
         predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)
+        print("predict : " , predictUnlabledTweets)
         for j in range(len(predictUnlabledTweets)):
             if (predictUnlabledTweets[j][1] >= epsilon):
                 idTweetsThatMatchTheCriterion.append(object[j]['_id'])
         #tweets that respect the criterion (more than a certain probability) will be sent to node.js
+	    print ("id tweets sent back ", idTweetsThatMatchTheCriterion)
         return "%s " % idTweetsThatMatchTheCriterion
 s = zerorpc.Server(TrainClassifier())
 s.bind("tcp://127.0.0.1:4242")

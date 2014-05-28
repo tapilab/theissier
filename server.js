@@ -77,12 +77,7 @@ MongoClient.connect(locationDb, function(err, db) {
                 }
             });
 
-            socket.on('affectGoodScore', function(object) {
-                collection.insert(object.object, function(err, docs) {
-                });
-            });
-
-            socket.on('affectBadScore', function(object) {
+            socket.on('affectScore', function(object) {
                 collection.insert(object.object, function(err, docs) {
                 });
             });
@@ -108,7 +103,7 @@ MongoClient.connect(locationDb, function(err, db) {
                     // collect the title from each response
                     response.hits.hits.forEach(function (hit) {
                         hits.push(hit);
-                        allIds.push(hit._id)
+                        allIds.push(hit._id);
                     });
                     console.log("all ids : ", allIds);
                     console.log("sessionname : ", sessionName);
@@ -130,15 +125,19 @@ MongoClient.connect(locationDb, function(err, db) {
                                 var idsRelevantTweets = [];
                                 console.log("idLabeledTweets : ", idLabeledTweets);
                                 findUnlabledTweets(hits, idLabeledTweets , unlabledTweets);
-                                //console.log("unlabled tweets: ", unlabledTweets);
-                                clientZeroRPC.invoke("train", unlabledTweets, function(error, res, more) {
-                                    //console.log("res : ", res);
+                                console.log("unlabled tweets : ");
+                                for(var k = 0; k < Object.size(unlabledTweets); k++) {
+                                    console.log(unlabledTweets[k]._id);
+                                }
+                                clientZeroRPC.invoke("predict", unlabledTweets, function(error, res, more) {
+                                    console.log("res return by python script : ", res);
                                     if (!(res[0] == "[" && res[1] == "]")) {
                                         var idTweetsThatMatchTheCriterion = res.replace("[", "");
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace("]", "");
                                         regExp=/'/g;
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace(regExp, "");
                                         idsRelevantTweets = stringToArray(idTweetsThatMatchTheCriterion);
+                                        console.log("size ids Relevant tweets :", Object.size(idsRelevantTweets));
                                         if (Object.size(idsRelevantTweets) > MAX_TOP_TWEETS) {
                                             console.log("it's done, here are the ids : ", idsRelevantTweets);
                                             ESclient.mget({
@@ -165,6 +164,7 @@ MongoClient.connect(locationDb, function(err, db) {
                                             }
                                         }
                                     } else //HANDLE THE ERROR -> send back the ids even if there are less that MAX_TOP_TWEETS
+                                        console.log("NO DATA !");
                                         socket.emit('nodata', {});
                                 });
                             }

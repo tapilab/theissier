@@ -229,7 +229,7 @@ function onClickTweet(scoreAffected, parent) {
         updateObjectScore.set('input', $('#keyword-search-input').val());
         updateObjectScore.set('hits', hitsToSave);
         results.push(updateObjectScore, { at: indexCollection });
-        socket.emit('affectBadScore', { object:hitsToSave });
+        socket.emit('affectScore', { object: hitsToSave });
         var idThis = "#id-button-" + indexCollection;
         $(idThis).children("button").addClass("disabled");
         $(idThis).children("button").prop('disabled', false);
