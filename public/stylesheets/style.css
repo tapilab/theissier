@@ -15,6 +15,8 @@ body { height: 100%; margin: 0; padding: 0 }
 #modal-button { float:right; margin-top: 10px; margin-right: 10px; }
 #create-session-button { float:left; margin-top: 10px; margin-left: 10px; }
 #body-create-session { height: 110px; }
+#body-create-account { height: 110px; }
+#login-form { height : 110px; }
 #analytics { float:right; margin-right: 5px;margin-top: 10px; }
 #choose-session { margin-top: 10px; float: left; margin-left: 10px;}
 .tweets-matched { float: left; width: 50%; margin-top: -20px; }

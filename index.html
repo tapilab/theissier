@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link class="cssdeck" rel="stylesheet" href="public/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="public/stylesheets/style.css"/>
+</head>
+<body>
+<div class="" id="loginModal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Have an Account?</h3>
+    </div>
+    <div class="modal-body">
+        <div class="well">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+                <li><a href="#create" data-toggle="tab">Create Account</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="login">
+                    <div id="login-form" class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">@</span>
+                                    <input id="input-username2" type="text" class="form-control" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="input-password2" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="login-button" type="button" class="disabled btn btn-primary login-buttons">Login</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="create">
+                    <div id="body-create-account" class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">@</span>
+                                    <input id="input-username" type="text" class="form-control" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="input-password" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="submit-create-account" type="button" class="disabled btn btn-primary login-buttons">Submit</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost:8080');
+</script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="public/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="public/javascripts/verif.js"></script>
+</html>

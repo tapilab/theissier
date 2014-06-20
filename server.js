@@ -25,9 +25,32 @@ MongoClient.connect(locationDb, function(err, db) {
     if(err)
         throw err;
     else {
-        var collection = db.collection('scoredTweets');
+        var scoredTweets = db.collection('scoredTweets');
+        var users = db.collection('users');
 
         io.sockets.on('connection', function (socket) {
+            socket.on('createaccount', function(usernameAndPassword) {
+                usernameAndPassword = usernameAndPassword.split("_");
+                var username = usernameAndPassword[0];
+                var password = usernameAndPassword[1];
+            });
+            socket.on('login', function(usernameAndPassword) {
+                usernameAndPassword = usernameAndPassword.split("_");
+                var username = usernameAndPassword[0];
+                var password = usernameAndPassword[1];
+                users.find(
+                    {
+                        username: username, password: password
+                    }
+                ).toArray(function(err, user) {
+                    if (err)
+                        throw err;
+                    else
+                        if (user != []) {
+
+                        }
+                });
+            });
             socket.on('updateTweets', function (keyword) {
                 if(keyword.keyword.indexOf(" ") == -1) {    //if keyword
                     ESclient.search({
@@ -78,7 +101,7 @@ MongoClient.connect(locationDb, function(err, db) {
             });
 
             socket.on('affectScore', function(object) {
-                collection.insert(object.object, function(err, docs) {
+                scoredTweets.insert(object.object, function(err, docs) {
                 });
             });
 
@@ -107,7 +130,7 @@ MongoClient.connect(locationDb, function(err, db) {
                     });
                     console.log("all ids : ", allIds);
                     console.log("sessionname : ", sessionName);
-                    collection.find(
+                    scoredTweets.find(
                         {
                             id: { $in: allIds }
                             /*** WITH SESSIONS ****/
