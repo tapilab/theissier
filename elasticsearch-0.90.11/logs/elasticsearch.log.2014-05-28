@@ -1,0 +1,235 @@
+[2014-05-28 12:22:32,919][INFO ][node                     ] [Llan the Sorcerer] version[0.90.11], pid[7228], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-28 12:22:32,921][INFO ][node                     ] [Llan the Sorcerer] initializing ...
+[2014-05-28 12:22:33,049][INFO ][plugins                  ] [Llan the Sorcerer] loaded [river-twitter, river-fs], sites []
+[2014-05-28 12:22:36,445][INFO ][node                     ] [Llan the Sorcerer] initialized
+[2014-05-28 12:22:36,447][INFO ][node                     ] [Llan the Sorcerer] starting ...
+[2014-05-28 12:22:36,610][INFO ][transport                ] [Llan the Sorcerer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-28 12:22:39,716][INFO ][cluster.service          ] [Llan the Sorcerer] new_master [Llan the Sorcerer][Kjo0MKQ-Ts6UP1nXS2XnCw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-28 12:22:39,771][INFO ][discovery                ] [Llan the Sorcerer] elasticsearch/Kjo0MKQ-Ts6UP1nXS2XnCw
+[2014-05-28 12:22:39,837][INFO ][http                     ] [Llan the Sorcerer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-28 12:22:39,838][INFO ][node                     ] [Llan the Sorcerer] started
+[2014-05-28 12:22:41,096][INFO ][gateway                  ] [Llan the Sorcerer] recovered [2] indices into cluster_state
+[2014-05-28 12:24:33,114][INFO ][cluster.metadata         ] [Llan the Sorcerer] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 12:24:33,223][INFO ][cluster.metadata         ] [Llan the Sorcerer] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 12:24:34,256][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Llan the Sorcerer] [fs][mydocs] Starting fs river scanning
+[2014-05-28 12:24:34,286][INFO ][cluster.metadata         ] [Llan the Sorcerer] [mydocs] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-28 12:24:34,376][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Llan the Sorcerer] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 12:24:34,419][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Llan the Sorcerer] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 12:24:34,426][INFO ][cluster.metadata         ] [Llan the Sorcerer] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 12:24:39,384][INFO ][cluster.metadata         ] [Llan the Sorcerer] [mydocs] update_mapping [folder] (dynamic)
+[2014-05-28 12:34:44,727][INFO ][node                     ] [Llan the Sorcerer] stopping ...
+[2014-05-28 12:34:44,738][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Llan the Sorcerer] [fs][mydocs] Closing fs river
+[2014-05-28 12:34:44,801][INFO ][node                     ] [Llan the Sorcerer] stopped
+[2014-05-28 12:34:44,801][INFO ][node                     ] [Llan the Sorcerer] closing ...
+[2014-05-28 12:34:44,806][INFO ][node                     ] [Llan the Sorcerer] closed
+[2014-05-28 12:35:11,783][INFO ][node                     ] [Cloud] version[0.90.11], pid[7579], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-28 12:35:11,784][INFO ][node                     ] [Cloud] initializing ...
+[2014-05-28 12:35:11,850][INFO ][plugins                  ] [Cloud] loaded [river-twitter, river-fs], sites []
+[2014-05-28 12:35:14,060][INFO ][node                     ] [Cloud] initialized
+[2014-05-28 12:35:14,060][INFO ][node                     ] [Cloud] starting ...
+[2014-05-28 12:35:14,148][INFO ][transport                ] [Cloud] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-28 12:35:17,217][INFO ][cluster.service          ] [Cloud] new_master [Cloud][iVkOB0JXR8aqWYDOlWTulw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-28 12:35:17,257][INFO ][discovery                ] [Cloud] elasticsearch/iVkOB0JXR8aqWYDOlWTulw
+[2014-05-28 12:35:17,298][INFO ][http                     ] [Cloud] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-28 12:35:17,299][INFO ][node                     ] [Cloud] started
+[2014-05-28 12:35:17,920][INFO ][gateway                  ] [Cloud] recovered [4] indices into cluster_state
+[2014-05-28 12:35:18,482][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Starting fs river scanning
+[2014-05-28 12:35:18,491][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 12:35:18,518][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 12:35:19,581][INFO ][cluster.metadata         ] [Cloud] [_river] deleting index
+[2014-05-28 12:35:19,600][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Closing fs river
+[2014-05-28 12:35:39,933][INFO ][cluster.metadata         ] [Cloud] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 12:35:40,003][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 12:35:40,007][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Starting fs river scanning
+[2014-05-28 12:35:40,007][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 12:35:40,015][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 12:35:40,031][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 12:36:21,304][INFO ][cluster.metadata         ] [Cloud] [_river] deleting index
+[2014-05-28 12:36:21,309][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Closing fs river
+[2014-05-28 12:37:07,366][INFO ][cluster.metadata         ] [Cloud] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 12:37:07,449][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 12:37:07,457][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Starting fs river scanning
+[2014-05-28 12:37:07,458][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 12:37:07,465][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 12:37:07,485][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 12:39:47,322][INFO ][cluster.metadata         ] [Cloud] [_river] deleting index
+[2014-05-28 12:39:47,327][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Closing fs river
+[2014-05-28 12:40:03,370][INFO ][cluster.metadata         ] [Cloud] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 12:40:03,428][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [docs] (dynamic)
+[2014-05-28 12:40:03,431][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] Starting fs river scanning
+[2014-05-28 12:40:03,459][INFO ][cluster.metadata         ] [Cloud] [docs] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-28 12:40:03,539][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] creating fs river [docs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 12:40:03,568][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 12:40:03,587][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [docs] (dynamic)
+[2014-05-28 12:40:08,550][INFO ][cluster.metadata         ] [Cloud] [docs] update_mapping [folder] (dynamic)
+[2014-05-28 12:56:50,448][INFO ][cluster.metadata         ] [Cloud] [_river] deleting index
+[2014-05-28 12:56:50,458][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] Closing fs river
+[2014-05-28 12:57:21,450][INFO ][cluster.metadata         ] [Cloud] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 12:57:21,503][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [docs] (dynamic)
+[2014-05-28 12:57:21,508][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] Starting fs river scanning
+[2014-05-28 12:57:21,509][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] creating fs river [docs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 12:57:21,534][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [docs] (dynamic)
+[2014-05-28 12:57:21,547][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 13:01:35,976][INFO ][cluster.metadata         ] [Cloud] [_river] deleting index
+[2014-05-28 13:01:35,981][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][docs] Closing fs river
+[2014-05-28 13:02:01,211][INFO ][cluster.metadata         ] [Cloud] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 13:02:01,288][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:02:01,295][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Starting fs river scanning
+[2014-05-28 13:02:01,295][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 13:02:01,300][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:02:01,350][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 13:04:41,636][INFO ][cluster.metadata         ] [Cloud] [_river] deleting index
+[2014-05-28 13:04:41,644][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Closing fs river
+[2014-05-28 13:04:51,750][INFO ][cluster.metadata         ] [Cloud] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 13:04:51,808][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:04:51,815][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Starting fs river scanning
+[2014-05-28 13:04:51,817][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 13:04:51,824][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:04:51,841][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 13:05:16,718][INFO ][cluster.metadata         ] [Cloud] [_river] deleting index
+[2014-05-28 13:05:16,723][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Closing fs river
+[2014-05-28 13:06:26,379][INFO ][cluster.metadata         ] [Cloud] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 13:06:26,429][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:06:26,434][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Starting fs river scanning
+[2014-05-28 13:06:26,434][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 13:06:26,440][INFO ][cluster.metadata         ] [Cloud] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:06:26,454][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 13:06:33,014][INFO ][node                     ] [Cloud] stopping ...
+[2014-05-28 13:06:33,035][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Cloud] [fs][mydocs] Closing fs river
+[2014-05-28 13:06:33,099][INFO ][node                     ] [Cloud] stopped
+[2014-05-28 13:06:33,100][INFO ][node                     ] [Cloud] closing ...
+[2014-05-28 13:06:33,107][INFO ][node                     ] [Cloud] closed
+[2014-05-28 13:06:34,758][INFO ][node                     ] [Tempo] version[0.90.11], pid[8165], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-28 13:06:34,758][INFO ][node                     ] [Tempo] initializing ...
+[2014-05-28 13:06:34,830][INFO ][plugins                  ] [Tempo] loaded [river-twitter, river-fs], sites []
+[2014-05-28 13:06:37,996][INFO ][node                     ] [Tempo] initialized
+[2014-05-28 13:06:37,997][INFO ][node                     ] [Tempo] starting ...
+[2014-05-28 13:06:38,138][INFO ][transport                ] [Tempo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-28 13:06:41,247][INFO ][cluster.service          ] [Tempo] new_master [Tempo][bRxVB97EQkSjfNpv2Her4Q][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-28 13:06:41,301][INFO ][discovery                ] [Tempo] elasticsearch/bRxVB97EQkSjfNpv2Her4Q
+[2014-05-28 13:06:41,346][INFO ][http                     ] [Tempo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-28 13:06:41,346][INFO ][node                     ] [Tempo] started
+[2014-05-28 13:06:42,218][INFO ][gateway                  ] [Tempo] recovered [5] indices into cluster_state
+[2014-05-28 13:06:42,897][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tempo] [fs][mydocs] Starting fs river scanning
+[2014-05-28 13:06:42,909][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tempo] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 13:06:42,941][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tempo] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 13:06:44,209][INFO ][cluster.metadata         ] [Tempo] [_river] deleting index
+[2014-05-28 13:06:44,220][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tempo] [fs][mydocs] Closing fs river
+[2014-05-28 13:06:48,191][INFO ][node                     ] [Tempo] stopping ...
+[2014-05-28 13:06:48,268][INFO ][node                     ] [Tempo] stopped
+[2014-05-28 13:06:48,268][INFO ][node                     ] [Tempo] closing ...
+[2014-05-28 13:06:48,273][INFO ][node                     ] [Tempo] closed
+[2014-05-28 13:06:49,935][INFO ][node                     ] [Solomon O'Sullivan] version[0.90.11], pid[8177], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-28 13:06:49,936][INFO ][node                     ] [Solomon O'Sullivan] initializing ...
+[2014-05-28 13:06:49,987][INFO ][plugins                  ] [Solomon O'Sullivan] loaded [river-twitter, river-fs], sites []
+[2014-05-28 13:06:52,178][INFO ][node                     ] [Solomon O'Sullivan] initialized
+[2014-05-28 13:06:52,179][INFO ][node                     ] [Solomon O'Sullivan] starting ...
+[2014-05-28 13:06:52,272][INFO ][transport                ] [Solomon O'Sullivan] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-28 13:06:55,347][INFO ][cluster.service          ] [Solomon O'Sullivan] new_master [Solomon O'Sullivan][R5eu-vg8Sx2DK5HZ2KAWYw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-28 13:06:55,388][INFO ][discovery                ] [Solomon O'Sullivan] elasticsearch/R5eu-vg8Sx2DK5HZ2KAWYw
+[2014-05-28 13:06:55,426][INFO ][http                     ] [Solomon O'Sullivan] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-28 13:06:55,427][INFO ][node                     ] [Solomon O'Sullivan] started
+[2014-05-28 13:06:56,173][INFO ][gateway                  ] [Solomon O'Sullivan] recovered [4] indices into cluster_state
+[2014-05-28 13:07:00,146][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 13:07:00,252][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:07:00,276][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Solomon O'Sullivan] [fs][mydocs] Starting fs river scanning
+[2014-05-28 13:07:00,283][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Solomon O'Sullivan] [fs][mydocs] creating fs river [mydocs] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json] every [3600000] ms
+[2014-05-28 13:07:00,289][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] update_mapping [mydocs] (dynamic)
+[2014-05-28 13:07:00,310][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Solomon O'Sullivan] [fs][mydocs] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json
+[2014-05-28 13:07:58,793][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] deleting index
+[2014-05-28 13:07:58,802][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Solomon O'Sullivan] [fs][mydocs] Closing fs river
+[2014-05-28 13:08:21,662][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 13:08:21,730][DEBUG][action.index             ] [Solomon O'Sullivan] [_river][0], node[R5eu-vg8Sx2DK5HZ2KAWYw], [P], s[STARTED]: Failed to execute [index {[_river][mydocs][_meta], source[{
+  "type": "fs",
+  "fs": {
+    "url": "/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json",
+    "update_rate": 3600000,
+    "json_support": false,
+  },
+  "index": {
+    "index": "mydocs",
+    "type": "doc",
+    "bulk_size": 50
+  }
+}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:541)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:460)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:374)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:205)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting either valid name character (for unquoted name) or double-quote (for quoted) to start field name
+ at [Source: [B@66b967ed; line: 7, column: 4]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1524)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._handleOddName(UTF8StreamJsonParser.java:1793)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._parseName(UTF8StreamJsonParser.java:1481)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:701)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:468)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeObject(ObjectMapper.java:552)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:456)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:516)
+	... 8 more
+[2014-05-28 13:20:32,816][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] deleting index
+[2014-05-28 13:20:39,951][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-28 13:20:39,998][DEBUG][action.index             ] [Solomon O'Sullivan] [_river][0], node[R5eu-vg8Sx2DK5HZ2KAWYw], [P], s[STARTED]: Failed to execute [index {[_river][mydocs][_meta], source[{
+  "type": "fs",
+  "fs": {
+    "url": "/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/jsontestfile.json",
+    "update_rate": 3600000,
+    "json_support": false,
+  },
+  "index": {
+    "index": "mydocs",
+    "type": "doc",
+    "bulk_size": 50
+  }
+}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:541)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:460)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:374)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:205)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting either valid name character (for unquoted name) or double-quote (for quoted) to start field name
+ at [Source: [B@52248adb; line: 7, column: 4]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1524)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._handleOddName(UTF8StreamJsonParser.java:1793)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._parseName(UTF8StreamJsonParser.java:1481)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:701)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:468)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeObject(ObjectMapper.java:552)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:456)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:516)
+	... 8 more
+[2014-05-28 13:35:19,106][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [_river] deleting index
+[2014-05-28 13:36:17,198][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [docs] deleting index
+[2014-05-28 13:36:22,939][INFO ][cluster.metadata         ] [Solomon O'Sullivan] [mydocs] deleting index
+[2014-05-28 14:03:25,203][INFO ][node                     ] [Solomon O'Sullivan] stopping ...
+[2014-05-28 14:03:25,248][INFO ][node                     ] [Solomon O'Sullivan] stopped
+[2014-05-28 14:03:25,249][INFO ][node                     ] [Solomon O'Sullivan] closing ...
+[2014-05-28 14:03:25,256][INFO ][node                     ] [Solomon O'Sullivan] closed
+[2014-05-28 14:05:45,254][INFO ][node                     ] [Saint Anna] version[0.90.11], pid[8763], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-28 14:05:45,254][INFO ][node                     ] [Saint Anna] initializing ...
+[2014-05-28 14:05:45,324][INFO ][plugins                  ] [Saint Anna] loaded [river-twitter, river-fs], sites []
+[2014-05-28 14:05:48,365][INFO ][node                     ] [Saint Anna] initialized
+[2014-05-28 14:05:48,365][INFO ][node                     ] [Saint Anna] starting ...
+[2014-05-28 14:05:48,509][INFO ][transport                ] [Saint Anna] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-28 14:05:51,610][INFO ][cluster.service          ] [Saint Anna] new_master [Saint Anna][UKcoibW1TBWyDjF6mroviQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-28 14:05:51,664][INFO ][discovery                ] [Saint Anna] elasticsearch/UKcoibW1TBWyDjF6mroviQ
+[2014-05-28 14:05:51,713][INFO ][http                     ] [Saint Anna] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-28 14:05:51,715][INFO ][node                     ] [Saint Anna] started
+[2014-05-28 14:05:52,567][INFO ][gateway                  ] [Saint Anna] recovered [2] indices into cluster_state

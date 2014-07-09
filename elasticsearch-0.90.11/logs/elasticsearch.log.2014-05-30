@@ -1,0 +1,11 @@
+[2014-05-30 18:47:44,804][INFO ][node                     ] [Harry Leland] version[0.90.11], pid[1802], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-30 18:47:44,807][INFO ][node                     ] [Harry Leland] initializing ...
+[2014-05-30 18:47:44,961][INFO ][plugins                  ] [Harry Leland] loaded [river-twitter, river-fs], sites []
+[2014-05-30 18:47:48,163][INFO ][node                     ] [Harry Leland] initialized
+[2014-05-30 18:47:48,164][INFO ][node                     ] [Harry Leland] starting ...
+[2014-05-30 18:47:48,304][INFO ][transport                ] [Harry Leland] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-30 18:47:51,408][INFO ][cluster.service          ] [Harry Leland] new_master [Harry Leland][tHFv0x2gRMWOLQE9ybXtgw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-30 18:47:51,454][INFO ][discovery                ] [Harry Leland] elasticsearch/tHFv0x2gRMWOLQE9ybXtgw
+[2014-05-30 18:47:51,477][INFO ][http                     ] [Harry Leland] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-30 18:47:51,478][INFO ][node                     ] [Harry Leland] started
+[2014-05-30 18:47:52,305][INFO ][gateway                  ] [Harry Leland] recovered [2] indices into cluster_state

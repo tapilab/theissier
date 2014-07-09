@@ -1,0 +1,13 @@
+{
+    "type": "fs",
+    "fs": {
+        "url": "/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json",
+        "update_rate": 3600000,
+    	"json_support" : true
+    },
+    "index": {
+        "index": "newtweets",
+        "type": "tweet",
+        "bulk_size": 50
+    }   
+}

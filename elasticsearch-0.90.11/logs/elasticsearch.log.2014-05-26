@@ -1,0 +1,11 @@
+[2014-05-26 16:01:51,480][INFO ][node                     ] [MN-E (Ultraverse)] version[0.90.11], pid[4243], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-26 16:01:51,482][INFO ][node                     ] [MN-E (Ultraverse)] initializing ...
+[2014-05-26 16:01:51,609][INFO ][plugins                  ] [MN-E (Ultraverse)] loaded [river-twitter, river-fs], sites []
+[2014-05-26 16:01:54,790][INFO ][node                     ] [MN-E (Ultraverse)] initialized
+[2014-05-26 16:01:54,790][INFO ][node                     ] [MN-E (Ultraverse)] starting ...
+[2014-05-26 16:01:54,928][INFO ][transport                ] [MN-E (Ultraverse)] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-26 16:01:58,025][INFO ][cluster.service          ] [MN-E (Ultraverse)] new_master [MN-E (Ultraverse)][FcibzvN0TiSs2QUde4gGmg][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-26 16:01:58,073][INFO ][discovery                ] [MN-E (Ultraverse)] elasticsearch/FcibzvN0TiSs2QUde4gGmg
+[2014-05-26 16:01:58,141][INFO ][http                     ] [MN-E (Ultraverse)] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-26 16:01:58,143][INFO ][node                     ] [MN-E (Ultraverse)] started
+[2014-05-26 16:01:58,915][INFO ][gateway                  ] [MN-E (Ultraverse)] recovered [2] indices into cluster_state

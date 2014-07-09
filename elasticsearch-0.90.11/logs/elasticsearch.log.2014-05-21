@@ -1,0 +1,1113 @@
+[2014-05-21 14:37:31,280][INFO ][node                     ] [Bison] version[0.90.11], pid[6100], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 14:37:31,282][INFO ][node                     ] [Bison] initializing ...
+[2014-05-21 14:37:31,432][INFO ][plugins                  ] [Bison] loaded [river-twitter, river-fs], sites []
+[2014-05-21 14:37:34,631][INFO ][node                     ] [Bison] initialized
+[2014-05-21 14:37:34,632][INFO ][node                     ] [Bison] starting ...
+[2014-05-21 14:37:34,778][INFO ][transport                ] [Bison] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/64.131.106.148:9300]}
+[2014-05-21 14:37:37,879][INFO ][cluster.service          ] [Bison] new_master [Bison][9quAxj3cS4KvCZVOo59I8A][inet[/64.131.106.148:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 14:37:37,916][INFO ][discovery                ] [Bison] elasticsearch/9quAxj3cS4KvCZVOo59I8A
+[2014-05-21 14:37:37,935][INFO ][http                     ] [Bison] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/64.131.106.148:9200]}
+[2014-05-21 14:37:37,936][INFO ][node                     ] [Bison] started
+[2014-05-21 14:37:38,801][INFO ][gateway                  ] [Bison] recovered [1] indices into cluster_state
+[2014-05-21 15:51:34,356][INFO ][node                     ] [Bison] stopping ...
+[2014-05-21 15:51:34,409][INFO ][node                     ] [Bison] stopped
+[2014-05-21 15:51:34,409][INFO ][node                     ] [Bison] closing ...
+[2014-05-21 15:51:34,416][INFO ][node                     ] [Bison] closed
+[2014-05-21 15:55:11,196][INFO ][node                     ] [Mister Hyde] version[0.90.11], pid[7163], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 15:55:11,196][INFO ][node                     ] [Mister Hyde] initializing ...
+[2014-05-21 15:55:11,306][INFO ][plugins                  ] [Mister Hyde] loaded [river-twitter, river-fs], sites []
+[2014-05-21 15:55:14,324][INFO ][node                     ] [Mister Hyde] initialized
+[2014-05-21 15:55:14,324][INFO ][node                     ] [Mister Hyde] starting ...
+[2014-05-21 15:55:14,442][INFO ][transport                ] [Mister Hyde] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 15:55:17,538][INFO ][cluster.service          ] [Mister Hyde] new_master [Mister Hyde][QIJ7JRrjR9i9QPdWjSWarA][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 15:55:17,590][INFO ][discovery                ] [Mister Hyde] elasticsearch/QIJ7JRrjR9i9QPdWjSWarA
+[2014-05-21 15:55:17,616][INFO ][http                     ] [Mister Hyde] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 15:55:17,617][INFO ][node                     ] [Mister Hyde] started
+[2014-05-21 15:55:18,476][INFO ][gateway                  ] [Mister Hyde] recovered [1] indices into cluster_state
+[2014-05-21 16:19:48,053][INFO ][node                     ] [Mister Hyde] stopping ...
+[2014-05-21 16:19:48,101][INFO ][node                     ] [Mister Hyde] stopped
+[2014-05-21 16:19:48,101][INFO ][node                     ] [Mister Hyde] closing ...
+[2014-05-21 16:19:48,111][INFO ][node                     ] [Mister Hyde] closed
+[2014-05-21 16:32:48,980][INFO ][node                     ] [Tommy] version[0.90.11], pid[7878], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 16:32:48,981][INFO ][node                     ] [Tommy] initializing ...
+[2014-05-21 16:32:49,101][INFO ][plugins                  ] [Tommy] loaded [river-twitter, river-fs], sites []
+[2014-05-21 16:32:52,158][INFO ][node                     ] [Tommy] initialized
+[2014-05-21 16:32:52,158][INFO ][node                     ] [Tommy] starting ...
+[2014-05-21 16:32:52,291][INFO ][transport                ] [Tommy] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 16:32:55,384][INFO ][cluster.service          ] [Tommy] new_master [Tommy][qLUaAmNEQiSAm1TvtUm3Ug][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 16:32:55,439][INFO ][discovery                ] [Tommy] elasticsearch/qLUaAmNEQiSAm1TvtUm3Ug
+[2014-05-21 16:32:55,460][INFO ][http                     ] [Tommy] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 16:32:55,461][INFO ][node                     ] [Tommy] started
+[2014-05-21 16:32:56,292][INFO ][gateway                  ] [Tommy] recovered [1] indices into cluster_state
+[2014-05-21 16:32:56,707][INFO ][cluster.metadata         ] [Tommy] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-21 16:32:56,816][INFO ][cluster.metadata         ] [Tommy] [_river] update_mapping [tweetsAaron] (dynamic)
+[2014-05-21 16:32:57,854][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tommy] [fs][tweetsAaron] Starting fs river scanning
+[2014-05-21 16:32:57,856][DEBUG][action.admin.indices.create] [Tommy] [tweetsAaron] failed to create
+org.elasticsearch.indices.InvalidIndexNameException: [tweetsAaron] Invalid index name [tweetsAaron], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:486)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:86)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:300)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:135)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:32:57,862][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tommy] [fs][tweetsAaron] failed to create index [tweetsAaron], disabling river...
+org.elasticsearch.indices.InvalidIndexNameException: [tweetsAaron] Invalid index name [tweetsAaron], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:486)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:86)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:300)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:135)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:32:57,869][INFO ][cluster.metadata         ] [Tommy] [_river] update_mapping [tweetsAaron] (dynamic)
+[2014-05-21 16:33:34,012][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x0b968080, /0:0:0:0:0:0:0:1%0:51634 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:33:34,020][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0xf5188480, /0:0:0:0:0:0:0:1%0:51635 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:33:34,026][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x9c7ac170, /0:0:0:0:0:0:0:1%0:51636 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:23,925][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x93e253d1, /0:0:0:0:0:0:0:1%0:51638 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:23,932][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x12b4e42b, /0:0:0:0:0:0:0:1%0:51688 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:23,935][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x750cf140, /0:0:0:0:0:0:0:1%0:51689 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:34,687][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0xd78bb957, /0:0:0:0:0:0:0:1%0:51691 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:34,697][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x0a295322, /0:0:0:0:0:0:0:1%0:51692 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:34,700][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x8ac5e0d5, /0:0:0:0:0:0:0:1%0:51693 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:36,505][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0xe24867e7, /0:0:0:0:0:0:0:1%0:51694 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:36,992][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x297a2b59, /0:0:0:0:0:0:0:1%0:51695 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:37,152][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x06f55575, /0:0:0:0:0:0:0:1%0:51696 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:37,306][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x5279eb39, /0:0:0:0:0:0:0:1%0:51697 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:37,443][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x615e81a8, /0:0:0:0:0:0:0:1%0:51698 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:38:37,561][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x55fd730d, /0:0:0:0:0:0:0:1%0:51699 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:39:40,961][INFO ][cluster.metadata         ] [Tommy] [_river] update_mapping [aarontweets] (dynamic)
+[2014-05-21 16:39:41,969][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tommy] [fs][aarontweets] Starting fs river scanning
+[2014-05-21 16:39:42,012][INFO ][cluster.metadata         ] [Tommy] [aarontweets] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-21 16:39:42,117][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tommy] [fs][aarontweets] creating fs river [aarontweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 16:39:42,151][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tommy] [fs][aarontweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 16:39:42,157][INFO ][cluster.metadata         ] [Tommy] [_river] update_mapping [aarontweets] (dynamic)
+[2014-05-21 16:39:47,132][INFO ][cluster.metadata         ] [Tommy] [aarontweets] update_mapping [folder] (dynamic)
+[2014-05-21 16:39:53,040][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x97e8d94a, /0:0:0:0:0:0:0:1%0:51700 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:39:53,045][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x76826f62, /0:0:0:0:0:0:0:1%0:51706 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:39:53,047][WARN ][http.netty               ] [Tommy] Caught exception while handling client http traffic, closing connection [id: 0x5845a334, /0:0:0:0:0:0:0:1%0:51707 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:40:00,989][INFO ][node                     ] [Tommy] stopping ...
+[2014-05-21 16:40:01,005][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tommy] [fs][aarontweets] Closing fs river
+[2014-05-21 16:40:01,007][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Tommy] [fs][tweetsAaron] Closing fs river
+[2014-05-21 16:40:01,065][INFO ][node                     ] [Tommy] stopped
+[2014-05-21 16:40:01,065][INFO ][node                     ] [Tommy] closing ...
+[2014-05-21 16:40:01,072][INFO ][node                     ] [Tommy] closed
+[2014-05-21 16:40:02,724][INFO ][node                     ] [Brothers Grimm] version[0.90.11], pid[8034], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 16:40:02,725][INFO ][node                     ] [Brothers Grimm] initializing ...
+[2014-05-21 16:40:02,803][INFO ][plugins                  ] [Brothers Grimm] loaded [river-twitter, river-fs], sites []
+[2014-05-21 16:40:05,875][INFO ][node                     ] [Brothers Grimm] initialized
+[2014-05-21 16:40:05,875][INFO ][node                     ] [Brothers Grimm] starting ...
+[2014-05-21 16:40:06,002][INFO ][transport                ] [Brothers Grimm] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 16:40:09,098][INFO ][cluster.service          ] [Brothers Grimm] new_master [Brothers Grimm][aSqvbsasTcee96FYtT0NKA][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 16:40:09,139][INFO ][discovery                ] [Brothers Grimm] elasticsearch/aSqvbsasTcee96FYtT0NKA
+[2014-05-21 16:40:09,173][INFO ][http                     ] [Brothers Grimm] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 16:40:09,174][INFO ][node                     ] [Brothers Grimm] started
+[2014-05-21 16:40:10,022][INFO ][gateway                  ] [Brothers Grimm] recovered [3] indices into cluster_state
+[2014-05-21 16:40:10,448][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Brothers Grimm] [fs][tweetsAaron] Starting fs river scanning
+[2014-05-21 16:40:10,456][DEBUG][action.admin.indices.create] [Brothers Grimm] [tweetsAaron] failed to create
+org.elasticsearch.indices.InvalidIndexNameException: [tweetsAaron] Invalid index name [tweetsAaron], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:486)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:86)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:300)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:135)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:40:10,459][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Brothers Grimm] [fs][tweetsAaron] failed to create index [tweetsAaron], disabling river...
+org.elasticsearch.indices.InvalidIndexNameException: [tweetsAaron] Invalid index name [tweetsAaron], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:486)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:86)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:300)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:135)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:40:10,464][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Brothers Grimm] [fs][aarontweets] Starting fs river scanning
+[2014-05-21 16:40:10,471][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Brothers Grimm] [fs][aarontweets] creating fs river [aarontweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 16:40:10,504][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Brothers Grimm] [fs][aarontweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 16:41:20,239][INFO ][node                     ] [Brothers Grimm] stopping ...
+[2014-05-21 16:41:20,247][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Brothers Grimm] [fs][tweetsAaron] Closing fs river
+[2014-05-21 16:41:20,248][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Brothers Grimm] [fs][aarontweets] Closing fs river
+[2014-05-21 16:41:20,315][INFO ][node                     ] [Brothers Grimm] stopped
+[2014-05-21 16:41:20,316][INFO ][node                     ] [Brothers Grimm] closing ...
+[2014-05-21 16:41:20,325][INFO ][node                     ] [Brothers Grimm] closed
+[2014-05-21 16:41:32,257][INFO ][node                     ] [Master Khan] version[0.90.11], pid[8071], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 16:41:32,257][INFO ][node                     ] [Master Khan] initializing ...
+[2014-05-21 16:41:32,314][INFO ][plugins                  ] [Master Khan] loaded [river-twitter, river-fs], sites []
+[2014-05-21 16:41:34,531][INFO ][node                     ] [Master Khan] initialized
+[2014-05-21 16:41:34,532][INFO ][node                     ] [Master Khan] starting ...
+[2014-05-21 16:41:34,629][INFO ][transport                ] [Master Khan] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 16:41:37,699][INFO ][cluster.service          ] [Master Khan] new_master [Master Khan][NVCF9i2PS8ambEX2ctTSVg][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 16:41:37,739][INFO ][discovery                ] [Master Khan] elasticsearch/NVCF9i2PS8ambEX2ctTSVg
+[2014-05-21 16:41:37,779][INFO ][http                     ] [Master Khan] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 16:41:37,780][INFO ][node                     ] [Master Khan] started
+[2014-05-21 16:41:38,415][INFO ][gateway                  ] [Master Khan] recovered [3] indices into cluster_state
+[2014-05-21 16:41:38,811][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Master Khan] [fs][tweetsAaron] Starting fs river scanning
+[2014-05-21 16:41:38,819][DEBUG][action.admin.indices.create] [Master Khan] [tweetsAaron] failed to create
+org.elasticsearch.indices.InvalidIndexNameException: [tweetsAaron] Invalid index name [tweetsAaron], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:486)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:86)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:300)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:135)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:41:38,822][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Master Khan] [fs][tweetsAaron] failed to create index [tweetsAaron], disabling river...
+org.elasticsearch.indices.InvalidIndexNameException: [tweetsAaron] Invalid index name [tweetsAaron], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:486)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:86)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:300)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:135)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:41:38,843][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Master Khan] [fs][aarontweets] Starting fs river scanning
+[2014-05-21 16:41:38,860][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Master Khan] [fs][aarontweets] creating fs river [aarontweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 16:41:38,900][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Master Khan] [fs][aarontweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 16:42:08,377][INFO ][cluster.metadata         ] [Master Khan] [[_river]] remove_mapping [tweetsAaron]
+[2014-05-21 16:42:08,380][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Master Khan] [fs][tweetsAaron] Closing fs river
+[2014-05-21 16:42:12,018][INFO ][node                     ] [Master Khan] stopping ...
+[2014-05-21 16:42:12,023][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Master Khan] [fs][aarontweets] Closing fs river
+[2014-05-21 16:42:12,083][INFO ][node                     ] [Master Khan] stopped
+[2014-05-21 16:42:12,083][INFO ][node                     ] [Master Khan] closing ...
+[2014-05-21 16:42:12,089][INFO ][node                     ] [Master Khan] closed
+[2014-05-21 16:42:13,396][INFO ][node                     ] [Misty Knight] version[0.90.11], pid[8094], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 16:42:13,396][INFO ][node                     ] [Misty Knight] initializing ...
+[2014-05-21 16:42:13,439][INFO ][plugins                  ] [Misty Knight] loaded [river-twitter, river-fs], sites []
+[2014-05-21 16:42:15,612][INFO ][node                     ] [Misty Knight] initialized
+[2014-05-21 16:42:15,612][INFO ][node                     ] [Misty Knight] starting ...
+[2014-05-21 16:42:15,722][INFO ][transport                ] [Misty Knight] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 16:42:18,788][INFO ][cluster.service          ] [Misty Knight] new_master [Misty Knight][oaaM1vNDTPKXa0IW2kbGew][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 16:42:18,830][INFO ][discovery                ] [Misty Knight] elasticsearch/oaaM1vNDTPKXa0IW2kbGew
+[2014-05-21 16:42:18,850][INFO ][http                     ] [Misty Knight] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 16:42:18,860][INFO ][node                     ] [Misty Knight] started
+[2014-05-21 16:42:19,498][INFO ][gateway                  ] [Misty Knight] recovered [3] indices into cluster_state
+[2014-05-21 16:42:19,860][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Misty Knight] [fs][aarontweets] Starting fs river scanning
+[2014-05-21 16:42:19,877][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Misty Knight] [fs][aarontweets] creating fs river [aarontweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 16:42:19,892][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Misty Knight] [fs][aarontweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 16:43:12,047][WARN ][http.netty               ] [Misty Knight] Caught exception while handling client http traffic, closing connection [id: 0xc2747f1c, /0:0:0:0:0:0:0:1%0:51762 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:43:12,054][WARN ][http.netty               ] [Misty Knight] Caught exception while handling client http traffic, closing connection [id: 0x23c04cb2, /0:0:0:0:0:0:0:1%0:51763 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:43:12,058][WARN ][http.netty               ] [Misty Knight] Caught exception while handling client http traffic, closing connection [id: 0x7388acbf, /0:0:0:0:0:0:0:1%0:51764 => /0:0:0:0:0:0:0:1%0:9200]
+java.lang.IncompatibleClassChangeError: Found class org.elasticsearch.rest.RestRequest, but interface was expected
+	at fr.pilato.elasticsearch.river.fs.rest.ManageRiverAction.handleRequest(ManageRiverAction.java:49)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:159)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:142)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:121)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:83)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:291)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:43)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-05-21 16:45:55,751][INFO ][node                     ] [Misty Knight] stopping ...
+[2014-05-21 16:45:55,804][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Misty Knight] [fs][aarontweets] Closing fs river
+[2014-05-21 16:45:55,873][INFO ][node                     ] [Misty Knight] stopped
+[2014-05-21 16:45:55,874][INFO ][node                     ] [Misty Knight] closing ...
+[2014-05-21 16:45:55,884][INFO ][node                     ] [Misty Knight] closed
+[2014-05-21 16:46:10,918][INFO ][node                     ] [Vermin] version[0.90.11], pid[8160], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 16:46:10,918][INFO ][node                     ] [Vermin] initializing ...
+[2014-05-21 16:46:10,998][INFO ][plugins                  ] [Vermin] loaded [river-twitter, river-fs], sites []
+[2014-05-21 16:46:14,135][INFO ][node                     ] [Vermin] initialized
+[2014-05-21 16:46:14,135][INFO ][node                     ] [Vermin] starting ...
+[2014-05-21 16:46:14,278][INFO ][transport                ] [Vermin] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 16:46:17,372][INFO ][cluster.service          ] [Vermin] new_master [Vermin][Cvrhks7cS5OrruooAzgr7g][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 16:46:17,421][INFO ][discovery                ] [Vermin] elasticsearch/Cvrhks7cS5OrruooAzgr7g
+[2014-05-21 16:46:17,467][INFO ][http                     ] [Vermin] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 16:46:17,467][INFO ][node                     ] [Vermin] started
+[2014-05-21 16:46:18,261][INFO ][gateway                  ] [Vermin] recovered [3] indices into cluster_state
+[2014-05-21 16:46:18,672][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Vermin] [fs][aarontweets] Starting fs river scanning
+[2014-05-21 16:46:18,693][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Vermin] [fs][aarontweets] creating fs river [aarontweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 16:46:18,721][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Vermin] [fs][aarontweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 16:46:49,136][INFO ][cluster.metadata         ] [Vermin] [_river] deleting index
+[2014-05-21 16:46:49,145][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Vermin] [fs][aarontweets] Closing fs river
+[2014-05-21 16:46:58,522][INFO ][node                     ] [Vermin] stopping ...
+[2014-05-21 16:46:58,580][INFO ][node                     ] [Vermin] stopped
+[2014-05-21 16:46:58,580][INFO ][node                     ] [Vermin] closing ...
+[2014-05-21 16:46:58,587][INFO ][node                     ] [Vermin] closed
+[2014-05-21 16:48:04,585][INFO ][node                     ] [The Profile] version[0.90.11], pid[8199], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 16:48:04,585][INFO ][node                     ] [The Profile] initializing ...
+[2014-05-21 16:48:04,668][INFO ][plugins                  ] [The Profile] loaded [river-twitter, river-fs], sites []
+[2014-05-21 16:48:07,035][INFO ][node                     ] [The Profile] initialized
+[2014-05-21 16:48:07,036][INFO ][node                     ] [The Profile] starting ...
+[2014-05-21 16:48:07,137][INFO ][transport                ] [The Profile] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 16:48:10,216][INFO ][cluster.service          ] [The Profile] new_master [The Profile][z4REovwuSHGA-MIK1u15Kw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 16:48:10,259][INFO ][discovery                ] [The Profile] elasticsearch/z4REovwuSHGA-MIK1u15Kw
+[2014-05-21 16:48:10,297][INFO ][http                     ] [The Profile] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 16:48:10,299][INFO ][node                     ] [The Profile] started
+[2014-05-21 16:48:10,915][INFO ][gateway                  ] [The Profile] recovered [2] indices into cluster_state
+[2014-05-21 16:48:37,186][INFO ][cluster.metadata         ] [The Profile] [aaronindex] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-21 16:53:04,102][INFO ][cluster.metadata         ] [The Profile] [aaronindex] deleting index
+[2014-05-21 16:53:08,321][INFO ][node                     ] [The Profile] stopping ...
+[2014-05-21 16:53:08,384][INFO ][node                     ] [The Profile] stopped
+[2014-05-21 16:53:08,384][INFO ][node                     ] [The Profile] closing ...
+[2014-05-21 16:53:08,391][INFO ][node                     ] [The Profile] closed
+[2014-05-21 16:53:09,879][INFO ][node                     ] [Crippler] version[0.90.11], pid[8294], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 16:53:09,879][INFO ][node                     ] [Crippler] initializing ...
+[2014-05-21 16:53:09,957][INFO ][plugins                  ] [Crippler] loaded [river-twitter, river-fs], sites []
+[2014-05-21 16:53:13,112][INFO ][node                     ] [Crippler] initialized
+[2014-05-21 16:53:13,112][INFO ][node                     ] [Crippler] starting ...
+[2014-05-21 16:53:13,253][INFO ][transport                ] [Crippler] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 16:53:16,352][INFO ][cluster.service          ] [Crippler] new_master [Crippler][vWD_1kHbQkKWNhggJgU-cQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 16:53:16,392][INFO ][discovery                ] [Crippler] elasticsearch/vWD_1kHbQkKWNhggJgU-cQ
+[2014-05-21 16:53:16,413][INFO ][http                     ] [Crippler] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 16:53:16,414][INFO ][node                     ] [Crippler] started
+[2014-05-21 16:53:17,160][INFO ][gateway                  ] [Crippler] recovered [2] indices into cluster_state
+[2014-05-21 16:56:29,488][INFO ][cluster.metadata         ] [Crippler] [setaaron] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-21 16:57:13,234][INFO ][cluster.metadata         ] [Crippler] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-21 16:57:13,326][INFO ][cluster.metadata         ] [Crippler] [_river] update_mapping [aaronindex] (dynamic)
+[2014-05-21 16:57:14,354][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][aaronindex] Starting fs river scanning
+[2014-05-21 16:57:14,385][INFO ][cluster.metadata         ] [Crippler] [newtweets] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-21 16:57:14,470][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][aaronindex] creating fs river [aaronindex] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 16:57:14,513][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][aaronindex] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 16:57:14,515][INFO ][cluster.metadata         ] [Crippler] [_river] update_mapping [aaronindex] (dynamic)
+[2014-05-21 16:57:19,479][INFO ][cluster.metadata         ] [Crippler] [newtweets] update_mapping [folder] (dynamic)
+[2014-05-21 16:59:28,866][INFO ][cluster.metadata         ] [Crippler] [_river] deleting index
+[2014-05-21 16:59:28,874][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][aaronindex] Closing fs river
+[2014-05-21 17:01:20,589][INFO ][cluster.metadata         ] [Crippler] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-21 17:01:20,662][INFO ][cluster.metadata         ] [Crippler] [_river] update_mapping [newtweets] (dynamic)
+[2014-05-21 17:01:20,671][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][newtweets] Starting fs river scanning
+[2014-05-21 17:01:20,675][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][newtweets] creating fs river [newtweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 17:01:20,680][INFO ][cluster.metadata         ] [Crippler] [_river] update_mapping [newtweets] (dynamic)
+[2014-05-21 17:01:20,703][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][newtweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 17:03:02,972][INFO ][node                     ] [Crippler] stopping ...
+[2014-05-21 17:03:02,981][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Crippler] [fs][newtweets] Closing fs river
+[2014-05-21 17:03:03,044][INFO ][node                     ] [Crippler] stopped
+[2014-05-21 17:03:03,044][INFO ][node                     ] [Crippler] closing ...
+[2014-05-21 17:03:03,048][INFO ][node                     ] [Crippler] closed
+[2014-05-21 17:03:08,840][INFO ][node                     ] [Virako] version[0.90.11], pid[8501], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 17:03:08,841][INFO ][node                     ] [Virako] initializing ...
+[2014-05-21 17:03:08,888][INFO ][plugins                  ] [Virako] loaded [river-twitter, river-fs], sites []
+[2014-05-21 17:03:11,004][INFO ][node                     ] [Virako] initialized
+[2014-05-21 17:03:11,004][INFO ][node                     ] [Virako] starting ...
+[2014-05-21 17:03:11,116][INFO ][transport                ] [Virako] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 17:03:14,195][INFO ][cluster.service          ] [Virako] new_master [Virako][h69nTmxUSrG_DBmn-sUcdg][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 17:03:14,244][INFO ][discovery                ] [Virako] elasticsearch/h69nTmxUSrG_DBmn-sUcdg
+[2014-05-21 17:03:14,285][INFO ][http                     ] [Virako] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 17:03:14,286][INFO ][node                     ] [Virako] started
+[2014-05-21 17:03:14,939][INFO ][gateway                  ] [Virako] recovered [5] indices into cluster_state
+[2014-05-21 17:03:15,498][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Virako] [fs][newtweets] Starting fs river scanning
+[2014-05-21 17:03:15,565][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Virako] [fs][newtweets] creating fs river [newtweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 17:03:15,617][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Virako] [fs][newtweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 17:03:41,317][INFO ][cluster.metadata         ] [Virako] [newtweets] deleting index
+[2014-05-21 17:04:47,394][INFO ][cluster.metadata         ] [Virako] [setaaron] deleting index
+[2014-05-21 17:04:58,821][INFO ][cluster.metadata         ] [Virako] [aarontweets] deleting index
+[2014-05-21 17:05:23,483][INFO ][cluster.metadata         ] [Virako] [troudbal] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-21 17:05:50,761][INFO ][cluster.metadata         ] [Virako] [troudbal] deleting index
+[2014-05-21 17:11:10,133][INFO ][node                     ] [Virako] stopping ...
+[2014-05-21 17:11:10,150][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Virako] [fs][newtweets] Closing fs river
+[2014-05-21 17:11:10,193][INFO ][node                     ] [Virako] stopped
+[2014-05-21 17:11:10,194][INFO ][node                     ] [Virako] closing ...
+[2014-05-21 17:11:10,197][INFO ][node                     ] [Virako] closed
+[2014-05-21 17:11:52,276][INFO ][node                     ] [Honcho] version[0.90.11], pid[8699], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 17:11:52,276][INFO ][node                     ] [Honcho] initializing ...
+[2014-05-21 17:11:52,329][INFO ][plugins                  ] [Honcho] loaded [river-twitter, river-fs], sites []
+[2014-05-21 17:11:54,622][INFO ][node                     ] [Honcho] initialized
+[2014-05-21 17:11:54,623][INFO ][node                     ] [Honcho] starting ...
+[2014-05-21 17:11:54,794][INFO ][transport                ] [Honcho] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 17:11:57,862][INFO ][cluster.service          ] [Honcho] new_master [Honcho][GgK_XDOjQKO0UUdmKm57wQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 17:11:57,907][INFO ][discovery                ] [Honcho] elasticsearch/GgK_XDOjQKO0UUdmKm57wQ
+[2014-05-21 17:11:57,950][INFO ][http                     ] [Honcho] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 17:11:57,951][INFO ][node                     ] [Honcho] started
+[2014-05-21 17:11:58,562][INFO ][gateway                  ] [Honcho] recovered [2] indices into cluster_state
+[2014-05-21 17:11:58,783][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Honcho] [fs][newtweets] Starting fs river scanning
+[2014-05-21 17:11:58,854][INFO ][cluster.metadata         ] [Honcho] [newtweets] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-21 17:11:58,995][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Honcho] [fs][newtweets] creating fs river [newtweets] for [/Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json] every [3600000] ms
+[2014-05-21 17:11:59,040][WARN ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Honcho] [fs][newtweets] Error while indexing content from /Users/thomastheissier/Documents/IIT/CS597/tweetmapprojLOCAL/theissier/elasticsearch-0.90.11/tweetsAaron.json
+[2014-05-21 17:12:04,006][INFO ][cluster.metadata         ] [Honcho] [newtweets] update_mapping [folder] (dynamic)
+[2014-05-21 17:12:16,419][INFO ][cluster.metadata         ] [Honcho] [newtweets] deleting index
+[2014-05-21 17:12:20,652][INFO ][cluster.metadata         ] [Honcho] [newtweets] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-21 17:15:34,696][INFO ][cluster.metadata         ] [Honcho] [_river] update_mapping [docs] (dynamic)
+[2014-05-21 17:15:38,710][WARN ][river.routing            ] [Honcho] no river _meta document found after 5 attempts
+[2014-05-21 17:16:53,850][INFO ][cluster.metadata         ] [Honcho] [_river] deleting index
+[2014-05-21 17:16:53,856][INFO ][fr.pilato.elasticsearch.river.fs.river.FsRiver] [Honcho] [fs][newtweets] Closing fs river
+[2014-05-21 17:17:00,669][INFO ][node                     ] [Honcho] stopping ...
+[2014-05-21 17:17:00,719][INFO ][node                     ] [Honcho] stopped
+[2014-05-21 17:17:00,720][INFO ][node                     ] [Honcho] closing ...
+[2014-05-21 17:17:00,724][INFO ][node                     ] [Honcho] closed
+[2014-05-21 18:17:51,209][INFO ][node                     ] [Silvermane] version[0.90.11], pid[9410], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-21 18:17:51,211][INFO ][node                     ] [Silvermane] initializing ...
+[2014-05-21 18:17:51,334][INFO ][plugins                  ] [Silvermane] loaded [river-twitter, river-fs], sites []
+[2014-05-21 18:17:54,438][INFO ][node                     ] [Silvermane] initialized
+[2014-05-21 18:17:54,439][INFO ][node                     ] [Silvermane] starting ...
+[2014-05-21 18:17:54,568][INFO ][transport                ] [Silvermane] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-21 18:17:57,668][INFO ][cluster.service          ] [Silvermane] new_master [Silvermane][Ie7KZ6icS7aOW5aNhpy_Qg][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-21 18:17:57,721][INFO ][discovery                ] [Silvermane] elasticsearch/Ie7KZ6icS7aOW5aNhpy_Qg
+[2014-05-21 18:17:57,782][INFO ][http                     ] [Silvermane] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-21 18:17:57,783][INFO ][node                     ] [Silvermane] started
+[2014-05-21 18:17:58,637][INFO ][gateway                  ] [Silvermane] recovered [2] indices into cluster_state
+[2014-05-21 23:16:11,272][INFO ][node                     ] [Silvermane] stopping ...
+[2014-05-21 23:16:11,359][INFO ][node                     ] [Silvermane] stopped
+[2014-05-21 23:16:11,369][INFO ][node                     ] [Silvermane] closing ...
+[2014-05-21 23:16:11,379][INFO ][node                     ] [Silvermane] closed

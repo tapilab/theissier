@@ -1,0 +1,15 @@
+[2014-05-19 10:06:45,527][INFO ][node                     ] [Jonathan "John" Garrett] version[0.90.11], pid[744], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-19 10:06:45,532][INFO ][node                     ] [Jonathan "John" Garrett] initializing ...
+[2014-05-19 10:06:45,654][INFO ][plugins                  ] [Jonathan "John" Garrett] loaded [river-twitter, river-fs], sites []
+[2014-05-19 10:06:48,688][INFO ][node                     ] [Jonathan "John" Garrett] initialized
+[2014-05-19 10:06:48,688][INFO ][node                     ] [Jonathan "John" Garrett] starting ...
+[2014-05-19 10:06:48,823][INFO ][transport                ] [Jonathan "John" Garrett] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-19 10:06:51,919][INFO ][cluster.service          ] [Jonathan "John" Garrett] new_master [Jonathan "John" Garrett][fsJWLcn7RSqGiqP1U1_Aaw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-19 10:06:51,975][INFO ][discovery                ] [Jonathan "John" Garrett] elasticsearch/fsJWLcn7RSqGiqP1U1_Aaw
+[2014-05-19 10:06:51,997][INFO ][http                     ] [Jonathan "John" Garrett] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-19 10:06:51,997][INFO ][node                     ] [Jonathan "John" Garrett] started
+[2014-05-19 10:06:52,763][INFO ][gateway                  ] [Jonathan "John" Garrett] recovered [1] indices into cluster_state
+[2014-05-19 23:07:17,966][INFO ][node                     ] [Jonathan "John" Garrett] stopping ...
+[2014-05-19 23:07:18,111][INFO ][node                     ] [Jonathan "John" Garrett] stopped
+[2014-05-19 23:07:18,112][INFO ][node                     ] [Jonathan "John" Garrett] closing ...
+[2014-05-19 23:07:18,127][INFO ][node                     ] [Jonathan "John" Garrett] closed

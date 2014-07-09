@@ -1,0 +1,34 @@
+[2014-05-27 11:56:59,537][INFO ][node                     ] [MN-E (Ultraverse)] stopping ...
+[2014-05-27 11:56:59,697][INFO ][node                     ] [MN-E (Ultraverse)] stopped
+[2014-05-27 11:56:59,697][INFO ][node                     ] [MN-E (Ultraverse)] closing ...
+[2014-05-27 11:56:59,709][INFO ][node                     ] [MN-E (Ultraverse)] closed
+[2014-05-27 18:43:35,358][INFO ][node                     ] [Comet Man] version[0.90.11], pid[1221], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-27 18:43:35,360][INFO ][node                     ] [Comet Man] initializing ...
+[2014-05-27 18:43:35,489][INFO ][plugins                  ] [Comet Man] loaded [river-twitter, river-fs], sites []
+[2014-05-27 18:43:38,537][INFO ][node                     ] [Comet Man] initialized
+[2014-05-27 18:43:38,538][INFO ][node                     ] [Comet Man] starting ...
+[2014-05-27 18:43:38,664][INFO ][transport                ] [Comet Man] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-27 18:43:41,761][INFO ][cluster.service          ] [Comet Man] new_master [Comet Man][giN34K_8QTaTpMMkX9snuA][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-27 18:43:41,810][INFO ][discovery                ] [Comet Man] elasticsearch/giN34K_8QTaTpMMkX9snuA
+[2014-05-27 18:43:41,853][INFO ][http                     ] [Comet Man] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-27 18:43:41,854][INFO ][node                     ] [Comet Man] started
+[2014-05-27 18:43:42,644][INFO ][gateway                  ] [Comet Man] recovered [2] indices into cluster_state
+[2014-05-27 23:27:33,474][INFO ][node                     ] [Comet Man] stopping ...
+[2014-05-27 23:27:33,626][INFO ][node                     ] [Comet Man] stopped
+[2014-05-27 23:27:33,627][INFO ][node                     ] [Comet Man] closing ...
+[2014-05-27 23:27:33,641][INFO ][node                     ] [Comet Man] closed
+[2014-05-27 23:28:52,569][INFO ][node                     ] [Saint Elmo] version[0.90.11], pid[4042], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-27 23:28:52,570][INFO ][node                     ] [Saint Elmo] initializing ...
+[2014-05-27 23:28:52,676][INFO ][plugins                  ] [Saint Elmo] loaded [river-twitter, river-fs], sites []
+[2014-05-27 23:28:55,794][INFO ][node                     ] [Saint Elmo] initialized
+[2014-05-27 23:28:55,794][INFO ][node                     ] [Saint Elmo] starting ...
+[2014-05-27 23:28:55,951][INFO ][transport                ] [Saint Elmo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-27 23:28:59,054][INFO ][cluster.service          ] [Saint Elmo] new_master [Saint Elmo][gUfe4vIeSNmWotukuv36sw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-27 23:28:59,098][INFO ][discovery                ] [Saint Elmo] elasticsearch/gUfe4vIeSNmWotukuv36sw
+[2014-05-27 23:28:59,119][INFO ][http                     ] [Saint Elmo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-27 23:28:59,134][INFO ][node                     ] [Saint Elmo] started
+[2014-05-27 23:28:59,998][INFO ][gateway                  ] [Saint Elmo] recovered [2] indices into cluster_state
+[2014-05-27 23:45:05,956][INFO ][node                     ] [Saint Elmo] stopping ...
+[2014-05-27 23:45:06,020][INFO ][node                     ] [Saint Elmo] stopped
+[2014-05-27 23:45:06,020][INFO ][node                     ] [Saint Elmo] closing ...
+[2014-05-27 23:45:06,033][INFO ][node                     ] [Saint Elmo] closed

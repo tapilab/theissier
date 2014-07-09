@@ -11,7 +11,7 @@ import json
 db = client.tweetsClassifier
 collection = db['scoredTweets']
 clf = LogisticRegression(class_weight="auto")
-epsilon = 0.4j
+epsilon = 0.7
 class TrainClassifier(object):
     def fit(self, object):
         print ("currently fitting")

@@ -1,0 +1,33 @@
+[2014-07-08 19:35:15,068][INFO ][node                     ] [Vavavoom] version[0.90.11], pid[4851], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-08 19:35:15,070][INFO ][node                     ] [Vavavoom] initializing ...
+[2014-07-08 19:35:15,195][INFO ][plugins                  ] [Vavavoom] loaded [river-twitter, river-fs], sites []
+[2014-07-08 19:35:18,377][INFO ][node                     ] [Vavavoom] initialized
+[2014-07-08 19:35:18,378][INFO ][node                     ] [Vavavoom] starting ...
+[2014-07-08 19:35:18,522][INFO ][transport                ] [Vavavoom] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/198.37.19.145:9300]}
+[2014-07-08 19:35:21,622][INFO ][cluster.service          ] [Vavavoom] new_master [Vavavoom][wro1ym7iTQWC30SrR45G0A][inet[/198.37.19.145:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-08 19:35:21,658][INFO ][discovery                ] [Vavavoom] elasticsearch/wro1ym7iTQWC30SrR45G0A
+[2014-07-08 19:35:21,711][INFO ][http                     ] [Vavavoom] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/198.37.19.145:9200]}
+[2014-07-08 19:35:21,713][INFO ][node                     ] [Vavavoom] started
+[2014-07-08 19:35:22,538][INFO ][gateway                  ] [Vavavoom] recovered [2] indices into cluster_state
+[2014-07-08 19:35:28,592][INFO ][node                     ] [Vavavoom] stopping ...
+[2014-07-08 19:35:28,645][INFO ][node                     ] [Vavavoom] stopped
+[2014-07-08 19:35:28,645][INFO ][node                     ] [Vavavoom] closing ...
+[2014-07-08 19:35:28,652][INFO ][node                     ] [Vavavoom] closed
+[2014-07-08 19:35:29,861][INFO ][node                     ] [Makkari] version[0.90.11], pid[4863], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-08 19:35:29,862][INFO ][node                     ] [Makkari] initializing ...
+[2014-07-08 19:35:29,921][INFO ][plugins                  ] [Makkari] loaded [river-twitter, river-fs], sites []
+[2014-07-08 19:35:32,228][INFO ][node                     ] [Makkari] initialized
+[2014-07-08 19:35:32,228][INFO ][node                     ] [Makkari] starting ...
+[2014-07-08 19:35:32,333][INFO ][transport                ] [Makkari] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/198.37.19.145:9300]}
+[2014-07-08 19:35:35,410][INFO ][cluster.service          ] [Makkari] new_master [Makkari][iWCl4pL9SrWGtGTdwrYgYg][inet[/198.37.19.145:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-08 19:35:35,446][INFO ][discovery                ] [Makkari] elasticsearch/iWCl4pL9SrWGtGTdwrYgYg
+[2014-07-08 19:35:35,491][INFO ][http                     ] [Makkari] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/198.37.19.145:9200]}
+[2014-07-08 19:35:35,491][INFO ][node                     ] [Makkari] started
+[2014-07-08 19:35:36,109][INFO ][gateway                  ] [Makkari] recovered [2] indices into cluster_state
+[2014-07-08 19:36:00,707][INFO ][cluster.metadata         ] [Makkari] [test2] creating index, cause [auto(bulk api)], shards [5]/[1], mappings []
+[2014-07-08 19:36:04,920][INFO ][cluster.metadata         ] [Makkari] [test2] update_mapping [tweet] (dynamic)
+[2014-07-08 19:36:05,135][INFO ][cluster.metadata         ] [Makkari] [test2] update_mapping [tweet] (dynamic)
+[2014-07-08 22:33:45,545][INFO ][node                     ] [Makkari] stopping ...
+[2014-07-08 22:33:45,686][INFO ][node                     ] [Makkari] stopped
+[2014-07-08 22:33:45,687][INFO ][node                     ] [Makkari] closing ...
+[2014-07-08 22:33:45,703][INFO ][node                     ] [Makkari] closed

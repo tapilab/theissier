@@ -35,20 +35,20 @@ function initialize() {
                 var search = new Search();
                 search.set('input',$("#keyword-search-input").val());
                 var hit = new Object();
-
+                console.log("hits[i]", hits[index]);
                 /************ FILL THE HIT OUT **********/
                 hit.id = hits[index]._id;
-                console.log("hit id : ", hit.id);
                 hit.username = hits[index]._source.user.name;
                 hit.created_at = hits[index]._source.created_at;
                 hit.text = hits[index]._source.text;
-                hit.lng = hits[index]._source.geo.coordinates[0];
-                hit.lat = hits[index]._source.geo.coordinates[1];
+                if (hits[index]._source.geo != null) {
+                    hit.lng = hits[index]._source.geo.coordinates[0];
+                    hit.lat = hits[index]._source.geo.coordinates[1];
+                }
                 hit.score = -1;
                 /*********** FILL THE HIT OUT ***********/
 
                 var idButtons = "id-button-" + index;
-
                 var idInfoWindow = 'contentInfoWindow' + hit['id'];
                 var usernameAndTweet = "<div id=" + idInfoWindow + "><div class='tweets-matched'><h3>" + hit['username'] + "</h3><h5>"+ hit['created_at'] +"</h5><p>"+ hit['text'] +"</p></div>";
                 var myLatlng = new google.maps.LatLng(hit['lng'], hit['lat']);
@@ -87,6 +87,7 @@ function initialize() {
                 });
 
             }
+            console.log("here toggle");
             setAllMap(map);
             $('#modal-box').modal('toggle');
         } else {
@@ -126,7 +127,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#input-username, #input-session-name").bind('keyup', function() {
+    $("#input-username, #input-session-name, #input-login-username").bind('keyup', function() {
         if ($("#input-username").val() != "" || $("#input-session-name").val() != "") {
             $("#submit-create-session").addClass("disabled");
         }
@@ -134,11 +135,25 @@ $(document).ready(function() {
             //console.log("#submit-create-session", $("#submit-create-session"));
             $("#submit-create-session").removeClass("disabled");
         }
+        if ($("#input-login-username").val() != "") {
+            $("#submit-login-box").removeClass("disabled");
+        }
+        if ($("#input-login-username").val() == "") {
+            $("#submit-login-box").addClass("disabled");
+        }
+    });
+
+    $("#submit-login-box").click(function() {
+        if ($("#input-login-username").val() != "") {
+            socket.emit("retrievesessions", $("#input-login-username").val());
+        }
     });
 
     $("#submit-create-session").click(function() {
         if ($("#input-username").val() != "" && $("#input-session-name").val() != "") {
             var jsObj = { username: $("#input-username").val(), sessionname: $("#input-session-name").val(), status: "active" };
+            var usernameAndSession = $("#input-username").val() + "_" + $("#input-session-name").val();
+            socket.emit("postsession", usernameAndSession);
             dataSessions.userSessions.push(jsObj);
         }
         for (var i = 0; i < Object.keys(dataSessions.userSessions).length - 1; i++) {
@@ -156,8 +171,6 @@ $(document).ready(function() {
         $("#list-sessions span").css('background-color', '');
         $("#list-sessions").append("<li id=" + jsObj.username + " class=" + jsObj.status + "><span style='cursor:pointer;'>"+  jsObj.sessionname + "</span></li>");
         $("#title-alert-active-session").empty().append("Current session : " + jsObj.sessionname);
-        //$("#choose-session").val(dataSessions.userSessions[0].sessionname);
-       //$("#choose-session-button").text(dataSessions.userSessions[0].sessionname);
     });
 
     $('#list-sessions').on('click', 'li', function () {

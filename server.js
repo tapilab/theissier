@@ -33,11 +33,15 @@ MongoClient.connect(locationDb, function(err, db) {
                 usernameAndPassword = usernameAndPassword.split("_");
                 var username = usernameAndPassword[0];
                 var password = usernameAndPassword[1];
+                console.log("username : ", username);
+                console.log("password : ", password);
             });
             socket.on('login', function(usernameAndPassword) {
                 usernameAndPassword = usernameAndPassword.split("_");
                 var username = usernameAndPassword[0];
                 var password = usernameAndPassword[1];
+                console.log("username : ", username);
+                console.log("password : ", password);
                 users.find(
                     {
                         username: username, password: password
@@ -46,16 +50,80 @@ MongoClient.connect(locationDb, function(err, db) {
                     if (err)
                         throw err;
                     else
-                        if (user != []) {
-
+                        if (Object.size(user) == 1) {
+                            console.log("user :", user);
+                        } else if (Object.size(user) > 1) {
+                            console.log("Multiple users have same name and password !");
+                        } else {
+                            console.log("No user found !");
                         }
                 });
             });
+
+            socket.on("retrievesessions", function(username) {
+                console.log("username : ", username);
+                if (username != "") {
+                    users.find(
+                        {
+                           username: username
+                        }
+                    ).toArray(function(err, user) {
+                        if (err)
+                            throw err;
+                        else {
+                            if (Object.size(user) == 1) {
+                                console.log("user : ", user);
+                                console.log("id : ", user[0]._id);
+                                console.log("username : ", user[0].username);
+                                console.log("sessions", user[0].sessions);
+                            } else if (Object.size(user) == 0) {
+                                var jsObj = { username : username, sessions: [] };
+                                users.insert(jsObj, function(err, docs) {
+
+                                });
+                            }
+                            else {
+                                console.log("Multiple user with same name");
+                            }
+                        }
+                    });
+                }
+
+            });
+
+            socket.on("postsession", function(usernameAndSession) {
+                console.log("username and pass : ", usernameAndSession);
+                usernameAndSession = usernameAndSession.split("_");
+                var username = usernameAndSession[0];
+                var session = usernameAndSession[1];
+                console.log("username : ", username);
+                console.log("session : ", session);
+                users.find(
+                    {
+                        username: username
+                    }
+                ).toArray(function(err, user) {
+                        if (err)
+                            throw err;
+                        if (Object.size(user) == 1) {
+                            console.log("user :", user[0].username);
+                            console.log("user id : ", user[0]._id);
+                            console.log("user sessions : ", user[0].sessions);
+                            var sessions = user[0].sessions;
+
+                        } else if (Object.size(user) > 1) {
+                            console.log("Multiple users have same name and password !");
+                        } else {
+                            console.log("No user found !");
+                        }
+                    });
+            });
+
             socket.on('updateTweets', function (keyword) {
                 if(keyword.keyword.indexOf(" ") == -1) {    //if keyword
                     ESclient.search({
-                        index: 'test',
-                        type: 'test',
+                        index: 'test2',
+                        type: 'tweet',
                         body: {
                             query: {
                                 bool: {
@@ -77,8 +145,8 @@ MongoClient.connect(locationDb, function(err, db) {
                         });
                 } else {            //else phrase
                     ESclient.search({
-                        index: 'test',
-                        type: 'test',
+                        index: 'test2',
+                        type: 'tweet',
                         body: {
                             query :
                                 { bool :
@@ -116,7 +184,7 @@ MongoClient.connect(locationDb, function(err, db) {
 
                 // first we do a search, and specify a scroll timeout
                 ESclient.search({
-                    index: 'test',
+                    index: 'test2',
                     // Set to 30 seconds because we are calling right back
                     scroll: '30s',
                     fields: ['text'],
@@ -160,35 +228,41 @@ MongoClient.connect(locationDb, function(err, db) {
                                         regExp=/'/g;
                                         idTweetsThatMatchTheCriterion = idTweetsThatMatchTheCriterion.replace(regExp, "");
                                         idsRelevantTweets = stringToArray(idTweetsThatMatchTheCriterion);
+                                        console.log("here last id :", idsRelevantTweets[Object.size(idsRelevantTweets) - 1]);
+                                        var lastID = idsRelevantTweets[Object.size(idsRelevantTweets) - 1].split(" ");
+                                        idsRelevantTweets[Object.size(idsRelevantTweets) - 1] = lastID[0];
                                         console.log("size ids Relevant tweets :", Object.size(idsRelevantTweets));
-                                        if (Object.size(idsRelevantTweets) > MAX_TOP_TWEETS) {
+                                        if (Object.size(idsRelevantTweets) >= MAX_TOP_TWEETS) {
                                             console.log("it's done, here are the ids : ", idsRelevantTweets);
                                             ESclient.mget({
-                                                index: 'test',
-                                                type: 'test',
+                                                index: 'test2',
+                                                type: 'tweet',
                                                 body: {
                                                     ids: idsRelevantTweets
                                                 }
                                             }, function(error, response) {
                                                 if (error) throw error;
-                                                else
+                                                else {
                                                     socket.emit('data', response.docs);
+                                                }
                                             });
                                         } else {
                                             if (response.hits.total !== hits.length) {
                                                 // now we can call scroll over and over
+                                                console.log("get more here");
                                                 ESclient.scroll({
                                                     scrollId: response._scroll_id,
                                                     scroll: '30s'
                                                 }, getMoreUntilDone);
                                             }
-                                            else {
+                                           /* else {
+                                                console.log("data sent : ", response.docs);
                                                 socket.emit('data', response.docs);
-                                            }
+                                            }   */
                                         }
                                     } else //HANDLE THE ERROR -> send back the ids even if there are less that MAX_TOP_TWEETS
                                         console.log("NO DATA !");
-                                        socket.emit('nodata', {});
+                                       // socket.emit('nodata', {});
                                 });
                             }
                         });
@@ -221,6 +295,12 @@ function findUnlabledTweets(hits, idsLabeledTweets, tweetsUnlabled) {
 };
 
 function stringToArray(string) {
-    if (!string) return [];
-    return string.split(',').map(Number);
+    var array = [];
+    if (!string) {
+        return []
+    } else {
+        console.log("the string is : ", string);
+        array = string.split(', ');
+        return array;
+    }
 }

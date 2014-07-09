@@ -2,6 +2,7 @@
 Prepend elastic search object before each tweet:
 cat mine.json | python prepend.py > mine.es.json
 """
+#!/bin/python
 import json
 import codecs
 import sys

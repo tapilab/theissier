@@ -1,0 +1,26 @@
+[2014-06-17 05:19:48,683][INFO ][node                     ] [Master Order] version[0.90.11], pid[2638], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-06-17 05:19:48,685][INFO ][node                     ] [Master Order] initializing ...
+[2014-06-17 05:19:48,809][INFO ][plugins                  ] [Master Order] loaded [river-twitter, river-fs], sites []
+[2014-06-17 05:19:52,077][INFO ][node                     ] [Master Order] initialized
+[2014-06-17 05:19:52,077][INFO ][node                     ] [Master Order] starting ...
+[2014-06-17 05:19:52,236][INFO ][transport                ] [Master Order] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.1.19:9300]}
+[2014-06-17 05:19:55,338][INFO ][cluster.service          ] [Master Order] new_master [Master Order][U8ZpVV4xQmyHaCXqkyh_Lw][inet[/192.168.1.19:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-17 05:19:55,386][INFO ][discovery                ] [Master Order] elasticsearch/U8ZpVV4xQmyHaCXqkyh_Lw
+[2014-06-17 05:19:55,437][INFO ][http                     ] [Master Order] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.1.19:9200]}
+[2014-06-17 05:19:55,439][INFO ][node                     ] [Master Order] started
+[2014-06-17 05:19:56,326][INFO ][gateway                  ] [Master Order] recovered [2] indices into cluster_state
+[2014-06-17 05:20:24,001][INFO ][node                     ] [Master Order] stopping ...
+[2014-06-17 05:20:24,078][INFO ][node                     ] [Master Order] stopped
+[2014-06-17 05:20:24,079][INFO ][node                     ] [Master Order] closing ...
+[2014-06-17 05:20:24,085][INFO ][node                     ] [Master Order] closed
+[2014-06-17 05:22:20,526][INFO ][node                     ] [Oneg the Prober] version[0.90.11], pid[2772], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-06-17 05:22:20,527][INFO ][node                     ] [Oneg the Prober] initializing ...
+[2014-06-17 05:22:20,662][INFO ][plugins                  ] [Oneg the Prober] loaded [river-twitter, river-fs], sites []
+[2014-06-17 05:22:24,382][INFO ][node                     ] [Oneg the Prober] initialized
+[2014-06-17 05:22:24,383][INFO ][node                     ] [Oneg the Prober] starting ...
+[2014-06-17 05:22:24,543][INFO ][transport                ] [Oneg the Prober] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.1.19:9300]}
+[2014-06-17 05:22:27,650][INFO ][cluster.service          ] [Oneg the Prober] new_master [Oneg the Prober][x33CqslqQ5CQKDlMnjBr3A][inet[/192.168.1.19:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-17 05:22:27,731][INFO ][discovery                ] [Oneg the Prober] elasticsearch/x33CqslqQ5CQKDlMnjBr3A
+[2014-06-17 05:22:27,787][INFO ][http                     ] [Oneg the Prober] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.1.19:9200]}
+[2014-06-17 05:22:27,788][INFO ][node                     ] [Oneg the Prober] started
+[2014-06-17 05:22:28,869][INFO ][gateway                  ] [Oneg the Prober] recovered [2] indices into cluster_state

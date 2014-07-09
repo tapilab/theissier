@@ -1,0 +1,15 @@
+[2014-06-25 13:41:10,224][INFO ][node                     ] [Blob] version[0.90.11], pid[919], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-06-25 13:41:10,225][INFO ][node                     ] [Blob] initializing ...
+[2014-06-25 13:41:10,350][INFO ][plugins                  ] [Blob] loaded [river-twitter, river-fs], sites []
+[2014-06-25 13:41:13,348][INFO ][node                     ] [Blob] initialized
+[2014-06-25 13:41:13,348][INFO ][node                     ] [Blob] starting ...
+[2014-06-25 13:41:13,486][INFO ][transport                ] [Blob] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[MacBook-Air-de-Thomas-2.local/127.0.0.1:9300]}
+[2014-06-25 13:41:16,614][INFO ][cluster.service          ] [Blob] new_master [Blob][bqGKBOPQT4Cx47UJt_QnWw][inet[MacBook-Air-de-Thomas-2.local/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-25 13:41:16,664][INFO ][discovery                ] [Blob] elasticsearch/bqGKBOPQT4Cx47UJt_QnWw
+[2014-06-25 13:41:16,682][INFO ][http                     ] [Blob] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[MacBook-Air-de-Thomas-2.local/127.0.0.1:9200]}
+[2014-06-25 13:41:16,683][INFO ][node                     ] [Blob] started
+[2014-06-25 13:41:17,483][INFO ][gateway                  ] [Blob] recovered [2] indices into cluster_state
+[2014-06-25 13:47:37,377][INFO ][node                     ] [Blob] stopping ...
+[2014-06-25 13:47:37,429][INFO ][node                     ] [Blob] stopped
+[2014-06-25 13:47:37,429][INFO ][node                     ] [Blob] closing ...
+[2014-06-25 13:47:37,441][INFO ][node                     ] [Blob] closed

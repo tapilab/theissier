@@ -1,0 +1,15 @@
+[2014-05-20 14:24:26,245][INFO ][node                     ] [Rictor] version[0.90.11], pid[1109], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-20 14:24:26,252][INFO ][node                     ] [Rictor] initializing ...
+[2014-05-20 14:24:26,374][INFO ][plugins                  ] [Rictor] loaded [river-twitter, river-fs], sites []
+[2014-05-20 14:24:29,754][INFO ][node                     ] [Rictor] initialized
+[2014-05-20 14:24:29,754][INFO ][node                     ] [Rictor] starting ...
+[2014-05-20 14:24:29,902][INFO ][transport                ] [Rictor] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-20 14:24:32,996][INFO ][cluster.service          ] [Rictor] new_master [Rictor][gzFKQ7_zQJ-C7uLBjihWqg][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-20 14:24:33,039][INFO ][discovery                ] [Rictor] elasticsearch/gzFKQ7_zQJ-C7uLBjihWqg
+[2014-05-20 14:24:33,061][INFO ][http                     ] [Rictor] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-20 14:24:33,061][INFO ][node                     ] [Rictor] started
+[2014-05-20 14:24:33,993][INFO ][gateway                  ] [Rictor] recovered [1] indices into cluster_state
+[2014-05-20 14:26:37,251][INFO ][node                     ] [Rictor] stopping ...
+[2014-05-20 14:26:37,314][INFO ][node                     ] [Rictor] stopped
+[2014-05-20 14:26:37,314][INFO ][node                     ] [Rictor] closing ...
+[2014-05-20 14:26:37,324][INFO ][node                     ] [Rictor] closed

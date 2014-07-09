@@ -1,0 +1,30 @@
+[2014-05-18 16:19:05,379][INFO ][node                     ] [Kate Neville] version[0.90.11], pid[2349], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-18 16:19:05,379][INFO ][node                     ] [Kate Neville] initializing ...
+[2014-05-18 16:19:05,440][INFO ][plugins                  ] [Kate Neville] loaded [river-twitter, river-fs], sites []
+[2014-05-18 16:19:07,862][INFO ][node                     ] [Kate Neville] initialized
+[2014-05-18 16:19:07,862][INFO ][node                     ] [Kate Neville] starting ...
+[2014-05-18 16:19:07,968][INFO ][transport                ] [Kate Neville] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-18 16:19:11,050][INFO ][cluster.service          ] [Kate Neville] new_master [Kate Neville][lqzGs8WWQB2yOkgrnZpQ4g][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-18 16:19:11,091][INFO ][discovery                ] [Kate Neville] elasticsearch/lqzGs8WWQB2yOkgrnZpQ4g
+[2014-05-18 16:19:11,116][INFO ][http                     ] [Kate Neville] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-18 16:19:11,117][INFO ][node                     ] [Kate Neville] started
+[2014-05-18 16:19:11,735][INFO ][gateway                  ] [Kate Neville] recovered [1] indices into cluster_state
+[2014-05-18 19:03:47,372][INFO ][node                     ] [Kate Neville] stopping ...
+[2014-05-18 19:03:47,411][INFO ][node                     ] [Kate Neville] stopped
+[2014-05-18 19:03:47,412][INFO ][node                     ] [Kate Neville] closing ...
+[2014-05-18 19:03:47,419][INFO ][node                     ] [Kate Neville] closed
+[2014-05-18 19:03:48,895][INFO ][node                     ] [3-D Man] version[0.90.11], pid[2630], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-05-18 19:03:48,896][INFO ][node                     ] [3-D Man] initializing ...
+[2014-05-18 19:03:48,972][INFO ][plugins                  ] [3-D Man] loaded [river-twitter, river-fs], sites []
+[2014-05-18 19:03:52,118][INFO ][node                     ] [3-D Man] initialized
+[2014-05-18 19:03:52,118][INFO ][node                     ] [3-D Man] starting ...
+[2014-05-18 19:03:52,248][INFO ][transport                ] [3-D Man] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-05-18 19:03:55,351][INFO ][cluster.service          ] [3-D Man] new_master [3-D Man][uXbXpirQTcKMe3fiwQKErQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-18 19:03:55,392][INFO ][discovery                ] [3-D Man] elasticsearch/uXbXpirQTcKMe3fiwQKErQ
+[2014-05-18 19:03:55,413][INFO ][http                     ] [3-D Man] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-05-18 19:03:55,414][INFO ][node                     ] [3-D Man] started
+[2014-05-18 19:03:56,253][INFO ][gateway                  ] [3-D Man] recovered [1] indices into cluster_state
+[2014-05-18 22:04:30,091][INFO ][node                     ] [3-D Man] stopping ...
+[2014-05-18 22:04:30,187][INFO ][node                     ] [3-D Man] stopped
+[2014-05-18 22:04:30,188][INFO ][node                     ] [3-D Man] closing ...
+[2014-05-18 22:04:30,200][INFO ][node                     ] [3-D Man] closed
