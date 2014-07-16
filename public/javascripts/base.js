@@ -24,6 +24,7 @@ function initialize() {
     };
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     socket.on('data', function(hits) {
+        console.log("these are the hits retrieved : ", hits);
         results = new SearchResults();
         clearMarkers();
         markers = [];

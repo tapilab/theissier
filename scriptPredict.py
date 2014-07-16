@@ -5,13 +5,20 @@ client = MongoClient('localhost', 27017)
 from sklearn.feature_extraction.text import CountVectorizer
 vec = CountVectorizer()
 from sklearn.linear_model import LogisticRegression
+from elasticsearch import Elasticsearch
+es = Elasticsearch()
 import zerorpc
 import array
 import json
 db = client.tweetsClassifier
 collection = db['scoredTweets']
 clf = LogisticRegression(class_weight="auto")
-epsilon = 0.7
+res = es.search(index="test2", body={"query": {"match_all": {}}})
+totalHits = res['hits']['total']
+res = es.search(index="test2", size=totalHits, body={"query": {"match_all": {}}})
+for hit in res['hits']['hits']:
+    print("%(text)s" % hit["_source"])
+epsilon = 0.5
 class TrainClassifier(object):
     def fit(self, object):
         print ("currently fitting")

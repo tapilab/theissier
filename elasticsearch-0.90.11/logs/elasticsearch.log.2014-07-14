@@ -1,0 +1,127 @@
+[2014-07-14 11:24:43,938][INFO ][node                     ] [Assassin] version[0.90.11], pid[918], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-14 11:24:43,939][INFO ][node                     ] [Assassin] initializing ...
+[2014-07-14 11:24:44,064][INFO ][plugins                  ] [Assassin] loaded [river-twitter, river-fs], sites []
+[2014-07-14 11:24:47,104][INFO ][node                     ] [Assassin] initialized
+[2014-07-14 11:24:47,105][INFO ][node                     ] [Assassin] starting ...
+[2014-07-14 11:24:47,235][INFO ][transport                ] [Assassin] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-14 11:24:50,325][INFO ][cluster.service          ] [Assassin] new_master [Assassin][9C3aIY7hRXq_k09Z5vRh7w][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-14 11:24:50,366][INFO ][discovery                ] [Assassin] elasticsearch/9C3aIY7hRXq_k09Z5vRh7w
+[2014-07-14 11:24:50,411][INFO ][http                     ] [Assassin] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-14 11:24:50,412][INFO ][node                     ] [Assassin] started
+[2014-07-14 11:24:51,307][INFO ][gateway                  ] [Assassin] recovered [3] indices into cluster_state
+[2014-07-14 11:46:15,291][DEBUG][action.search.type       ] [Assassin] [test2][1], node[9C3aIY7hRXq_k09Z5vRh7w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@424de67] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"match": {}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] [match] query malformed, no field
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-07-14 11:46:15,292][DEBUG][action.search.type       ] [Assassin] [test2][4], node[9C3aIY7hRXq_k09Z5vRh7w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@424de67] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"match": {}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] [match] query malformed, no field
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-07-14 11:46:15,291][DEBUG][action.search.type       ] [Assassin] [test2][2], node[9C3aIY7hRXq_k09Z5vRh7w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@424de67] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"match": {}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] [match] query malformed, no field
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-07-14 11:46:15,291][DEBUG][action.search.type       ] [Assassin] [test2][0], node[9C3aIY7hRXq_k09Z5vRh7w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@424de67] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"match": {}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] [match] query malformed, no field
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-07-14 11:46:15,291][DEBUG][action.search.type       ] [Assassin] [test2][3], node[9C3aIY7hRXq_k09Z5vRh7w], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@424de67]
+org.elasticsearch.search.SearchParseException: [test2][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"match": {}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] [match] query malformed, no field
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+[2014-07-14 11:46:15,303][DEBUG][action.search.type       ] [Assassin] All shards failed for phase: [query]

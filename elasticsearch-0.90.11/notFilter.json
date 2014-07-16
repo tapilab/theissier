@@ -1,0 +1,17 @@
+curl -XGET localhost:9200/test2/_search -d '{
+    "query": {
+        "filtered" : {
+            "query" : {
+                "match_all": {}
+             },
+             "filter" : {
+                 "not" : {
+                     "ids" : {
+		        "type": "tweet",
+		       "values" : [ "468510797531189248", "468510797355032577" ,"468663375225159682", "468528108883431424"]
+                     }
+                  }
+              }
+         }
+     }  
+}'

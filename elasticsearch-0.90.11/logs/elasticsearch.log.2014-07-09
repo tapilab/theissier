@@ -1,0 +1,413 @@
+[2014-07-09 10:24:31,498][INFO ][node                     ] [Douglas Birely] version[0.90.11], pid[579], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-09 10:24:31,499][INFO ][node                     ] [Douglas Birely] initializing ...
+[2014-07-09 10:24:31,626][INFO ][plugins                  ] [Douglas Birely] loaded [river-twitter, river-fs], sites []
+[2014-07-09 10:24:34,746][INFO ][node                     ] [Douglas Birely] initialized
+[2014-07-09 10:24:34,746][INFO ][node                     ] [Douglas Birely] starting ...
+[2014-07-09 10:24:34,874][INFO ][transport                ] [Douglas Birely] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-09 10:24:37,958][INFO ][cluster.service          ] [Douglas Birely] new_master [Douglas Birely][uL1aUPC6TqGEHF1aFpRwuw][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-09 10:24:38,011][INFO ][discovery                ] [Douglas Birely] elasticsearch/uL1aUPC6TqGEHF1aFpRwuw
+[2014-07-09 10:24:38,055][INFO ][http                     ] [Douglas Birely] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-09 10:24:38,056][INFO ][node                     ] [Douglas Birely] started
+[2014-07-09 10:24:38,877][INFO ][gateway                  ] [Douglas Birely] recovered [3] indices into cluster_state
+[2014-07-09 10:28:35,883][INFO ][node                     ] [Douglas Birely] stopping ...
+[2014-07-09 10:28:35,932][INFO ][node                     ] [Douglas Birely] stopped
+[2014-07-09 10:28:35,932][INFO ][node                     ] [Douglas Birely] closing ...
+[2014-07-09 10:28:35,946][INFO ][node                     ] [Douglas Birely] closed
+[2014-07-09 10:28:37,198][INFO ][node                     ] [Deadpool] version[0.90.11], pid[603], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-09 10:28:37,199][INFO ][node                     ] [Deadpool] initializing ...
+[2014-07-09 10:28:37,251][INFO ][plugins                  ] [Deadpool] loaded [river-twitter, river-fs], sites []
+[2014-07-09 10:28:39,481][INFO ][node                     ] [Deadpool] initialized
+[2014-07-09 10:28:39,481][INFO ][node                     ] [Deadpool] starting ...
+[2014-07-09 10:28:39,567][INFO ][transport                ] [Deadpool] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-09 10:28:42,634][INFO ][cluster.service          ] [Deadpool] new_master [Deadpool][oPg1bMJrSsWSLW4JJF7GIQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-09 10:28:42,675][INFO ][discovery                ] [Deadpool] elasticsearch/oPg1bMJrSsWSLW4JJF7GIQ
+[2014-07-09 10:28:42,713][INFO ][http                     ] [Deadpool] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-09 10:28:42,714][INFO ][node                     ] [Deadpool] started
+[2014-07-09 10:28:43,612][INFO ][gateway                  ] [Deadpool] recovered [3] indices into cluster_state
+[2014-07-09 14:11:16,894][DEBUG][action.search.type       ] [Deadpool] Failed to execute fetch phase
+java.lang.ArrayIndexOutOfBoundsException: 8
+	at org.elasticsearch.search.fetch.FetchPhase.execute(FetchPhase.java:164)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:434)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteFetch(SearchServiceTransportAction.java:406)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.executeFetchPhase(TransportSearchScrollQueryThenFetchAction.java:243)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.access$800(TransportSearchScrollQueryThenFetchAction.java:75)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction$3.onResult(TransportSearchScrollQueryThenFetchAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction$3.onResult(TransportSearchScrollQueryThenFetchAction.java:200)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:271)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.executeQueryPhase(TransportSearchScrollQueryThenFetchAction.java:200)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.access$600(TransportSearchScrollQueryThenFetchAction.java:75)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction$2.run(TransportSearchScrollQueryThenFetchAction.java:184)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-07-09 14:11:16,899][DEBUG][action.search.type       ] [Deadpool] [397] Failed to execute query phase
+org.elasticsearch.search.SearchContextMissingException: No search context found for id [397]
+	at org.elasticsearch.search.SearchService.findContext(SearchService.java:455)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:258)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:270)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.executeQueryPhase(TransportSearchScrollQueryThenFetchAction.java:200)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.access$600(TransportSearchScrollQueryThenFetchAction.java:75)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction$2.run(TransportSearchScrollQueryThenFetchAction.java:184)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-07-09 14:11:16,894][DEBUG][action.search.type       ] [Deadpool] Failed to execute fetch phase
+java.lang.ArrayIndexOutOfBoundsException: 8
+	at org.elasticsearch.search.fetch.FetchPhase.execute(FetchPhase.java:164)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:434)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteFetch(SearchServiceTransportAction.java:406)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.executeFetchPhase(TransportSearchScrollQueryThenFetchAction.java:243)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.access$800(TransportSearchScrollQueryThenFetchAction.java:75)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction$3.onResult(TransportSearchScrollQueryThenFetchAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction$3.onResult(TransportSearchScrollQueryThenFetchAction.java:200)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:271)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.executeQueryPhase(TransportSearchScrollQueryThenFetchAction.java:200)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction.access$600(TransportSearchScrollQueryThenFetchAction.java:75)
+	at org.elasticsearch.action.search.type.TransportSearchScrollQueryThenFetchAction$AsyncAction$2.run(TransportSearchScrollQueryThenFetchAction.java:184)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-07-09 14:42:15,691][INFO ][node                     ] [Deadpool] stopping ...
+[2014-07-09 14:42:15,821][WARN ][index.engine.robin       ] [Deadpool] [test2][1] Failed to close SearcherManager
+org.apache.lucene.store.AlreadyClosedException: this IndexReader is closed
+	at org.apache.lucene.index.IndexReader.decRef(IndexReader.java:224)
+	at org.apache.lucene.search.SearcherManager.decRef(SearcherManager.java:111)
+	at org.apache.lucene.search.SearcherManager.decRef(SearcherManager.java:58)
+	at org.apache.lucene.search.ReferenceManager.release(ReferenceManager.java:253)
+	at org.apache.lucene.search.ReferenceManager.swapReference(ReferenceManager.java:62)
+	at org.apache.lucene.search.ReferenceManager.close(ReferenceManager.java:130)
+	at org.apache.lucene.util.IOUtils.close(IOUtils.java:140)
+	at org.elasticsearch.index.engine.robin.RobinEngine.innerClose(RobinEngine.java:1339)
+	at org.elasticsearch.index.engine.robin.RobinEngine.close(RobinEngine.java:1291)
+	at org.elasticsearch.index.service.InternalIndexService.removeShard(InternalIndexService.java:404)
+	at org.elasticsearch.index.service.InternalIndexService$1.run(InternalIndexService.java:272)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-07-09 14:42:15,821][ERROR][index.engine.robin       ] [Deadpool] [test2][1] failed to acquire searcher, source search
+org.apache.lucene.store.AlreadyClosedException: this ReferenceManager is closed
+	at org.apache.lucene.search.ReferenceManager.acquire(ReferenceManager.java:97)
+	at org.elasticsearch.index.engine.robin.RobinEngine.acquireSearcher(RobinEngine.java:744)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.acquireSearcher(InternalIndexShard.java:600)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.acquireSearcher(InternalIndexShard.java:594)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:478)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-07-09 14:42:15,829][DEBUG][action.search.type       ] [Deadpool] [test2][1], node[oPg1bMJrSsWSLW4JJF7GIQ], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@e7359f7]
+org.elasticsearch.index.engine.EngineException: [test2][1] failed to acquire searcher
+	at org.elasticsearch.index.engine.robin.RobinEngine.acquireSearcher(RobinEngine.java:748)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.acquireSearcher(InternalIndexShard.java:600)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.acquireSearcher(InternalIndexShard.java:594)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:478)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.apache.lucene.store.AlreadyClosedException: this ReferenceManager is closed
+	at org.apache.lucene.search.ReferenceManager.acquire(ReferenceManager.java:97)
+	at org.elasticsearch.index.engine.robin.RobinEngine.acquireSearcher(RobinEngine.java:744)
+	... 14 more
+[2014-07-09 14:42:15,839][WARN ][netty.channel.DefaultChannelPipeline] An exception was thrown by an exception handler.
+java.util.concurrent.RejectedExecutionException: Worker has already been shutdown
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.registerTask(AbstractNioSelector.java:120)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:72)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:56)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioChannelSink.execute(AbstractNioChannelSink.java:34)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.execute(DefaultChannelPipeline.java:636)
+	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaughtLater(Channels.java:496)
+	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:46)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:781)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:725)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.doEncode(OneToOneEncoder.java:71)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:59)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:704)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:671)
+	at org.elasticsearch.common.netty.channel.AbstractChannel.write(AbstractChannel.java:248)
+	at org.elasticsearch.http.netty.NettyHttpChannel.sendResponse(NettyHttpChannel.java:158)
+	at org.elasticsearch.rest.action.search.RestSearchAction$1.onResponse(RestSearchAction.java:99)
+	at org.elasticsearch.rest.action.search.RestSearchAction$1.onResponse(RestSearchAction.java:91)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.innerFinishHim(TransportSearchQueryThenFetchAction.java:198)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.finishHim(TransportSearchQueryThenFetchAction.java:180)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction$3.onResult(TransportSearchQueryThenFetchAction.java:156)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction$3.onResult(TransportSearchQueryThenFetchAction.java:150)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteFetch(SearchServiceTransportAction.java:407)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.executeFetch(TransportSearchQueryThenFetchAction.java:150)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction$2.run(TransportSearchQueryThenFetchAction.java:134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-07-09 14:42:15,857][INFO ][node                     ] [Deadpool] stopped
+[2014-07-09 14:42:15,857][INFO ][node                     ] [Deadpool] closing ...
+[2014-07-09 14:42:15,866][INFO ][node                     ] [Deadpool] closed
+[2014-07-09 14:42:17,572][INFO ][node                     ] [Hermes] version[0.90.11], pid[3374], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-09 14:42:17,572][INFO ][node                     ] [Hermes] initializing ...
+[2014-07-09 14:42:17,711][INFO ][plugins                  ] [Hermes] loaded [river-twitter, river-fs], sites []
+[2014-07-09 14:42:20,901][INFO ][node                     ] [Hermes] initialized
+[2014-07-09 14:42:20,901][INFO ][node                     ] [Hermes] starting ...
+[2014-07-09 14:42:21,035][INFO ][transport                ] [Hermes] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/198.37.19.145:9300]}
+[2014-07-09 14:42:24,141][INFO ][cluster.service          ] [Hermes] new_master [Hermes][VxZisESHTxuDJrHWGhRXeg][inet[/198.37.19.145:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-09 14:42:24,192][INFO ][discovery                ] [Hermes] elasticsearch/VxZisESHTxuDJrHWGhRXeg
+[2014-07-09 14:42:24,245][INFO ][http                     ] [Hermes] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/198.37.19.145:9200]}
+[2014-07-09 14:42:24,245][INFO ][node                     ] [Hermes] started
+[2014-07-09 14:42:25,227][INFO ][gateway                  ] [Hermes] recovered [3] indices into cluster_state
+[2014-07-09 15:01:07,874][DEBUG][action.search.type       ] [Hermes] [test2][4], node[VxZisESHTxuDJrHWGhRXeg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@104b1bcd] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:485)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:232)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:881)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:215)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 19 more
+[2014-07-09 15:01:07,874][DEBUG][action.search.type       ] [Hermes] [test2][1], node[VxZisESHTxuDJrHWGhRXeg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@104b1bcd]
+org.elasticsearch.search.SearchParseException: [test2][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:485)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:232)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:881)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:215)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 19 more
+[2014-07-09 15:01:07,874][DEBUG][action.search.type       ] [Hermes] [test2][3], node[VxZisESHTxuDJrHWGhRXeg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@104b1bcd] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:485)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:232)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:881)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:215)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 19 more
+[2014-07-09 15:01:07,874][DEBUG][action.search.type       ] [Hermes] [test2][0], node[VxZisESHTxuDJrHWGhRXeg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@104b1bcd] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:485)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:232)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:881)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:215)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 19 more
+[2014-07-09 15:01:07,874][DEBUG][action.search.type       ] [Hermes] [test2][2], node[VxZisESHTxuDJrHWGhRXeg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@104b1bcd] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:485)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [test2] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:232)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:213)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:284)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:255)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:569)
+	... 12 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:881)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:215)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 19 more
+[2014-07-09 15:01:07,884][DEBUG][action.search.type       ] [Hermes] All shards failed for phase: [query]
+[2014-07-09 17:50:24,188][INFO ][node                     ] [Hermes] stopping ...
+[2014-07-09 17:50:24,309][INFO ][node                     ] [Hermes] stopped
+[2014-07-09 17:50:24,310][INFO ][node                     ] [Hermes] closing ...
+[2014-07-09 17:50:24,324][INFO ][node                     ] [Hermes] closed

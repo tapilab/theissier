@@ -1,0 +1,362 @@
+[2014-07-15 11:29:30,192][INFO ][node                     ] [Assassin] stopping ...
+[2014-07-15 11:29:30,321][INFO ][node                     ] [Assassin] stopped
+[2014-07-15 11:29:30,321][INFO ][node                     ] [Assassin] closing ...
+[2014-07-15 11:29:30,334][INFO ][node                     ] [Assassin] closed
+[2014-07-15 11:29:31,653][INFO ][node                     ] [Riot] version[0.90.11], pid[3471], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-15 11:29:31,653][INFO ][node                     ] [Riot] initializing ...
+[2014-07-15 11:29:31,770][INFO ][plugins                  ] [Riot] loaded [river-twitter, river-fs], sites []
+[2014-07-15 11:29:35,003][INFO ][node                     ] [Riot] initialized
+[2014-07-15 11:29:35,004][INFO ][node                     ] [Riot] starting ...
+[2014-07-15 11:29:35,176][INFO ][transport                ] [Riot] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-15 11:29:38,283][INFO ][cluster.service          ] [Riot] new_master [Riot][eW4p4SAZS4i3dgNRVky1OA][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-15 11:29:38,331][INFO ][discovery                ] [Riot] elasticsearch/eW4p4SAZS4i3dgNRVky1OA
+[2014-07-15 11:29:38,368][INFO ][http                     ] [Riot] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-15 11:29:38,369][INFO ][node                     ] [Riot] started
+[2014-07-15 11:29:39,273][INFO ][gateway                  ] [Riot] recovered [3] indices into cluster_state
+[2014-07-15 11:38:11,396][DEBUG][action.search.type       ] [Riot] [test2][1], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4bd66d2f] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "_id" : 468663375225159682
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][1]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:38:11,396][DEBUG][action.search.type       ] [Riot] [test2][0], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4bd66d2f] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "_id" : 468663375225159682
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][0]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:38:11,396][DEBUG][action.search.type       ] [Riot] [test2][3], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4bd66d2f]
+org.elasticsearch.search.SearchParseException: [test2][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "_id" : 468663375225159682
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][3]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:38:11,396][DEBUG][action.search.type       ] [Riot] [test2][2], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4bd66d2f] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "_id" : 468663375225159682
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][2]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:38:11,396][DEBUG][action.search.type       ] [Riot] [test2][4], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4bd66d2f] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "_id" : 468663375225159682
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][4]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:38:11,404][DEBUG][action.search.type       ] [Riot] All shards failed for phase: [query]
+[2014-07-15 11:42:27,479][DEBUG][action.search.type       ] [Riot] [test2][0], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2db1d931] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "ids" : {
+                     "type": "tweet",
+                     "values" : ["468663375225159682", "468528108883431424"]
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][0]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:42:27,481][DEBUG][action.search.type       ] [Riot] [test2][4], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2db1d931]
+org.elasticsearch.search.SearchParseException: [test2][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "ids" : {
+                     "type": "tweet",
+                     "values" : ["468663375225159682", "468528108883431424"]
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][4]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:42:27,484][DEBUG][action.search.type       ] [Riot] All shards failed for phase: [query]
+[2014-07-15 11:42:27,480][DEBUG][action.search.type       ] [Riot] [test2][3], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2db1d931] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "ids" : {
+                     "type": "tweet",
+                     "values" : ["468663375225159682", "468528108883431424"]
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][3]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:42:27,480][DEBUG][action.search.type       ] [Riot] [test2][2], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2db1d931] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "ids" : {
+                     "type": "tweet",
+                     "values" : ["468663375225159682", "468528108883431424"]
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][2]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 11:42:27,479][DEBUG][action.search.type       ] [Riot] [test2][1], node[eW4p4SAZS4i3dgNRVky1OA], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2db1d931] lastShard [true]
+org.elasticsearch.search.SearchParseException: [test2][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{
+    "filtered" : {
+        "query" : {
+            "match_all": {}
+        },
+        "filter" : {
+            "not" : {
+                "ids" : {
+                     "type": "tweet",
+                     "values" : ["468663375225159682", "468528108883431424"]
+            }
+        }
+    }
+}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:581)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:484)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:469)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:462)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:234)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.search.SearchParseException: [test2][1]: from[-1],size[-1]: Parse Failure [No parser for element [filtered]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:567)
+	... 12 more
+[2014-07-15 12:04:01,203][INFO ][node                     ] [Riot] stopping ...
+[2014-07-15 12:04:01,264][INFO ][node                     ] [Riot] stopped
+[2014-07-15 12:04:01,264][INFO ][node                     ] [Riot] closing ...
+[2014-07-15 12:04:01,272][INFO ][node                     ] [Riot] closed
+[2014-07-15 12:04:02,856][INFO ][node                     ] [Beast] version[0.90.11], pid[4068], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-15 12:04:02,857][INFO ][node                     ] [Beast] initializing ...
+[2014-07-15 12:04:02,926][INFO ][plugins                  ] [Beast] loaded [river-twitter, river-fs], sites []
+[2014-07-15 12:04:06,235][INFO ][node                     ] [Beast] initialized
+[2014-07-15 12:04:06,235][INFO ][node                     ] [Beast] starting ...
+[2014-07-15 12:04:06,375][INFO ][transport                ] [Beast] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-15 12:04:09,474][INFO ][cluster.service          ] [Beast] new_master [Beast][yrGXVUcCQg6EK85C7QBMqQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-15 12:04:09,518][INFO ][discovery                ] [Beast] elasticsearch/yrGXVUcCQg6EK85C7QBMqQ
+[2014-07-15 12:04:09,556][INFO ][http                     ] [Beast] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-15 12:04:09,556][INFO ][node                     ] [Beast] started
+[2014-07-15 12:04:10,454][INFO ][gateway                  ] [Beast] recovered [3] indices into cluster_state
+[2014-07-15 12:44:59,269][INFO ][node                     ] [Beast] stopping ...
+[2014-07-15 12:44:59,378][INFO ][node                     ] [Beast] stopped
+[2014-07-15 12:44:59,379][INFO ][node                     ] [Beast] closing ...
+[2014-07-15 12:44:59,393][INFO ][node                     ] [Beast] closed
+[2014-07-15 12:45:01,308][INFO ][node                     ] [Ghost Dancer] version[0.90.11], pid[4745], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-15 12:45:01,309][INFO ][node                     ] [Ghost Dancer] initializing ...
+[2014-07-15 12:45:01,424][INFO ][plugins                  ] [Ghost Dancer] loaded [river-twitter, river-fs], sites []
+[2014-07-15 12:45:04,775][INFO ][node                     ] [Ghost Dancer] initialized
+[2014-07-15 12:45:04,775][INFO ][node                     ] [Ghost Dancer] starting ...
+[2014-07-15 12:45:04,920][INFO ][transport                ] [Ghost Dancer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-15 12:45:08,031][INFO ][cluster.service          ] [Ghost Dancer] new_master [Ghost Dancer][hXvJfW5IT7S2-DKkbxVZIQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-15 12:45:08,073][INFO ][discovery                ] [Ghost Dancer] elasticsearch/hXvJfW5IT7S2-DKkbxVZIQ
+[2014-07-15 12:45:08,112][INFO ][http                     ] [Ghost Dancer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-15 12:45:08,113][INFO ][node                     ] [Ghost Dancer] started
+[2014-07-15 12:45:09,067][INFO ][gateway                  ] [Ghost Dancer] recovered [3] indices into cluster_state
+[2014-07-15 21:41:12,398][INFO ][node                     ] [Ghost Dancer] stopping ...
+[2014-07-15 21:41:12,534][INFO ][node                     ] [Ghost Dancer] stopped
+[2014-07-15 21:41:12,534][INFO ][node                     ] [Ghost Dancer] closing ...
+[2014-07-15 21:41:12,546][INFO ][node                     ] [Ghost Dancer] closed
+[2014-07-15 21:41:13,883][INFO ][node                     ] [Sidewinder] version[0.90.11], pid[8588], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-15 21:41:13,883][INFO ][node                     ] [Sidewinder] initializing ...
+[2014-07-15 21:41:13,996][INFO ][plugins                  ] [Sidewinder] loaded [river-twitter, river-fs], sites []
+[2014-07-15 21:41:17,170][INFO ][node                     ] [Sidewinder] initialized
+[2014-07-15 21:41:17,171][INFO ][node                     ] [Sidewinder] starting ...
+[2014-07-15 21:41:17,310][INFO ][transport                ] [Sidewinder] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-15 21:41:20,397][INFO ][cluster.service          ] [Sidewinder] new_master [Sidewinder][CuzraMCuQ1OxO1UcW59h-A][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-15 21:41:20,445][INFO ][discovery                ] [Sidewinder] elasticsearch/CuzraMCuQ1OxO1UcW59h-A
+[2014-07-15 21:41:20,486][INFO ][http                     ] [Sidewinder] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-15 21:41:20,487][INFO ][node                     ] [Sidewinder] started
+[2014-07-15 21:41:21,514][INFO ][gateway                  ] [Sidewinder] recovered [3] indices into cluster_state
