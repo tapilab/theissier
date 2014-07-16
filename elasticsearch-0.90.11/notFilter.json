@@ -1,4 +1,5 @@
 curl -XGET localhost:9200/test2/_search -d '{
+    "size": 2,
     "query": {
         "filtered" : {
             "query" : {

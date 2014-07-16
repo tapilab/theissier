@@ -48,11 +48,17 @@ def quicksort(myList, start, end):
         quicksort(myList, start, split-1)
         quicksort(myList, split+1, end)
     return myList
-
 #### QUICK SORT ALGORITHM ####
 
 def returnTopNTweets(myList, numberOfTweets):
     return myList[:numberOfTweets]
+
+def printTweets(myList):
+    for tweeet in myList:
+        print("tweet id : ", tweeet.id)
+        print("text : ", tweeet.text)
+        print("probaYES :", tweeet.probaYES)
+        print("probaNO : ", tweeet.probaNO)
 
 class TweetInfo:
     def __init__(self, id, text, probaYES, probaNO):
@@ -73,25 +79,27 @@ class TrainClassifier(object):
         clf.fit(resultMatrix, scores)
     def predict(self, sessionname):
         tweetsList = []
-        print("sessionname : ", sessionname)
+        #print("sessionname : ", sessionname)
         idsLabeledTweets = []
         for document in collection.find({ "sessionname": sessionname }, { "text": 1, "id": 1, "sessionname": 1, "_id": 0 }):
             idsLabeledTweets.append(document['id'])
-        print ("here are the ids of the labeled tweets : ")
-        print(idsLabeledTweets)
+        #print ("here are the ids of the labeled tweets : ")
+        #print(idsLabeledTweets)
         textUnlabledTweets = []
         bestTweets = []
         res = es.search(index="test2", body={"query": {"match_all": {}}})
         totalHits = res['hits']['total']
         totalUnlabled = totalHits - len(idsLabeledTweets)
-        res = es.search(index="test2", size=totalUnlabled, body={"query": {"match_all": {}}})
+        res = es.search(index="test2", size=totalUnlabled, body={"query": {"filtered" : {"query" : {"match_all": {}}, "filter" : {"not" : {"ids" : {"type": "tweet","values" : idsLabeledTweets }}}}}})
         for hit in res['hits']['hits']:
             x = TweetInfo(hit["_id"], hit["_source"]["text"], 0.0, 0.0)
             tweetsList.append(x)
             textUnlabledTweets.append(hit["_source"]["text"])
+        #printTweets(tweetsList)
+        #print("len tweetsLIST : ", len(tweetsList))
         matrixUnlabledTweets = vec.transform(textUnlabledTweets).toarray()
         predictUnlabledTweets = clf.predict_proba(matrixUnlabledTweets)
-        print("predict : " , predictUnlabledTweets)
+        #print("predict : " , predictUnlabledTweets)
         count = 0
         for tweet in tweetsList:
             tweet.probaNO = predictUnlabledTweets[count][0]
@@ -100,6 +108,8 @@ class TrainClassifier(object):
         sortedList = quicksort(tweetsList,0,len(tweetsList)-1)
         sortedList = sortedList[::-1]
         bestTweets = returnTopNTweets(sortedList, 20)
+        print("BEST TWEETS : ")
+        printTweets(bestTweets)
         #tweets that respect the criterion (more than a certain probability) will be sent to node.js
         idsToSend = []
         for bestTweet in bestTweets:

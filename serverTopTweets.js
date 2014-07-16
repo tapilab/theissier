@@ -149,16 +149,16 @@ MongoClient.connect(locationDb, function(err, db) {
                         type: 'tweet',
                         body: {
                             query :
-                            { bool :
-                            { must :
-                            { match :
-                            { text :
-                            { "query" : keyword.keyword, "type" : "phrase" }
+                                { bool :
+                                    { must :
+                                        { match :
+                                            { text :
+                                                { "query" : keyword.keyword, "type" : "phrase" }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            }
-                            }
-                            }
-                        }
                     }).then(function (resp) {
                             var hits = resp.hits.hits;
                             io.sockets.emit('data', hits);
