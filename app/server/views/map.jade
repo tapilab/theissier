@@ -1,0 +1,104 @@
+// preset form values if we receive a userdata object //
+- user = typeof(udata) != 'undefined' ? udata : { }
+// store the userId on the client side in a hidden input field //
+input(type='hidden', value= user._id)#userId
+input(type='hidden', value= user.user)#username
+input(type='hidden', value= user.activesession)#activeSession
+input(type='hidden', value= sessions)#sessionsUser
+
+- hits = typeof(hits) != 'undefined' ? hits : { }
+
+!!! 5
+html(ng-app='ng-app')
+head
+    title Label Tweets
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/stylesheet.css')
+    body
+        legend
+            include modals/return-search
+            button#modal-button.btn.btn-primary.btn-small(data-toggle='modal', data-target='#info-box') Info!
+            #search-keyword
+                form.navbar-form.navbar-brand(role='search')
+                    .form-group
+                        input#keyword-search-input.form-control(name='search_query', type='text', placeholder='Search')
+                    button#submit-keyword.btn.btn-default.btn-sm(type='button')
+                        span.glyphicon.glyphicon-search
+            #choose-session.btn-group
+                button#choose-session-button.btn.btn-default.btn-small.btn-danger.dropdown-toggle(type='button', data-toggle='dropdown')
+                    | Sessions
+                    span.caret
+                ul#list-sessions.dropdown-menu
+                    li#no-history.disabled
+                        a(href='#') No History
+            button#train-classifier.btn.btn-danger.btn-small Train Classifier
+            button#create-session-button.btn.btn-success.btn-small(data-toggle='modal', data-target='#create-session-box') Create a session
+            button#title-alert-active-session.btn.btn-info.btn-small Current session :
+            br
+            br
+        #info-box.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                        h4#info.modal-title Information
+                    #text-info-box.modal-body
+                        p
+                            | Just search for something (keywords or sentences) and say if the tweets retrieved are relevant to your search! Please add a session name to be able to search for something.
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        #modal-box.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                        h4#tweets-result.modal-title Tweets
+                    #text-modal.modal-body
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        #results-box.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                        h4#from-classifier-tweets.modal-title TOP ... Tweets
+                    #text-from-classifier-tweets.modal-body
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        #create-session-box.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                        h4#title-create-session.modal-title Create a session
+                    #body-create-session.modal-body
+                        form.form-horizontal(role='form')
+                            .form-group
+                                input#input-session-name.form-control(type='text', placeholder='Your Session Name')
+                    .modal-footer
+                        button#submit-create-session.disabled.btn.btn-primary(type='button', data-dismiss='modal') Submit
+        #map-canvas
+block scripts
+    script(type='text/javascript', src='//code.jquery.com/jquery-1.10.2.min.js')
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmKFXOfbzFxjrP5BO-Jw8ZTtooWm0XKU&sensor=true')
+    script(type='text/javascript', src='/js/bootstrap.min.js')
+    script(type='text/javascript', src='/js/underscore.js')
+    script(type='text/javascript', src='/js/backbone.js')
+    script(type='text/javascript')
+        var Search = Backbone.Model.extend({
+        defaults: {
+        input: "Keyword",
+        hits: new Object()
+        },
+        initialize: function(){
+        //console.log("Search is initialized");
+        }
+        });
+        var SearchResults = Backbone.Collection.extend({
+        model: Search
+        });
+        var results = new SearchResults();
+        // console.log( results.models );
+    script(type='text/javascript', src='/js/views/search.js')
+    script(src='/js/controllers/searchController.js')

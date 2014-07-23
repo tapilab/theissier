@@ -1,0 +1,11 @@
+[2014-07-19 17:01:02,680][INFO ][node                     ] [Sligguth] version[0.90.11], pid[944], build[11da1ba/2014-02-03T15:27:39Z]
+[2014-07-19 17:01:02,682][INFO ][node                     ] [Sligguth] initializing ...
+[2014-07-19 17:01:02,800][INFO ][plugins                  ] [Sligguth] loaded [river-twitter, river-fs], sites []
+[2014-07-19 17:01:06,049][INFO ][node                     ] [Sligguth] initialized
+[2014-07-19 17:01:06,049][INFO ][node                     ] [Sligguth] starting ...
+[2014-07-19 17:01:06,184][INFO ][transport                ] [Sligguth] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/10.0.0.3:9300]}
+[2014-07-19 17:01:09,285][INFO ][cluster.service          ] [Sligguth] new_master [Sligguth][vyXtciSKQ0SI8b2OeKvvNQ][inet[/10.0.0.3:9300]], reason: zen-disco-join (elected_as_master)
+[2014-07-19 17:01:09,323][INFO ][discovery                ] [Sligguth] elasticsearch/vyXtciSKQ0SI8b2OeKvvNQ
+[2014-07-19 17:01:09,395][INFO ][http                     ] [Sligguth] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/10.0.0.3:9200]}
+[2014-07-19 17:01:09,397][INFO ][node                     ] [Sligguth] started
+[2014-07-19 17:01:10,469][INFO ][gateway                  ] [Sligguth] recovered [3] indices into cluster_state

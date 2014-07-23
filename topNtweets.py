@@ -67,30 +67,32 @@ class TweetInfo:
         self.probaYES = probaYES
         self.probaNO = probaNO
 class TrainClassifier(object):
-    def fit(self, sessionname):
+    def fit(self, sessionname, userId):
         print ("currently fitting")
-        print("object :", object)
+        #print("object : ", object)
+        #print("user id: ", userId)
         textTweetsArray = []
         scores = []
-        for document in collection.find({ "sessionname": sessionname }, { "text": 1, "id": 1, "score": 1, "sessionname": 1, "_id": 0 }):
+        for document in collection.find({ "sessionname": sessionname, "userId": userId  }, { "text": 1, "id": 1, "score": 1, "sessionname": 1, "_id": 0 }):
             textTweetsArray.append(document['text'])
             scores.append(document['score'])
         resultMatrix = vec.fit_transform(textTweetsArray).toarray()
         clf.fit(resultMatrix, scores)
-    def predict(self, sessionname):
+    def predict(self, sessionname, userId):
         tweetsList = []
-        #print("sessionname : ", sessionname)
+        print("sessionname : ", sessionname)
+        print("userId: ", userId)
         idsLabeledTweets = []
-        for document in collection.find({ "sessionname": sessionname }, { "text": 1, "id": 1, "sessionname": 1, "_id": 0 }):
+        for document in collection.find({ "sessionname": sessionname, "userId": userId  }, { "text": 1, "id": 1, "sessionname": 1, "_id": 0 }):
             idsLabeledTweets.append(document['id'])
-        #print ("here are the ids of the labeled tweets : ")
-        #print(idsLabeledTweets)
+        print ("here are the ids of the labeled tweets : ")
+        print(idsLabeledTweets)
         textUnlabledTweets = []
         bestTweets = []
-        res = es.search(index="test2", body={"query": {"match_all": {}}})
+        res = es.search(index="test", body={"query": {"match_all": {}}})
         totalHits = res['hits']['total']
         totalUnlabled = totalHits - len(idsLabeledTweets)
-        res = es.search(index="test2", size=totalUnlabled, body={"query": {"filtered" : {"query" : {"match_all": {}}, "filter" : {"not" : {"ids" : {"type": "tweet","values" : idsLabeledTweets }}}}}})
+        res = es.search(index="test", size=totalUnlabled, body={"query": {"filtered" : {"query" : {"match_all": {}}, "filter" : {"not" : {"ids" : {"type": "test","values" : idsLabeledTweets }}}}}})
         for hit in res['hits']['hits']:
             x = TweetInfo(hit["_id"], hit["_source"]["text"], 0.0, 0.0)
             tweetsList.append(x)
