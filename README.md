@@ -39,8 +39,8 @@ etc...
 Node.js & python scripts run on two different processes.
 They can communicate and send data to each other thanks to ZeroRPC library : http://zerorpc.dotcloud.com/
 Install ZeroRPC libraries: 
-*Node.js : ```npm install zerorpc```
-*Python : ```pip install zerorpc```
+- Node.js : ```npm install zerorpc```
+- Python : ```pip install zerorpc```
 
 **If you have errors:**
 It might be because ```zeroMQ``` and ```libtool``` libraries are not installed on your machine.
