@@ -1,6 +1,8 @@
 theissier
 =========
 
+##Installation & Configuration
+
 If you don't have node.js running on your machine go to : http://nodejs.org/ download and install the current version 
 -> Project running on version ```2.4.8```.
 
@@ -8,6 +10,8 @@ If you don't have mongodb running on your machine go to : http://www.mongodb.org
 
 If you don't have ElasticSearch running on your machine go to : http://www.elasticsearch.org/ download and install the current version
 -> Project running on version ```version[0.90.11]```.
+
+#####ElasticSearch setup
 
 You should index some documents (tweets) into an ElasticSearch index with the bulk API
 ```
@@ -28,6 +32,25 @@ myfilename has to be structured like that :
 { yourJsonTweet } 
 etc...
 ```
+
+#####Python setup
+
+Node.js & python scripts run on two different processes.
+They can communicate and send data to each other thanks to ZeroRPC library : http://zerorpc.dotcloud.com/
+Install ZeroRPC libraries: 
+1. Node.js : ```npm install zerorpc```
+2. Python : ```pip install zerorpc```
+
+**If you have errors:**
+It might be because ```zeroMQ``` and ```libtool``` libraries are not installed on your machine.
+I succeeded in installing zeroRPC library after executing this command : 
+```
+sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
+```
+
+##Overview of system architecture
+
+
 
 Master's project
 Procfile for heroku
