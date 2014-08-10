@@ -24,8 +24,9 @@ Command to run :
 ```
 curl -s -XPOST localhost:9200/_bulk --data-binary @myfilename; echo
 ```
-myfilename has to be structured like that : 
-```
+
+```myfilename``` has to be structured like that :
+````
 {"index": {"_index": "tweets", "_type": "tweet", "_id": "468510797367615488" }} 
 { yourJsonTweet }  
 {"index": {"_index": "tweets", "_type": "tweet", "_id": "468509383576801280"}}
