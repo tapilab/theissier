@@ -1,11 +1,13 @@
 theissier
 =========
 
-If you don't have node.js running on your machine go to : http://nodejs.org/ download and install the current version. Project running on version ```2.4.8```.
+If you don't have node.js running on your machine go to : http://nodejs.org/ download and install the current version. 
+-> Project running on version ```2.4.8```.
 
-If you don't have mongodb running on your machine go to : http://www.mongodb.org/ download and install the current version.Project running on version ```v0.10.24```.
+If you don't have mongodb running on your machine go to : http://www.mongodb.org/ download and install the current version.
+-> Project running on version ```v0.10.24```.
 
-If you don't have ElasticSearch running on your machine go to : http://www.elasticsearch.org/ download and install the current version. Project running on version ```version[0.90.11]```.
+If you don't have ElasticSearch running on your machine go to : http://www.elasticsearch.org/ download and install the current version. -> Project running on version ```version[0.90.11]```.
 
 You should index some documents (tweets) into an ElasticSearch index with the bulk API
 ```
