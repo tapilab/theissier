@@ -19,14 +19,12 @@ You should index some documents (tweets) into an ElasticSearch index with the bu
 INDEX NAME HAS TO BE : tweets
 INDEX TYPE HAS TO BE : tweet
 ```
-Help here : http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-bulk.html
 
 Command to run : 
 ```
 curl -s -XPOST localhost:9200/_bulk --data-binary @myfilename; echo
 ```
-
-```myfilename``` has to be structured like that :
+where ```myfilename``` has to be structured like that :
 ````
 {"index": {"_index": "tweets", "_type": "tweet", "_id": "468510797367615488" }} 
 { yourJsonTweet }  
@@ -34,6 +32,8 @@ curl -s -XPOST localhost:9200/_bulk --data-binary @myfilename; echo
 { yourJsonTweet } 
 etc...
 ```
+
+Documentation of ```ElasticSearch``` on the ```Bulk API``` : http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-bulk.html
 
 #####Python setup
 
