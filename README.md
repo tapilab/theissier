@@ -59,12 +59,12 @@ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 - a ```Node.js``` application that handles different types of requests performed by the user (ex: ```/search```, ```/train```)
 
 
-######Example of a Search request performed by the user:
+######Example of a ```/search``` request performed by the user:
 ![Alt text](searchRequest.png?raw=true "Search request performed by the user")
 
 ######Example of labelling a tweet:
 
-######Example of a click on the ```TrainClassifier``` button:
+######Example of a ```/train``` request performed when the user clicks on the ```TrainClassifier``` button:
 ![Alt text](trainClassifier.png?raw=true "TrainClassifier request performed by the user")
 
 ##Launch the app
