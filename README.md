@@ -73,4 +73,5 @@ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 - Launch elasticsearch. If elasticsearch directory at the root of the folder : ```elasticsearch-0.90.11/bin/elasticsearch -f```
 - Start MongoDB server : ```mongod```
 - Start python script : ```python topNtweets.py```
+- Install npm dependencies : ```npm install -d```
 - Start the node application : ```node app.js```
