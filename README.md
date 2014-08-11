@@ -7,7 +7,7 @@ theissier
 If you don't have node.js running on your machine go to : http://nodejs.org/ download and install the current version 
 -> Project running on version ```2.4.8```.
 
-If you don't have mongodb running on your machine go to : http://www.mongodb.org/ download and install the current version -> Project running on version ```v0.10.24```.
+If you don't have MongoDB running on your machine go to : http://www.mongodb.org/ download and install the current version -> Project running on version ```v0.10.24```.
 
 If you don't have ElasticSearch running on your machine go to : http://www.elasticsearch.org/ download and install the current version
 -> Project running on version ```version[0.90.11]```.
@@ -53,11 +53,22 @@ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 ##Launch the app
 
 - Launch elasticsearch. If elasticsearch directory at the root of the folder : ```elasticsearch-0.90.11/bin/elasticsearch -f```
+- Start MongoDB server : ```mongod```
 - Start python script : ```python topNtweets.py```
-- Start mongodb server : ```mongod```
 - Start the node application : ```node app.js```
 
 ##Overview of system architecture
 
-####Search request performed by the user:
+**The system is composed of :**
+- a MongoDB database composed of two collections : *users* and *scoredTweets*. Users & labeled tweets are sorted in those collections.
+- an ElasticSearch index called ```tweets``` composed of documents of type ```tweet``` that makes the tweets searchable.
+- a Python script where a ```Logistical Regression classifier``` predicts the relevance of unlabeled tweets, sort all the tweets by relevance and sends back the 20 top tweets to the ```Node.js server```
+- a Node.js application that handles different types of requests performed by the user (ex: ```/search```, ```/train````)
+
+
+######Search request performed by the user:
 ![Alt text](searchRequest.png?raw=true "Search request performed by the user")
+
+######Label a tweet performed by the user:
+
+######Trainthe classifier
