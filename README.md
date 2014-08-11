@@ -1,12 +1,13 @@
 theissier
 =========
+[Procfile for heroku]
 
 ##Installation & Configuration
 
 If you don't have node.js running on your machine go to : http://nodejs.org/ download and install the current version 
 -> Project running on version ```2.4.8```.
 
-If you don't have mongodb running on your machine go to : http://www.mongodb.org/ download and install the current version -> Project running on version ```v0.10.24```.
+If you don't have MongoDB running on your machine go to : http://www.mongodb.org/ download and install the current version -> Project running on version ```v0.10.24```.
 
 If you don't have ElasticSearch running on your machine go to : http://www.elasticsearch.org/ download and install the current version
 -> Project running on version ```version[0.90.11]```.
@@ -18,14 +19,12 @@ You should index some documents (tweets) into an ElasticSearch index with the bu
 INDEX NAME HAS TO BE : tweets
 INDEX TYPE HAS TO BE : tweet
 ```
-Help here : http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-bulk.html
 
 Command to run : 
 ```
 curl -s -XPOST localhost:9200/_bulk --data-binary @myfilename; echo
 ```
-
-```myfilename``` has to be structured like that :
+where ```myfilename``` has to be structured like that :
 ````
 {"index": {"_index": "tweets", "_type": "tweet", "_id": "468510797367615488" }} 
 { yourJsonTweet }  
@@ -33,6 +32,8 @@ curl -s -XPOST localhost:9200/_bulk --data-binary @myfilename; echo
 { yourJsonTweet } 
 etc...
 ```
+
+Documentation of ```ElasticSearch``` on the ```Bulk API``` : http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-bulk.html
 
 #####Python setup
 
@@ -51,14 +52,24 @@ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 
 ##Overview of system architecture
 
+**The system is composed of :**
+- a ```MongoDB``` database composed of two collections : *users* and *scoredTweets*. Users & labeled tweets are sorted in those collections.
+- an ```ElasticSearch``` index called ```tweets``` composed of documents of type ```tweet``` that makes the tweets searchable.
+- a ```Python``` script where a ```Logistical Regression classifier``` predicts the relevance of unlabeled tweets, sort all the tweets by relevance and sends back the top 20 tweets to the ```Node.js server```
+- a ```Node.js``` application that handles different types of requests performed by the user (ex: ```/search```, ```/train```)
 
 
-Master's project
-Procfile for heroku
-- First thing first, run node ./server.js
-- Second, don't forget to cd elasticsearch-0.90.11/ and run the following command "bin/elasticsearch -f" to launch elasticsearch
+######Example of a Search request performed by the user:
+![Alt text](searchRequest.png?raw=true "Search request performed by the user")
 
-Node.js communicates with a python script through a tcp socket thanks to zeroRPC
-To make it work you've to get zeroMQ, libtool working on your machine.
-There were still some errors while installing zeroRPC. I finally installed executing this line:
-"sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e"
+######Example of labelling a tweet:
+
+######Example of a click on the ```TrainClassifier``` button:
+![Alt text](trainClassifier.png?raw=true "TrainClassifier request performed by the user")
+
+##Launch the app
+
+- Launch elasticsearch. If elasticsearch directory at the root of the folder : ```elasticsearch-0.90.11/bin/elasticsearch -f```
+- Start MongoDB server : ```mongod```
+- Start python script : ```python topNtweets.py```
+- Start the node application : ```node app.js```
