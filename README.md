@@ -50,13 +50,6 @@ I succeeded in installing zeroRPC library after executing this command :
 sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 ```
 
-##Launch the app
-
-- Launch elasticsearch. If elasticsearch directory at the root of the folder : ```elasticsearch-0.90.11/bin/elasticsearch -f```
-- Start MongoDB server : ```mongod```
-- Start python script : ```python topNtweets.py```
-- Start the node application : ```node app.js```
-
 ##Overview of system architecture
 
 **The system is composed of :**
@@ -72,3 +65,10 @@ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 ######Label a tweet performed by the user:
 
 ######Trainthe classifier
+
+##Launch the app
+
+- Launch elasticsearch. If elasticsearch directory at the root of the folder : ```elasticsearch-0.90.11/bin/elasticsearch -f```
+- Start MongoDB server : ```mongod```
+- Start python script : ```python topNtweets.py```
+- Start the node application : ```node app.js```
