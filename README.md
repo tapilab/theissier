@@ -62,10 +62,11 @@ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 ######Example of a ```/search``` request performed by the user:
 ![Alt text](searchRequest.png?raw=true "Search request performed by the user")
 
-######Example of labelling a tweet:
+######Example of a ```/affectscore```request performed by the user when clicking on `*YES* or *NO* buttons:
+![Alt text](affectScore.png?raw=true "Search request performed by the user")
 
 ######Example of a ```/train``` request performed when the user clicks on the ```TrainClassifier``` button:
-![Alt text](trainClassifier.png?raw=true "TrainClassifier request performed by the user")
+![Alt text](trainClassifier.png?raw=true "TrainClassifer request performed by the user")
 
 ##Launch the app
 
