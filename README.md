@@ -1,5 +1,6 @@
 theissier
 =========
+[Procfile for heroku]
 
 ##Installation & Configuration
 
@@ -49,16 +50,14 @@ I succeeded in installing zeroRPC library after executing this command :
 sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 ```
 
+##Launch the app
+
+- Launch elasticsearch. If elasticsearch directory at the root of the folder : ```elasticsearch-0.90.11/bin/elasticsearch -f```
+- Start python script : ```python topNtweets.py```
+- Start mongodb server : ```mongod```
+- Start the node application : ```node app.js```
+
 ##Overview of system architecture
 
-
-
-Master's project
-Procfile for heroku
-- First thing first, run node ./server.js
-- Second, don't forget to cd elasticsearch-0.90.11/ and run the following command "bin/elasticsearch -f" to launch elasticsearch
-
-Node.js communicates with a python script through a tcp socket thanks to zeroRPC
-To make it work you've to get zeroMQ, libtool working on your machine.
-There were still some errors while installing zeroRPC. I finally installed executing this line:
-"sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e"
+####Search request performed by the user:
+![Alt text](searchRequest.png?raw=true "Search request performed by the user")
