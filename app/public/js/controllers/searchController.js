@@ -67,6 +67,26 @@ function SearchController()
         }
     });
 
+    $("#submit-import-json-file").click(function() {
+        if (document.getElementById("import-json-file").files[0].name != "") {
+            console.log("file name: ", document.getElementById("import-json-file").files[0].name);
+            $.ajax({
+                url: "/submitjson",
+                type: "POST",
+                data: { userId: userId, fileName: $("#import-json-file").val() },
+                success: function(data) {
+                    console.log("data returned : ", data);
+                    //that.onUpdate('TOP N TWEETS', data.hits);
+                },
+                error: function(jqXHR){
+                    console.log(jqXHR.responseText+' :: '+jqXHR.statusText);
+                }
+            });
+        } else {
+            console.log("not possible to call the script without file")
+        }
+    });
+
     $("#keyword-search-input").bind('keyup', function() {   //markers for map
         if($("#keyword-search-input").val() == "") {
             clearMarkers();
@@ -80,6 +100,23 @@ function SearchController()
         that.trainClassifier(userId, activeSession);
         console.log("active session : ", activeSession);
     });
+
+
+     $(window).bind('beforeunload',function() {
+         console.log("coucou");
+         $.ajax({
+             url: "/reloadmap",
+             type: "POST",
+             data: { userId: userId, activeSession: activeSession },
+             success: function(data) {
+                 console.log("data returned : ", data);
+                 //that.onUpdate('TOP N TWEETS', data.hits);
+             },
+             error: function(jqXHR){
+                 console.log(jqXHR.responseText+' :: '+jqXHR.statusText);
+             }
+         });
+     });
 
     changeStateButtons(); //change state buttons
     changeActiveSession();
@@ -202,8 +239,17 @@ function initSessions() {   //initialize sessions -> retrieve sessions on the se
             var session = sessions[key];
             var status = "inactive";
             console.log("active Session : ", activeSession);
-            if (session == activeSession)
+            console.log("session : ", session);
+            if (session.sessionname == activeSession) {
                 status = "active";
+                console.log("session.countNo : ", session.countNo);
+                console.log("session.countNo : ", session.countYes);
+                if (session.countNo >= 1 && session.countYes >= 1) {
+                    console.log("remove class disabled of train-classifier");
+                    $("#train-classifier").removeClass('disabled');
+                    $('#train-classifier').prop('disabled', false);
+                }
+            }
             var jsObj = { username: $("#userId").val(), sessionname: session.sessionname, status: status };
             dataSessions.userSessions.push(jsObj);
             status = "inactive";
@@ -214,6 +260,7 @@ function initSessions() {   //initialize sessions -> retrieve sessions on the se
 }
 
 function initialize(data, reference) {
+    clearMarkers();
     if (typeof(data) != 'undefined' ) {
         for (var index = 0; index < Object.size(data); index++) {
             var search = new Search();
@@ -340,6 +387,7 @@ function updateSessionsClient() {
 }
 
 function changeActiveSession() {
+    clearMarkers();
     $('#list-sessions').on('click', 'li', function () {
         if ($(this).hasClass("active")) {
             $("#list-sessions li").addClass("inactive");

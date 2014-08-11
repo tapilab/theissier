@@ -182,6 +182,17 @@ exports.postSessionTry = function(id, session, callback) {
     });
 }
 
+exports.changeActiveSession = function(id, activeSession, callback) {
+    accounts.findOne({_id: getObjectId(id)}, function(e, o) {
+        if (e)
+            callback(e, null);
+        else {
+            o.activeSession = activeSession;
+            accounts.save(o, {safe: true}, callback);
+        }
+    });
+}
+
 exports.validateResetLink = function(email, passHash, callback)
 {
 	accounts.find({ $and: [{email:email, pass:passHash}] }, function(e, o){

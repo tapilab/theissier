@@ -50,11 +50,17 @@ module.exports = function(app) {
             res.redirect('/');
         } else {
             console.log("map router called here", req.session.user);
-            console.log("sessions : ", req.session.user.sessions);
-            res.render('map', {
-                title : 'Map',
-                udata : req.session.user,
-                sessions: JSON.stringify(req.session.user.sessions)
+            AM.getUserSessions(req.session.user._id, function(e, o) {
+                var realSessions;
+                if (o) {
+                    console.log("o sessions : ", o.sessions);
+                    realSessions = o.sessions;
+                    res.render('map', {
+                        title : 'Map',
+                        udata : req.session.user,
+                        sessions: JSON.stringify(realSessions)
+                    });
+                }
             });
         }
     });
@@ -357,6 +363,28 @@ module.exports = function(app) {
 
 	app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
 
+    app.post("/submitjson", function(req,res) {
+        console.log("file name : ", req.body.fileName);
+
+
+
+    });
+
+    app.get('/reloadmap', function(req, res) {
+        console.log("RELOADDDD map ! ");
+        if (req.session.user == null) {
+            res.redirect("/");
+        } else {
+            AM.changeActiveSession(req.session.body.userId, req.session.body.activeSession, function(e, o) {
+                if (e)
+                    res.send(e, 400);
+                else {
+                    console.log("o : ", o);
+                    res.send(o, 200);
+                }
+            })
+        }
+    });
 
 };
 

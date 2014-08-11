@@ -35,6 +35,7 @@ head
             button#train-classifier.btn.btn-danger.btn-small Train Classifier
             button#create-session-button.btn.btn-success.btn-small(data-toggle='modal', data-target='#create-session-box') Create a session
             button#title-alert-active-session.btn.btn-info.btn-small Current session :
+            button#import-json-file-button.btn.btn-warning.btn-small(data-toggle='modal', data-target='#import-json-box') Import Json File into ES
             br
             br
         #info-box.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
@@ -78,6 +79,19 @@ head
                                 input#input-session-name.form-control(type='text', placeholder='Your Session Name')
                     .modal-footer
                         button#submit-create-session.disabled.btn.btn-primary(type='button', data-dismiss='modal') Submit
+        #import-json-box.modal.fade(tabindex='-1', role='dialog', aria-labelledby='importJsonLabel', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                        h4#title-import-json.modal-title Import your JSON file into ElasticSearch
+                    #body-create-session.modal-body
+                        form.form-horizontal(role='form')
+                            .form-group
+                                label#import-json-label(for="import-json-file") Import json file
+                                input#import-json-file(type="file")
+                    .modal-footer
+                        button#submit-import-json-file.btn.btn-primary(type='button', data-dismiss='modal') Submit
         #map-canvas
 block scripts
     script(type='text/javascript', src='//code.jquery.com/jquery-1.10.2.min.js')
