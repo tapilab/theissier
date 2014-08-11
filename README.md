@@ -55,7 +55,7 @@ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-e
 **The system is composed of :**
 - a MongoDB database composed of two collections : *users* and *scoredTweets*. Users & labeled tweets are sorted in those collections.
 - an ElasticSearch index called ```tweets``` composed of documents of type ```tweet``` that makes the tweets searchable.
-- a Python script where a ```Logistical Regression classifier``` predicts the relevance of unlabeled tweets, sort all the tweets by relevance and sends back the 20 top tweets to the ```Node.js server```
+- a Python script where a ```Logistical Regression classifier``` predicts the relevance of unlabeled tweets, sort all the tweets by relevance and sends back the top 20 tweets to the ```Node.js server```
 - a Node.js application that handles different types of requests performed by the user (ex: ```/search```, ```/train````)
 
 
